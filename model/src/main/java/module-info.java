@@ -5,6 +5,7 @@ module org.nasdanika.models.tibco.bw {
 	
 	exports org.nasdanika.models.tibco.bw;
 	exports org.nasdanika.models.tibco.bw.impl;
+	exports org.nasdanika.models.tibco.bw.loader;
 	exports org.nasdanika.models.tibco.bw.util;
 	
 	requires transitive org.eclipse.emf.ecore;
