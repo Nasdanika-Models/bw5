@@ -1,0 +1,422 @@
+/**
+ * Xcore model for Tibco BusinessWorks 5.x processes.
+ *
+ * Covers the core concepts found in .process files:
+ *   - ProcessDefinition (root element, namespace http://xmlns.tibco.com/bw/process/2003)
+ *   - Activity (tasks/steps)
+ *   - Starter (event-source activities that trigger the process)
+ *   - Group (containers for sub-activities, e.g. loop, error-handler)
+ *   - Transition (connections between activities)
+ *   - Label (visual annotations on the diagram)
+ *   - ProcessVariable (variables scoped to the process)
+ *
+ * References:
+ *   https://github.com/fastconnect/tibco-bwmaven/tree/master/tibco-bw-process-model-schema
+ *   https://github.com/joshuamoesa/tibco-businessworks5
+ *   https://github.com/tibcobwblog/tibcobwblog_samples/tree/master/bw5.x
+ */
+@Ecore(nsURI="ecore://nasdanika.org/models/tibco/bw", nsPrefix="tibco.bw")
+@GenModel(
+    basePackage="org.nasdanika.models.tibco.bw",
+    modelDirectory="tibco-bw/model/src/main/java",
+    documentation="Xcore model for Tibco BusinessWorks 5.x process concepts."
+)
+package org.nasdanika.models.tibco.bw
+
+/**
+ * Abstract base for process elements that are identified by name within a process.
+ * Corresponds to the NamedType complex type in the BW process schema.
+ */
+abstract class NamedElement {
+
+    /**
+     * The element's unique name within its containing scope (process or group).
+     * Used as the reference target in Transition.from and Transition.to.
+     */
+    id String name
+
+    /**
+     * Optional human-readable description of this element.
+     */
+    String description
+}
+
+/**
+ * Root element of a Tibco BW 5.x process file (.process).
+ * Corresponds to pd:ProcessDefinition in the XML namespace
+ * http://xmlns.tibco.com/bw/process/2003.
+ */
+class ProcessDefinition {
+
+    /**
+     * Fully-qualified process name (including package path),
+     * e.g. "Processes/MyProcess.process".
+     */
+    String name
+
+    /**
+     * Optional human-readable description.
+     */
+    String description
+
+    /**
+     * Name of the implicit Start node (the process trigger).
+     * When a Starter is present this is the starter's name; otherwise BW
+     * generates a plain Start pseudo-state.
+     */
+    String startName
+
+    /**
+     * Canonical type of the start element (optional).
+     */
+    String startType
+
+    /**
+     * X coordinate of the Start node on the design canvas.
+     */
+    int startX
+
+    /**
+     * Y coordinate of the Start node on the design canvas.
+     */
+    int startY
+
+    /**
+     * Name of the implicit End node.
+     */
+    String endName
+
+    /**
+     * Canonical type of the end element (optional).
+     */
+    String endType
+
+    /**
+     * X coordinate of the End node on the design canvas.
+     */
+    int endX
+
+    /**
+     * Y coordinate of the End node on the design canvas.
+     */
+    int endY
+
+    /**
+     * The XML target namespace declared in the process file.
+     * Used to qualify XPath expressions within the process.
+     */
+    String targetNamespace
+
+    /**
+     * XSL bindings that produce the process return value (output schema).
+     * Stored as raw XML text because the bindings reference arbitrary namespaces.
+     */
+    String returnBindings
+
+    /**
+     * The optional event-source activity that starts this process
+     * (e.g. an HTTP receiver, JMS queue listener, Timer, ...).
+     * When present, startName refers to this starter's name.
+     */
+    contains Starter starter
+
+    /**
+     * Activities (tasks/steps) at the top level of this process.
+     */
+    contains Activity[] activities
+
+    /**
+     * Groups of activities at the top level of this process (loops, scope, etc.).
+     */
+    contains Group[] groups
+
+    /**
+     * Transitions at the top level of this process.
+     */
+    contains Transition[] transitions
+
+    /**
+     * Visual annotation labels on the diagram.
+     */
+    contains Label[] labels
+
+    /**
+     * Process-scoped variables declared in the process.
+     */
+    contains ProcessVariable[] processVariables
+
+    /**
+     * Error schemas that this process can throw.
+     * Stored as raw XML text because they are arbitrary XSD fragments.
+     */
+    String errorSchemas
+}
+
+/**
+ * An activity (task or step) within a BW process or group.
+ * Corresponds to pd:activity in the process XML.
+ */
+class Activity extends NamedElement {
+
+    /**
+     * Fully-qualified Java class name of the activity implementation,
+     * e.g. "com.tibco.pe.core.WriteToLogActivity".
+     */
+    String type
+
+    /**
+     * Palette / resource-type identifier used by the BW Designer,
+     * e.g. "ae.activities.log".
+     */
+    String resourceType
+
+    /**
+     * X coordinate on the design canvas.
+     */
+    int x
+
+    /**
+     * Y coordinate on the design canvas.
+     */
+    int y
+
+    /**
+     * Activity-specific configuration, stored as raw XML text.
+     * The structure varies per activity type.
+     */
+    String config
+
+    /**
+     * XSL input bindings for this activity, stored as raw XML text.
+     */
+    String inputBindings
+}
+
+/**
+ * An event-source (starter) activity that triggers the process.
+ * Corresponds to pd:starter in the process XML.
+ * Examples: HTTP Event Source, JMS Queue Receiver, Timer, File Poller.
+ *
+ * Structurally identical to a regular Activity; modelled as a distinct
+ * class so that tooling can easily distinguish starters from regular steps.
+ */
+class Starter extends Activity {
+}
+
+/**
+ * A group of activities, used to model structured constructs such as:
+ *   - Loops (Repeat-Until, For-Each, While)
+ *   - Error handlers / Fault handlers
+ *   - Critical sections
+ *   - Scope groups
+ *
+ * Corresponds to pd:group in the process XML.
+ */
+class Group extends NamedElement {
+
+    /**
+     * Fully-qualified Java class name of the group implementation,
+     * e.g. "com.tibco.pe.core.LoopGroup".
+     */
+    String type
+
+    /**
+     * Palette / resource-type identifier, e.g. "ae.process.group".
+     */
+    String resourceType
+
+    /**
+     * X coordinate of the group frame on the design canvas.
+     */
+    int x
+
+    /**
+     * Y coordinate of the group frame on the design canvas.
+     */
+    int y
+
+    /**
+     * Width of the expanded group frame on the design canvas.
+     */
+    int width
+
+    /**
+     * Height of the expanded group frame on the design canvas.
+     */
+    int height
+
+    /**
+     * Width of the group icon when collapsed.
+     */
+    int collapsedWidth
+
+    /**
+     * Height of the group icon when collapsed.
+     */
+    int collapsedHeight
+
+    /**
+     * Whether the group is shown in expanded form on the canvas.
+     */
+    boolean expanded
+
+    /**
+     * Group-type-specific configuration, stored as raw XML text.
+     * For a LoopGroup this contains the loop condition and index slot.
+     */
+    String config
+
+    /**
+     * XSL input bindings for the group, stored as raw XML text.
+     */
+    String inputBindings
+
+    /**
+     * Activities contained inside this group.
+     */
+    contains Activity[] activities
+
+    /**
+     * Sub-groups nested inside this group.
+     */
+    contains Group[] groups
+
+    /**
+     * Transitions between the activities inside this group.
+     */
+    contains Transition[] transitions
+}
+
+/**
+ * A directed connection from one activity (or pseudo-state) to another.
+ * Corresponds to pd:transition in the process XML.
+ *
+ * The source and target are identified by the name of the containing
+ * NamedElement (Activity, Starter, Group, or the special names "Start"
+ * and "End" / "start" and "end" inside a group).
+ */
+class Transition {
+
+    /**
+     * Name of the source activity, group, or pseudo-state
+     * (e.g. "Log", "Start", "IterateAndFindMatch").
+     */
+    String from
+
+    /**
+     * Name of the target activity, group, or pseudo-state
+     * (e.g. "End", "MapResultToResponse").
+     */
+    String to
+
+    /**
+     * Visual style of the transition line.
+     * Common values: "Default", "Straight", "Curved".
+     */
+    String lineType
+
+    /**
+     * RGB color of the transition line encoded as a signed integer
+     * (Java AWT convention), e.g. "-16777216" for black.
+     */
+    String lineColor
+
+    /**
+     * How the transition is enabled.
+     * Common values: "always", "expression", "error", "timeout".
+     */
+    String conditionType
+
+    /**
+     * XPath/XSL condition expression evaluated at runtime to decide
+     * whether this transition fires.  Only used when conditionType
+     * is "expression".
+     */
+    String condition
+}
+
+/**
+ * A visual annotation (sticky-note style label) placed on the design canvas.
+ * Corresponds to pd:label in the process XML.
+ */
+class Label {
+
+    /**
+     * Label title / identifier on the canvas.
+     */
+    String name
+
+    /**
+     * Text content of the label.
+     */
+    String description
+
+    /**
+     * X coordinate on the design canvas.
+     */
+    int x
+
+    /**
+     * Y coordinate on the design canvas.
+     */
+    int y
+
+    /**
+     * Width of the label box on the canvas.
+     */
+    int width
+
+    /**
+     * Height of the label box on the canvas.
+     */
+    int height
+
+    /**
+     * Font color encoded as an RGB integer string.
+     */
+    String fontColor
+
+    /**
+     * Background color encoded as an RGB integer string.
+     */
+    String color
+
+    /**
+     * Label shape type.
+     */
+    String type
+
+    /**
+     * Border line thickness.
+     */
+    String thickness
+
+    /**
+     * Opacity / fade value.
+     */
+    String fade
+}
+
+/**
+ * A process-level variable declared in the processVariables section.
+ * Process variables hold state that is visible to all activities within
+ * the same process instance.
+ */
+class ProcessVariable {
+
+    /**
+     * Variable name.
+     */
+    String name
+
+    /**
+     * XSD type of the variable, e.g. "xsd:string", "xsd:integer".
+     * May reference a custom XSD type declared in the AESchemas folder.
+     */
+    String type
+
+    /**
+     * Optional documentation / description.
+     */
+    String description
+}

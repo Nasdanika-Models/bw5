@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.nasdanika.models.tibco.bw</groupId>
+    <artifactId>parent</artifactId>
+    <version>2025.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Tibco BW Model - Parent</name>
+    <description>Xcore model for Tibco BusinessWorks 5.x process concepts.</description>
+
+    <modules>
+        <module>model</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/Nasdanika-Models/tibco-bw</url>
+        <connection>scm:git:git://github.com/Nasdanika-Models/tibco-bw.git</connection>
+        <developerConnection>scm:git:git@github.com:Nasdanika-Models/tibco-bw.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+</project>
