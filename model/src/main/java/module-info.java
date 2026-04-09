@@ -1,0 +1,16 @@
+import org.nasdanika.capability.CapabilityFactory;
+import org.nasdanika.models.tibco.bw.capability.TibcoBwEPackageResourceSetCapabilityFactory;
+
+module org.nasdanika.models.tibco.bw {
+	
+	exports org.nasdanika.models.tibco.bw;
+	exports org.nasdanika.models.tibco.bw.impl;
+	exports org.nasdanika.models.tibco.bw.util;
+	
+	requires transitive org.eclipse.emf.ecore;
+	requires transitive org.eclipse.emf.common;
+	requires org.nasdanika.capability;
+	
+	provides CapabilityFactory with TibcoBwEPackageResourceSetCapabilityFactory;
+	
+}

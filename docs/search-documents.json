@@ -1,0 +1,511 @@
+{
+  "references/eClassifiers/ProcessVariable/index.html": {
+    "link-uuid": "18f526e1-8193-46ac-b21d-da1919f3488e",
+    "title": "ProcessVariable",
+    "content": "* A process-level variable declared in the processVariables section. Process variables hold state that is visible to all activities within the same process instance. Diagram ",
+    "timestamp": 1775771582665
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/width/index.html": {
+    "path": "Group/Attributes/width",
+    "link-uuid": "d2f0479e-6c43-4d38-8a35-c151a848a043",
+    "title": "width",
+    "content": "Type EInt Multiplicity 0..1 * Width of the expanded group frame on the design canvas.",
+    "timestamp": 1775771582501
+  },
+  "references/eClassifiers/NamedElement/references/eStructuralFeatures/description/index.html": {
+    "path": "NamedElement/Attributes/description",
+    "link-uuid": "e03e4095-4097-46e0-ab82-e4667705fc2e",
+    "title": "description",
+    "content": "Type EString Multiplicity 0..1 * Optional human-readable description of this element.",
+    "timestamp": 1775771582576
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/inputBindings/index.html": {
+    "path": "Activity/Attributes/inputBindings",
+    "link-uuid": "33e903fe-0342-447b-b8e5-4af6998ccd98",
+    "title": "inputBindings",
+    "content": "Type EString Multiplicity 0..1 * XSL input bindings for this activity, stored as raw XML text.",
+    "timestamp": 1775771582428
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startName/index.html": {
+    "path": "ProcessDefinition/Attributes/startName",
+    "link-uuid": "355ce50a-f83d-4db2-991c-0dff82223641",
+    "title": "startName",
+    "content": "Type EString Multiplicity 0..1 * Name of the implicit Start node (the process trigger). When a Starter is present this is the starter&rsquo;s name; otherwise BW generates a plain Start pseudo-state.",
+    "timestamp": 1775771582639
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startY/index.html": {
+    "path": "ProcessDefinition/Attributes/startY",
+    "link-uuid": "afae6e69-9185-4ba7-b1ca-25e46553be52",
+    "title": "startY",
+    "content": "Type EInt Multiplicity 0..1 * Y coordinate of the Start node on the design canvas.",
+    "timestamp": 1775771582645
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/resourceType/index.html": {
+    "path": "Group/Attributes/resourceType",
+    "link-uuid": "b0aa7b21-9dd0-4471-97af-14d7562c2843",
+    "title": "resourceType",
+    "content": "Type EString Multiplicity 0..1 * Palette / resource-type identifier, e.g. &ldquo;ae.process.group&rdquo;.",
+    "timestamp": 1775771582493
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/y/index.html": {
+    "path": "Group/Attributes/y",
+    "link-uuid": "a81f178e-a057-4e70-9412-dd08b89dc038",
+    "title": "y",
+    "content": "Type EInt Multiplicity 0..1 * Y coordinate of the group frame on the design canvas.",
+    "timestamp": 1775771582506
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endType/index.html": {
+    "path": "ProcessDefinition/Attributes/endType",
+    "link-uuid": "08e76134-a21b-40f5-86b6-4bfa38126a54",
+    "title": "endType",
+    "content": "Type EString Multiplicity 0..1 * Canonical type of the end element (optional).",
+    "timestamp": 1775771582618
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/transitions/index.html": {
+    "path": "ProcessDefinition/References/transitions",
+    "link-uuid": "045df2ee-974a-41c5-90cd-c08374bc34b6",
+    "title": "transitions",
+    "content": "Type Transition Multiplicity 0..* * Transitions at the top level of this process.",
+    "timestamp": 1775771582649
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/fade/index.html": {
+    "path": "Label/Attributes/fade",
+    "link-uuid": "e9436f8b-fac9-44f0-b55c-d44417a5bbb6",
+    "title": "fade",
+    "content": "Type EString Multiplicity 0..1 * Opacity / fade value.",
+    "timestamp": 1775771582536
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/type/index.html": {
+    "path": "Activity/Attributes/type",
+    "link-uuid": "f0905e8f-e7bf-4523-8e30-3994e42d0263",
+    "title": "type",
+    "content": "Type EString Multiplicity 0..1 * Fully-qualified Java class name of the activity implementation, e.g. &ldquo;com.tibco.pe.core.WriteToLogActivity&rdquo;.",
+    "timestamp": 1775771582435
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/y/index.html": {
+    "path": "Activity/Attributes/y",
+    "link-uuid": "65c566d9-845a-4ada-bd17-b9d46c929973",
+    "title": "y",
+    "content": "Type EInt Multiplicity 0..1 * Y coordinate on the design canvas.",
+    "timestamp": 1775771582441
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/collapsedWidth/index.html": {
+    "path": "Group/Attributes/collapsedWidth",
+    "link-uuid": "d23cbf96-de87-417b-9175-cc716d5d0316",
+    "title": "collapsedWidth",
+    "content": "Type EInt Multiplicity 0..1 * Width of the group icon when collapsed.",
+    "timestamp": 1775771582478
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/transitions/index.html": {
+    "path": "Group/References/transitions",
+    "link-uuid": "7ffd7492-1dd9-4cd6-9209-5866ee80b1a4",
+    "title": "transitions",
+    "content": "Type Transition Multiplicity 0..* * Transitions between the activities inside this group.",
+    "timestamp": 1775771582495
+  },
+  "index.html": {
+    "link-uuid": "a78a8c2b-9c9e-4561-b95d-e5f7eff34c90",
+    "title": "Tibco BW Model",
+    "content": "Xcore model for Tibco BusinessWorks 5.x process concepts. ProcessDefinition Transition transitions Group transitions groups groups ProcessVariable processVariables NamedElement Activity activities activities Label labels Starter starter Tibco BW",
+    "timestamp": 1775771582393
+  },
+  "references/eClassifiers/Starter/inheritance.html": {
+    "path": "Starter/Inheritance",
+    "link-uuid": "b3179c73-87c4-49fe-863a-d3287b07d89a",
+    "title": "Inheritance",
+    "content": "Supertypes ",
+    "timestamp": 1775771582691
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/activities/index.html": {
+    "path": "Group/References/activities",
+    "link-uuid": "16bfebd4-28eb-462f-95a2-dee9a6b268ab",
+    "title": "activities",
+    "content": "Type Activity Multiplicity 0..* * Activities contained inside this group.",
+    "timestamp": 1775771582472
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/type/index.html": {
+    "path": "Label/Attributes/type",
+    "link-uuid": "399e37ad-521c-4747-938e-5f28e5b35b75",
+    "title": "type",
+    "content": "Type EString Multiplicity 0..1 * Label shape type.",
+    "timestamp": 1775771582548
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startType/index.html": {
+    "path": "ProcessDefinition/Attributes/startType",
+    "link-uuid": "d17407e3-bd57-4fd4-85d1-01f1b8b4d9f2",
+    "title": "startType",
+    "content": "Type EString Multiplicity 0..1 * Canonical type of the start element (optional).",
+    "timestamp": 1775771582641
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/width/index.html": {
+    "path": "Label/Attributes/width",
+    "link-uuid": "6c6cd161-43d4-4472-9bb9-532e824c50d5",
+    "title": "width",
+    "content": "Type EInt Multiplicity 0..1 * Width of the label box on the canvas.",
+    "timestamp": 1775771582550
+  },
+  "references/eClassifiers/NamedElement/index.html": {
+    "link-uuid": "da9591a0-1fd3-4266-9010-f64a6ae97614",
+    "title": "NamedElement",
+    "content": "* Abstract base for process elements that are identified by name within a process. Corresponds to the NamedType complex type in the BW process schema. Diagram ",
+    "timestamp": 1775771582571
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/resourceType/index.html": {
+    "path": "Activity/Attributes/resourceType",
+    "link-uuid": "36843114-fced-44a9-abf1-32c5977d19b1",
+    "title": "resourceType",
+    "content": "Type EString Multiplicity 0..1 * Palette / resource-type identifier used by the BW Designer, e.g. &ldquo;ae.activities.log&rdquo;.",
+    "timestamp": 1775771582431
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/name/index.html": {
+    "path": "ProcessDefinition/Attributes/name",
+    "link-uuid": "da7076da-34f1-46b5-a338-18b369735af0",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1 * Fully-qualified process name (including package path), e.g. &ldquo;Processes/MyProcess.process&rdquo;.",
+    "timestamp": 1775771582630
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/starter/index.html": {
+    "path": "ProcessDefinition/References/starter",
+    "link-uuid": "c2c3516b-04b1-45de-8ec4-6be5f1026906",
+    "title": "starter",
+    "content": "Type Starter Multiplicity 0..1 * The optional event-source activity that starts this process (e.g. an HTTP receiver, JMS queue listener, Timer, &hellip;). When present, startName refers to this starter&rsquo;s name.",
+    "timestamp": 1775771582637
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/condition/index.html": {
+    "path": "Transition/Attributes/condition",
+    "link-uuid": "9cf49f47-14d0-46b3-a86b-9961f5101ec9",
+    "title": "condition",
+    "content": "Type EString Multiplicity 0..1 * XPath/XSL condition expression evaluated at runtime to decide whether this transition fires. Only used when conditionType is &ldquo;expression&rdquo;.",
+    "timestamp": 1775771582714
+  },
+  "references/eClassifiers/Group/index.html": {
+    "link-uuid": "2bdf02a0-6915-4494-99c6-8ebad2199a92",
+    "title": "Group",
+    "content": "* A group of activities, used to model structured constructs such as: - Loops (Repeat-Until, For-Each, While) - Error handlers / Fault handlers - Critical sections - Scope groups Corresponds to pd:group in the process XML. Diagram ",
+    "timestamp": 1775771582463
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/targetNamespace/index.html": {
+    "path": "ProcessDefinition/Attributes/targetNamespace",
+    "link-uuid": "8dc8aff5-c297-4fa5-b7b4-af52cf0c56a6",
+    "title": "targetNamespace",
+    "content": "Type EString Multiplicity 0..1 * The XML target namespace declared in the process file. Used to qualify XPath expressions within the process.",
+    "timestamp": 1775771582647
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endX/index.html": {
+    "path": "ProcessDefinition/Attributes/endX",
+    "link-uuid": "7cde599b-fcff-4b2d-b5bd-79f6611a9e22",
+    "title": "endX",
+    "content": "Type EInt Multiplicity 0..1 * X coordinate of the End node on the design canvas.",
+    "timestamp": 1775771582620
+  },
+  "references/eClassifiers/ProcessVariable/references/eStructuralFeatures/description/index.html": {
+    "path": "ProcessVariable/Attributes/description",
+    "link-uuid": "ddce84e3-1c71-4b89-a14a-b9cb5deb5b10",
+    "title": "description",
+    "content": "Type EString Multiplicity 0..1 * Optional documentation / description.",
+    "timestamp": 1775771582669
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/labels/index.html": {
+    "path": "ProcessDefinition/References/labels",
+    "link-uuid": "8a208718-d6ac-4213-95e4-a57c1b97e70f",
+    "title": "labels",
+    "content": "Type Label Multiplicity 0..* * Visual annotation labels on the diagram.",
+    "timestamp": 1775771582628
+  },
+  "references/eClassifiers/Starter/index.html": {
+    "link-uuid": "f940fb58-ab96-4848-b98f-f249d8313513",
+    "title": "Starter",
+    "content": "* An event-source (starter) activity that triggers the process. Corresponds to pd:starter in the process XML. Examples: HTTP Event Source, JMS Queue Receiver, Timer, File Poller. Structurally identical to a regular Activity; modelled as a distinct class so that tooling can easily distinguish starters from regular steps. Diagram ",
+    "timestamp": 1775771582689
+  },
+  "references/eClassifiers/NamedElement/references/eStructuralFeatures/name/index.html": {
+    "path": "NamedElement/Attributes/name",
+    "link-uuid": "f69f2365-22b5-4a3f-91c9-16f6fa98ff69",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1 * The element&rsquo;s unique name within its containing scope (process or group). Used as the reference target in Transition.from and Transition.to.",
+    "timestamp": 1775771582578
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endY/index.html": {
+    "path": "ProcessDefinition/Attributes/endY",
+    "link-uuid": "9f586f0a-3241-4ee3-b7e7-291ff9ec028a",
+    "title": "endY",
+    "content": "Type EInt Multiplicity 0..1 * Y coordinate of the End node on the design canvas.",
+    "timestamp": 1775771582622
+  },
+  "references/eClassifiers/Label/index.html": {
+    "link-uuid": "31a4b545-00b5-4dd9-87c0-43d5e7532a23",
+    "title": "Label",
+    "content": "* A visual annotation (sticky-note style label) placed on the design canvas. Corresponds to pd:label in the process XML. Diagram ",
+    "timestamp": 1775771582527
+  },
+  "references/eClassifiers/ProcessDefinition/index.html": {
+    "link-uuid": "190f32b8-b332-4d45-8528-c1235d849921",
+    "title": "ProcessDefinition",
+    "content": "* Root element of a Tibco BW 5.x process file (.process). Corresponds to pd:ProcessDefinition in the XML namespace http://xmlns.tibco.com/bw/process/2003. Diagram ",
+    "timestamp": 1775771582605
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/from/index.html": {
+    "path": "Transition/Attributes/from",
+    "link-uuid": "66992893-bb7c-4589-8af6-63086271e7eb",
+    "title": "from",
+    "content": "Type EString Multiplicity 0..1 * Name of the source activity, group, or pseudo-state (e.g. &ldquo;Log&rdquo;, &ldquo;Start&rdquo;, &ldquo;IterateAndFindMatch&rdquo;).",
+    "timestamp": 1775771582718
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/inputBindings/index.html": {
+    "path": "Group/Attributes/inputBindings",
+    "link-uuid": "6e2e0de4-2893-4f0f-82a8-b0e85d6dc3c8",
+    "title": "inputBindings",
+    "content": "Type EString Multiplicity 0..1 * XSL input bindings for the group, stored as raw XML text.",
+    "timestamp": 1775771582490
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/config/index.html": {
+    "path": "Group/Attributes/config",
+    "link-uuid": "c11baca6-6508-47b6-8f7f-83ccb4e07029",
+    "title": "config",
+    "content": "Type EString Multiplicity 0..1 * Group-type-specific configuration, stored as raw XML text. For a LoopGroup this contains the loop condition and index slot.",
+    "timestamp": 1775771582480
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/groups/index.html": {
+    "path": "ProcessDefinition/References/groups",
+    "link-uuid": "7a89760b-2187-474e-8bf3-24eac8d49bd4",
+    "title": "groups",
+    "content": "Type Group Multiplicity 0..* * Groups of activities at the top level of this process (loops, scope, etc.).",
+    "timestamp": 1775771582627
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/conditionType/index.html": {
+    "path": "Transition/Attributes/conditionType",
+    "link-uuid": "3f1e2d71-573c-4438-900d-79520d2e6d40",
+    "title": "conditionType",
+    "content": "Type EString Multiplicity 0..1 * How the transition is enabled. Common values: &ldquo;always&rdquo;, &ldquo;expression&rdquo;, &ldquo;error&rdquo;, &ldquo;timeout&rdquo;.",
+    "timestamp": 1775771582716
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/description/index.html": {
+    "path": "Label/Attributes/description",
+    "link-uuid": "ba7d7c66-28f4-458b-bb88-e6046af91ea2",
+    "title": "description",
+    "content": "Type EString Multiplicity 0..1 * Text content of the label.",
+    "timestamp": 1775771582533
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/x/index.html": {
+    "path": "Label/Attributes/x",
+    "link-uuid": "d509c9b9-42bd-4044-a48c-78f3d0164e12",
+    "title": "x",
+    "content": "Type EInt Multiplicity 0..1 * X coordinate on the design canvas.",
+    "timestamp": 1775771582553
+  },
+  "references/eClassifiers/Activity/inheritance.html": {
+    "path": "Activity/Inheritance",
+    "link-uuid": "fd5685b3-b168-41fa-9f95-e4de9e2af027",
+    "title": "Inheritance",
+    "content": "Supertypes Subtypes  ",
+    "timestamp": 1775771582419
+  },
+  "references/eClassifiers/Transition/index.html": {
+    "link-uuid": "21d70be0-c4fe-4a98-bae4-6746538d7093",
+    "title": "Transition",
+    "content": "* A directed connection from one activity (or pseudo-state) to another. Corresponds to pd:transition in the process XML. The source and target are identified by the name of the containing NamedElement (Activity, Starter, Group, or the special names &ldquo;Start&rdquo; and &ldquo;End&rdquo; / &ldquo;start&rdquo; and &ldquo;end&rdquo; inside a group). Diagram ",
+    "timestamp": 1775771582709
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/returnBindings/index.html": {
+    "path": "ProcessDefinition/Attributes/returnBindings",
+    "link-uuid": "d82b5c43-727f-4b09-becc-d6ac656d5426",
+    "title": "returnBindings",
+    "content": "Type EString Multiplicity 0..1 * XSL bindings that produce the process return value (output schema). Stored as raw XML text because the bindings reference arbitrary namespaces.",
+    "timestamp": 1775771582634
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/color/index.html": {
+    "path": "Label/Attributes/color",
+    "link-uuid": "99da49d1-62d4-4bf6-b98e-95373e8f383a",
+    "title": "color",
+    "content": "Type EString Multiplicity 0..1 * Background color encoded as an RGB integer string.",
+    "timestamp": 1775771582532
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startX/index.html": {
+    "path": "ProcessDefinition/Attributes/startX",
+    "link-uuid": "ad0a3b22-235f-4ce1-b5aa-9c2891dc188d",
+    "title": "startX",
+    "content": "Type EInt Multiplicity 0..1 * X coordinate of the Start node on the design canvas.",
+    "timestamp": 1775771582643
+  },
+  "references/eClassifiers/Activity/index.html": {
+    "link-uuid": "b84aebee-0563-47cb-95a6-334d1246f965",
+    "title": "Activity",
+    "content": "* An activity (task or step) within a BW process or group. Corresponds to pd:activity in the process XML. Diagram ",
+    "timestamp": 1775771582416
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/fontColor/index.html": {
+    "path": "Label/Attributes/fontColor",
+    "link-uuid": "ad217c0e-1f71-4dc8-aa80-b3113d952cb0",
+    "title": "fontColor",
+    "content": "Type EString Multiplicity 0..1 * Font color encoded as an RGB integer string.",
+    "timestamp": 1775771582539
+  },
+  "references/eClassifiers/NamedElement/inheritance.html": {
+    "path": "NamedElement/Inheritance",
+    "link-uuid": "5e3ddcc3-2b92-4a03-aa56-4094abf24c92",
+    "title": "Inheritance",
+    "content": "Subtypes ",
+    "timestamp": 1775771582574
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/activities/index.html": {
+    "path": "ProcessDefinition/References/activities",
+    "link-uuid": "83da7821-5a89-47e5-b0d6-eff1cad7d0a7",
+    "title": "activities",
+    "content": "Type Activity Multiplicity 0..* * Activities (tasks/steps) at the top level of this process.",
+    "timestamp": 1775771582611
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/lineColor/index.html": {
+    "path": "Transition/Attributes/lineColor",
+    "link-uuid": "3ca0937b-00cc-4eb0-84e2-e83b17d87468",
+    "title": "lineColor",
+    "content": "Type EString Multiplicity 0..1 * RGB color of the transition line encoded as a signed integer (Java AWT convention), e.g. &ldquo;-16777216&rdquo; for black.",
+    "timestamp": 1775771582721
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/to/index.html": {
+    "path": "Transition/Attributes/to",
+    "link-uuid": "6ea53a07-14ab-43c2-b46f-87dfbc2337a3",
+    "title": "to",
+    "content": "Type EString Multiplicity 0..1 * Name of the target activity, group, or pseudo-state (e.g. &ldquo;End&rdquo;, &ldquo;MapResultToResponse&rdquo;).",
+    "timestamp": 1775771582724
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/type/index.html": {
+    "path": "Group/Attributes/type",
+    "link-uuid": "fbca91c9-66cb-4b79-a08f-4a3ddc79c13f",
+    "title": "type",
+    "content": "Type EString Multiplicity 0..1 * Fully-qualified Java class name of the group implementation, e.g. &ldquo;com.tibco.pe.core.LoopGroup&rdquo;.",
+    "timestamp": 1775771582497
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/x/index.html": {
+    "path": "Activity/Attributes/x",
+    "link-uuid": "dab449a0-9d0d-4780-b233-6558fe5efc6f",
+    "title": "x",
+    "content": "Type EInt Multiplicity 0..1 * X coordinate on the design canvas.",
+    "timestamp": 1775771582438
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/errorSchemas/index.html": {
+    "path": "ProcessDefinition/Attributes/errorSchemas",
+    "link-uuid": "a898247d-c262-44d7-9f33-ba403da291d0",
+    "title": "errorSchemas",
+    "content": "Type EString Multiplicity 0..1 * Error schemas that this process can throw. Stored as raw XML text because they are arbitrary XSD fragments.",
+    "timestamp": 1775771582624
+  },
+  "references/eClassifiers/Activity/references/eStructuralFeatures/config/index.html": {
+    "path": "Activity/Attributes/config",
+    "link-uuid": "0ef6c86c-003d-44ea-8188-7f60b7fcca97",
+    "title": "config",
+    "content": "Type EString Multiplicity 0..1 * Activity-specific configuration, stored as raw XML text. The structure varies per activity type.",
+    "timestamp": 1775771582426
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/groups/index.html": {
+    "path": "Group/References/groups",
+    "link-uuid": "6acdcdc2-a8d7-48e9-b608-1b868f42e63d",
+    "title": "groups",
+    "content": "Type Group Multiplicity 0..* * Sub-groups nested inside this group.",
+    "timestamp": 1775771582485
+  },
+  "references/eClassifiers/ProcessVariable/references/eStructuralFeatures/name/index.html": {
+    "path": "ProcessVariable/Attributes/name",
+    "link-uuid": "7e7ea2a1-6f47-4fdc-b61e-1d2981cca9b3",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1 * Variable name.",
+    "timestamp": 1775771582671
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/thickness/index.html": {
+    "path": "Label/Attributes/thickness",
+    "link-uuid": "5fe48c62-0374-4e1b-87f3-28bb7565a429",
+    "title": "thickness",
+    "content": "Type EString Multiplicity 0..1 * Border line thickness.",
+    "timestamp": 1775771582546
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/name/index.html": {
+    "path": "Label/Attributes/name",
+    "link-uuid": "6b86795e-b59d-4a99-8004-6485f2addaa6",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1 * Label title / identifier on the canvas.",
+    "timestamp": 1775771582543
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/expanded/index.html": {
+    "path": "Group/Attributes/expanded",
+    "link-uuid": "5a8210af-8d6f-4910-942d-5387f438b9da",
+    "title": "expanded",
+    "content": "Type EBoolean Multiplicity 0..1 * Whether the group is shown in expanded form on the canvas.",
+    "timestamp": 1775771582482
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/x/index.html": {
+    "path": "Group/Attributes/x",
+    "link-uuid": "87e38061-be15-4958-9c42-bf8b2e9c392e",
+    "title": "x",
+    "content": "Type EInt Multiplicity 0..1 * X coordinate of the group frame on the design canvas.",
+    "timestamp": 1775771582504
+  },
+  "references/eClassifiers/Transition/references/eStructuralFeatures/lineType/index.html": {
+    "path": "Transition/Attributes/lineType",
+    "link-uuid": "86db42d4-f1dd-4b99-96c6-9fe478d87f70",
+    "title": "lineType",
+    "content": "Type EString Multiplicity 0..1 * Visual style of the transition line. Common values: &ldquo;Default&rdquo;, &ldquo;Straight&rdquo;, &ldquo;Curved&rdquo;.",
+    "timestamp": 1775771582723
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/height/index.html": {
+    "path": "Label/Attributes/height",
+    "link-uuid": "24b200b2-2453-449f-af0d-899b67dd463a",
+    "title": "height",
+    "content": "Type EInt Multiplicity 0..1 * Height of the label box on the canvas.",
+    "timestamp": 1775771582541
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/collapsedHeight/index.html": {
+    "path": "Group/Attributes/collapsedHeight",
+    "link-uuid": "9b5a456f-f84a-46ed-afa4-aa3d478bab1d",
+    "title": "collapsedHeight",
+    "content": "Type EInt Multiplicity 0..1 * Height of the group icon when collapsed.",
+    "timestamp": 1775771582475
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/description/index.html": {
+    "path": "ProcessDefinition/Attributes/description",
+    "link-uuid": "0727379a-c9c8-4e62-b7a2-6bf3b71645a2",
+    "title": "description",
+    "content": "Type EString Multiplicity 0..1 * Optional human-readable description.",
+    "timestamp": 1775771582613
+  },
+  "references/eClassifiers/ProcessVariable/references/eStructuralFeatures/type/index.html": {
+    "path": "ProcessVariable/Attributes/type",
+    "link-uuid": "08e95ffd-79f4-402f-9581-97d84c5397ac",
+    "title": "type",
+    "content": "Type EString Multiplicity 0..1 * XSD type of the variable, e.g. &ldquo;xsd:string&rdquo;, &ldquo;xsd:integer&rdquo;. May reference a custom XSD type declared in the AESchemas folder.",
+    "timestamp": 1775771582673
+  },
+  "references/eClassifiers/Label/references/eStructuralFeatures/y/index.html": {
+    "path": "Label/Attributes/y",
+    "link-uuid": "40e4f1e6-217f-4285-ade3-ce8cc908c9b5",
+    "title": "y",
+    "content": "Type EInt Multiplicity 0..1 * Y coordinate on the design canvas.",
+    "timestamp": 1775771582555
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/processVariables/index.html": {
+    "path": "ProcessDefinition/References/processVariables",
+    "link-uuid": "6ab560c0-ba52-4bfb-bac5-f65c720e7cb6",
+    "title": "processVariables",
+    "content": "Type ProcessVariable Multiplicity 0..* * Process-scoped variables declared in the process.",
+    "timestamp": 1775771582632
+  },
+  "references/eClassifiers/Group/references/eStructuralFeatures/height/index.html": {
+    "path": "Group/Attributes/height",
+    "link-uuid": "a74a8f3c-c4ba-4791-a851-1b07ea9c08f6",
+    "title": "height",
+    "content": "Type EInt Multiplicity 0..1 * Height of the expanded group frame on the design canvas.",
+    "timestamp": 1775771582488
+  },
+  "references/eClassifiers/Group/inheritance.html": {
+    "path": "Group/Inheritance",
+    "link-uuid": "83ae5e98-d4e2-4ce6-a661-7551a791235b",
+    "title": "Inheritance",
+    "content": "Supertypes ",
+    "timestamp": 1775771582466
+  },
+  "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endName/index.html": {
+    "path": "ProcessDefinition/Attributes/endName",
+    "link-uuid": "f2ad5ee4-694a-496e-b2c9-fb10f3e595af",
+    "title": "endName",
+    "content": "Type EString Multiplicity 0..1 * Name of the implicit End node.",
+    "timestamp": 1775771582615
+  }
+}

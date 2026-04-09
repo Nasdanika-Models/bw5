@@ -1,25 +1,13 @@
-/**
- * Xcore model for Tibco BusinessWorks 5.x processes.
- *
- * Covers the core concepts found in .process files:
- *   - ProcessDefinition (root element, namespace http://xmlns.tibco.com/bw/process/2003)
- *   - Activity (tasks/steps)
- *   - Starter (event-source activities that trigger the process)
- *   - Group (containers for sub-activities, e.g. loop, error-handler)
- *   - Transition (connections between activities)
- *   - Label (visual annotations on the diagram)
- *   - ProcessVariable (variables scoped to the process)
- *
- * References:
- *   https://github.com/fastconnect/tibco-bwmaven/tree/master/tibco-bw-process-model-schema
- *   https://github.com/joshuamoesa/tibco-businessworks5
- *   https://github.com/tibcobwblog/tibcobwblog_samples/tree/master/bw5.x
- */
-@Ecore(nsURI="ecore://nasdanika.org/models/tibco/bw", nsPrefix="tibco.bw")
+@Ecore(nsURI="https://bw.tibco.models.nasdanika.org", nsPrefix="org.nasdanika.models.tibco.bw")
 @GenModel(
-    basePackage="org.nasdanika.models.tibco.bw",
-    modelDirectory="tibco-bw/model/src/main/java",
-    documentation="Xcore model for Tibco BusinessWorks 5.x process concepts."
+    documentation="Xcore model for Tibco BusinessWorks 5.x process concepts.",
+    bundleManifest="false",
+    featureDelegation="Dynamic",
+    complianceLevel="21.0",
+    suppressGenModelAnnotations="false",
+    copyrightFields="false",
+    operationReflection="true",
+    importOrganizing="true"
 )
 package org.nasdanika.models.tibco.bw
 
@@ -162,7 +150,7 @@ class Activity extends NamedElement {
      * Fully-qualified Java class name of the activity implementation,
      * e.g. "com.tibco.pe.core.WriteToLogActivity".
      */
-    String type
+    String ^type
 
     /**
      * Palette / resource-type identifier used by the BW Designer,
@@ -218,7 +206,7 @@ class Group extends NamedElement {
      * Fully-qualified Java class name of the group implementation,
      * e.g. "com.tibco.pe.core.LoopGroup".
      */
-    String type
+    String ^type
 
     /**
      * Palette / resource-type identifier, e.g. "ae.process.group".
@@ -384,7 +372,7 @@ class Label {
     /**
      * Label shape type.
      */
-    String type
+    String ^type
 
     /**
      * Border line thickness.
@@ -413,7 +401,7 @@ class ProcessVariable {
      * XSD type of the variable, e.g. "xsd:string", "xsd:integer".
      * May reference a custom XSD type declared in the AESchemas folder.
      */
-    String type
+    String ^type
 
     /**
      * Optional documentation / description.

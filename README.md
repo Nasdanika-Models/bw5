@@ -1,6 +1,6 @@
-# tibco-bw
+# Tibco BW
 
-A model of Tibco BusinessWorks artifacts for demonstration of model-driven legacy modernization.
+A model of Tibco BusinessWorks artifacts for demonstration of [model-driven legacy modernization](https://medium.com/nasdanika/stop-asking-ai-to-read-spaghetti-why-context-windows-and-tools-arent-enough-for-legacy-8787d8d4d49a).
 
 ## Overview
 
