@@ -100,7 +100,7 @@ class ProcessDefinition {
      * Stored as raw XML text because the bindings reference arbitrary namespaces.
      */
     String returnBindings
-
+    
     /**
      * The optional event-source activity that starts this process
      * (e.g. an HTTP receiver, JMS queue listener, Timer, ...).

@@ -1061,18 +1061,20 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createResource(eNS_URI);
 
 		// Create annotations
+		// null
+		createNullAnnotations();
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * Initializes the annotations for <b>null</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createGenModelAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/GenModel";
+	protected void createNullAnnotations() {
+		String source = null;
 		addAnnotation
 		  (this,
 		   source,
@@ -1087,6 +1089,16 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "importOrganizing", "true",
 			   "basePackage", "org.nasdanika.models.tibco"
 		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
 		  (namedElementEClass,
 		   source,
