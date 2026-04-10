@@ -98,6 +98,9 @@ class BwProcessLoaderTest {
 	@Test
 	void testActivities() {
 		assertEquals(2, pd.getActivities().size());
+		pd.getActivities().forEach(activity -> {
+			System.out.println("Activity: " + activity.getName() + ", type: " + activity.getType() + "  " + activity.getOutgoingTransitions().size() + " " + activity.getIncomingTransitions().size());
+		});
 	}
 
 	@Test

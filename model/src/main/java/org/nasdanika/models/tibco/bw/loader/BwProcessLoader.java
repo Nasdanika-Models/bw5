@@ -2,22 +2,19 @@ package org.nasdanika.models.tibco.bw.loader;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stax.StAXSource;
-import javax.xml.transform.stream.StreamResult;
 
 import org.nasdanika.models.tibco.bw.Activity;
 import org.nasdanika.models.tibco.bw.BwFactory;
+import org.nasdanika.models.tibco.bw.Container;
 import org.nasdanika.models.tibco.bw.Group;
 import org.nasdanika.models.tibco.bw.Label;
+import org.nasdanika.models.tibco.bw.NamedElement;
+import org.nasdanika.models.tibco.bw.Node;
 import org.nasdanika.models.tibco.bw.ProcessDefinition;
 import org.nasdanika.models.tibco.bw.ProcessVariable;
 import org.nasdanika.models.tibco.bw.Starter;
@@ -82,13 +79,39 @@ public class BwProcessLoader {
 				if (event == XMLStreamConstants.START_ELEMENT
 						&& "ProcessDefinition".equals(reader.getLocalName())
 						&& PD_NAMESPACE.equals(reader.getNamespaceURI())) {
-					return parseProcessDefinition(reader);
+					ProcessDefinition processDefinition = parseProcessDefinition(reader);
+					resolve(processDefinition);
+					return processDefinition;
 				}
 			}
 			return null;
 		} finally {
 			reader.close();
 		}
+	}
+
+	private void resolve(Container container) {
+		container.getTransitions().forEach(t -> {
+			if (t.getFrom() != null && t.getTo() != null) {
+				t.setSource(findNodeByName(container, t.getFrom()));
+				t.setTarget(findNodeByName(container, t.getTo()));
+			}
+		});
+		
+	}
+	
+	final Node findNodeByName(Container container, String name) {
+		for (Activity activity : container.getActivities()) {
+			if (name.equals(activity.getName())) {
+				return activity;
+			}
+		}
+		for (Group group : container.getGroups()) {
+			if (name.equals(group.getName())) {
+				return group;
+			}
+		}
+		return null;
 	}
 
 	// -------------------------------------------------------------------------
@@ -120,6 +143,65 @@ public class BwProcessLoader {
 		}
 		return pd;
 	}
+	
+	/**
+	 * Dispatches a child element of {@code pd:ProcessDefinition} to the
+	 * appropriate handler.
+	 */
+	private void handleNamedElementChild(XMLStreamReader reader, NamedElement namedElement) throws XMLStreamException {
+
+		String ns = reader.getNamespaceURI();
+		String localName = reader.getLocalName();
+
+		if (PD_NAMESPACE.equals(ns)) {
+			switch (localName) {
+				case "name":
+					namedElement.setName(reader.getElementText());
+					break;
+				case "description":
+					namedElement.setDescription(reader.getElementText());
+					break;
+				default:
+					skipElement(reader);
+					break;
+			}
+		} else {
+			// Non-pd namespace children are skipped
+			skipElement(reader);
+		}
+	}
+	
+	/**
+	 * Dispatches a child element of {@code pd:ProcessDefinition} to the
+	 * appropriate handler.
+	 */
+	private void handleContainerChild(XMLStreamReader reader, Container container)
+			throws XMLStreamException {
+
+		String ns = reader.getNamespaceURI();
+		String localName = reader.getLocalName();
+
+		if (PD_NAMESPACE.equals(ns)) {
+			switch (localName) {
+				case "activity":
+					container.getActivities().add(parseActivity(reader));
+					break;
+				case "group":
+					container.getGroups().add(parseGroup(reader));
+					break;
+				case "transition":
+					container.getTransitions().add(parseTransition(reader));
+					break;
+				default:
+					handleNamedElementChild(reader, container);
+					break;
+			}
+		} else {
+			// Non-pd namespace children are skipped
+			skipElement(reader);
+		}
+	}
+	
 
 	/**
 	 * Dispatches a child element of {@code pd:ProcessDefinition} to the
@@ -133,12 +215,6 @@ public class BwProcessLoader {
 
 		if (PD_NAMESPACE.equals(ns)) {
 			switch (localName) {
-				case "name":
-					pd.setName(reader.getElementText());
-					break;
-				case "description":
-					pd.setDescription(reader.getElementText());
-					break;
 				case "startName":
 					pd.setStartName(reader.getElementText());
 					break;
@@ -175,15 +251,6 @@ public class BwProcessLoader {
 				case "starter":
 					pd.setStarter(parseStarter(reader));
 					break;
-				case "activity":
-					pd.getActivities().add(parseActivity(reader));
-					break;
-				case "group":
-					pd.getGroups().add(parseGroup(reader));
-					break;
-				case "transition":
-					pd.getTransitions().add(parseTransition(reader));
-					break;
 				case "label":
 					pd.getLabels().add(parseLabel(reader));
 					break;
@@ -191,7 +258,7 @@ public class BwProcessLoader {
 					parseProcessVariables(reader, pd);
 					break;
 				default:
-					skipElement(reader);
+					handleContainerChild(reader, pd);
 					break;
 			}
 		} else {
@@ -199,7 +266,8 @@ public class BwProcessLoader {
 			skipElement(reader);
 		}
 	}
-
+	
+	
 	// -------------------------------------------------------------------------
 	// Activity / Starter
 	// -------------------------------------------------------------------------
@@ -260,8 +328,33 @@ public class BwProcessLoader {
 	 * Dispatches a child element of an activity (or starter) to the
 	 * appropriate setter.
 	 */
-	private void handleActivityChild(XMLStreamReader reader, Activity activity)
-			throws XMLStreamException {
+	private void handleNodeChild(XMLStreamReader reader, Node node)	throws XMLStreamException {
+
+		String ns = reader.getNamespaceURI();
+		String localName = reader.getLocalName();
+
+		if (PD_NAMESPACE.equals(ns)) {
+			switch (localName) {
+				case "x":
+					node.setX(parseIntText(reader));
+					break;
+				case "y":
+					node.setY(parseIntText(reader));
+					break;
+				default:
+					handleNamedElementChild(reader, node);
+					break;
+			}
+		} else {
+			skipElement(reader);
+		}
+	}
+
+	/**
+	 * Dispatches a child element of an activity (or starter) to the
+	 * appropriate setter.
+	 */
+	private void handleActivityChild(XMLStreamReader reader, Activity activity)	throws XMLStreamException {
 
 		String ns = reader.getNamespaceURI();
 		String localName = reader.getLocalName();
@@ -274,17 +367,11 @@ public class BwProcessLoader {
 				case "resourceType":
 					activity.setResourceType(reader.getElementText());
 					break;
-				case "x":
-					activity.setX(parseIntText(reader));
-					break;
-				case "y":
-					activity.setY(parseIntText(reader));
-					break;
 				case "inputBindings":
 					activity.setInputBindings(captureXmlContent(reader));
 					break;
 				default:
-					skipElement(reader);
+					handleNodeChild(reader, activity);
 					break;
 			}
 		} else if ("config".equals(localName) && (ns == null || ns.isEmpty())) {
@@ -335,18 +422,6 @@ public class BwProcessLoader {
 
 		if (PD_NAMESPACE.equals(ns)) {
 			switch (localName) {
-				case "type":
-					group.setType(reader.getElementText());
-					break;
-				case "resourceType":
-					group.setResourceType(reader.getElementText());
-					break;
-				case "x":
-					group.setX(parseIntText(reader));
-					break;
-				case "y":
-					group.setY(parseIntText(reader));
-					break;
 				case "width":
 					group.setWidth(parseIntText(reader));
 					break;
@@ -362,9 +437,6 @@ public class BwProcessLoader {
 				case "group-expanded":
 					group.setExpanded(Boolean.parseBoolean(reader.getElementText()));
 					break;
-				case "inputBindings":
-					group.setInputBindings(captureXmlContent(reader));
-					break;
 				case "activity":
 					group.getActivities().add(parseActivity(reader));
 					break;
@@ -375,7 +447,7 @@ public class BwProcessLoader {
 					group.getTransitions().add(parseTransition(reader));
 					break;
 				default:
-					skipElement(reader);
+					handleActivityChild(reader, group);
 					break;
 			}
 		} else if ("config".equals(localName) && (ns == null || ns.isEmpty())) {
@@ -492,18 +564,6 @@ public class BwProcessLoader {
 
 		if (PD_NAMESPACE.equals(ns)) {
 			switch (localName) {
-				case "name":
-					label.setName(reader.getElementText());
-					break;
-				case "description":
-					label.setDescription(reader.getElementText());
-					break;
-				case "x":
-					label.setX(parseIntText(reader));
-					break;
-				case "y":
-					label.setY(parseIntText(reader));
-					break;
 				case "width":
 					label.setWidth(parseIntText(reader));
 					break;
@@ -526,7 +586,7 @@ public class BwProcessLoader {
 					label.setFade(reader.getElementText());
 					break;
 				default:
-					skipElement(reader);
+					handleNodeChild(reader, label);
 					break;
 			}
 		} else {
