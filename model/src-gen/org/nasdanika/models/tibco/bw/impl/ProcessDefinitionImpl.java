@@ -11,18 +11,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.nasdanika.models.tibco.bw.Activity;
 import org.nasdanika.models.tibco.bw.BwPackage;
-import org.nasdanika.models.tibco.bw.Group;
 import org.nasdanika.models.tibco.bw.Label;
 import org.nasdanika.models.tibco.bw.ProcessDefinition;
 import org.nasdanika.models.tibco.bw.ProcessVariable;
 import org.nasdanika.models.tibco.bw.Starter;
-import org.nasdanika.models.tibco.bw.Transition;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +27,6 @@ import org.nasdanika.models.tibco.bw.Transition;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartName <em>Start Name</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartX <em>Start X</em>}</li>
@@ -45,9 +38,6 @@ import org.nasdanika.models.tibco.bw.Transition;
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getTargetNamespace <em>Target Namespace</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getReturnBindings <em>Return Bindings</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStarter <em>Starter</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getActivities <em>Activities</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getGroups <em>Groups</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getProcessVariables <em>Process Variables</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getErrorSchemas <em>Error Schemas</em>}</li>
@@ -55,27 +45,7 @@ import org.nasdanika.models.tibco.bw.Transition;
  *
  * @generated
  */
-public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implements ProcessDefinition {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
+public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefinition {
 	/**
 	 * The default value of the '{@link #getStartName() <em>Start Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -203,56 +173,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	protected EClass eStaticClass() {
 		return BwPackage.Literals.PROCESS_DEFINITION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getName() {
-		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__NAME, BwPackage.Literals.PROCESS_DEFINITION__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__NAME, BwPackage.Literals.PROCESS_DEFINITION__NAME, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDescription() {
-		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__DESCRIPTION, BwPackage.Literals.PROCESS_DEFINITION__DESCRIPTION, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDescription(String newDescription) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__DESCRIPTION, BwPackage.Literals.PROCESS_DEFINITION__DESCRIPTION, newDescription);
 	}
 
 	/**
@@ -492,39 +412,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Activity> getActivities() {
-		return (EList<Activity>)eDynamicGet(BwPackage.PROCESS_DEFINITION__ACTIVITIES, BwPackage.Literals.PROCESS_DEFINITION__ACTIVITIES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Group> getGroups() {
-		return (EList<Group>)eDynamicGet(BwPackage.PROCESS_DEFINITION__GROUPS, BwPackage.Literals.PROCESS_DEFINITION__GROUPS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Transition> getTransitions() {
-		return (EList<Transition>)eDynamicGet(BwPackage.PROCESS_DEFINITION__TRANSITIONS, BwPackage.Literals.PROCESS_DEFINITION__TRANSITIONS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
 	public EList<Label> getLabels() {
 		return (EList<Label>)eDynamicGet(BwPackage.PROCESS_DEFINITION__LABELS, BwPackage.Literals.PROCESS_DEFINITION__LABELS, true, true);
 	}
@@ -570,12 +457,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				return basicSetStarter(null, msgs);
-			case BwPackage.PROCESS_DEFINITION__ACTIVITIES:
-				return ((InternalEList<?>)getActivities()).basicRemove(otherEnd, msgs);
-			case BwPackage.PROCESS_DEFINITION__GROUPS:
-				return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
-			case BwPackage.PROCESS_DEFINITION__TRANSITIONS:
-				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
 			case BwPackage.PROCESS_DEFINITION__LABELS:
 				return ((InternalEList<?>)getLabels()).basicRemove(otherEnd, msgs);
 			case BwPackage.PROCESS_DEFINITION__PROCESS_VARIABLES:
@@ -592,10 +473,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BwPackage.PROCESS_DEFINITION__NAME:
-				return getName();
-			case BwPackage.PROCESS_DEFINITION__DESCRIPTION:
-				return getDescription();
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				return getStartName();
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
@@ -618,12 +495,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 				return getReturnBindings();
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				return getStarter();
-			case BwPackage.PROCESS_DEFINITION__ACTIVITIES:
-				return getActivities();
-			case BwPackage.PROCESS_DEFINITION__GROUPS:
-				return getGroups();
-			case BwPackage.PROCESS_DEFINITION__TRANSITIONS:
-				return getTransitions();
 			case BwPackage.PROCESS_DEFINITION__LABELS:
 				return getLabels();
 			case BwPackage.PROCESS_DEFINITION__PROCESS_VARIABLES:
@@ -643,12 +514,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BwPackage.PROCESS_DEFINITION__NAME:
-				setName((String)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				setStartName((String)newValue);
 				return;
@@ -682,18 +547,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				setStarter((Starter)newValue);
 				return;
-			case BwPackage.PROCESS_DEFINITION__ACTIVITIES:
-				getActivities().clear();
-				getActivities().addAll((Collection<? extends Activity>)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__GROUPS:
-				getGroups().clear();
-				getGroups().addAll((Collection<? extends Group>)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__TRANSITIONS:
-				getTransitions().clear();
-				getTransitions().addAll((Collection<? extends Transition>)newValue);
-				return;
 			case BwPackage.PROCESS_DEFINITION__LABELS:
 				getLabels().clear();
 				getLabels().addAll((Collection<? extends Label>)newValue);
@@ -717,12 +570,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BwPackage.PROCESS_DEFINITION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case BwPackage.PROCESS_DEFINITION__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				setStartName(START_NAME_EDEFAULT);
 				return;
@@ -756,15 +603,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				setStarter((Starter)null);
 				return;
-			case BwPackage.PROCESS_DEFINITION__ACTIVITIES:
-				getActivities().clear();
-				return;
-			case BwPackage.PROCESS_DEFINITION__GROUPS:
-				getGroups().clear();
-				return;
-			case BwPackage.PROCESS_DEFINITION__TRANSITIONS:
-				getTransitions().clear();
-				return;
 			case BwPackage.PROCESS_DEFINITION__LABELS:
 				getLabels().clear();
 				return;
@@ -786,10 +624,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BwPackage.PROCESS_DEFINITION__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case BwPackage.PROCESS_DEFINITION__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				return START_NAME_EDEFAULT == null ? getStartName() != null : !START_NAME_EDEFAULT.equals(getStartName());
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
@@ -812,12 +646,6 @@ public class ProcessDefinitionImpl extends MinimalEObjectImpl.Container implemen
 				return RETURN_BINDINGS_EDEFAULT == null ? getReturnBindings() != null : !RETURN_BINDINGS_EDEFAULT.equals(getReturnBindings());
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				return getStarter() != null;
-			case BwPackage.PROCESS_DEFINITION__ACTIVITIES:
-				return !getActivities().isEmpty();
-			case BwPackage.PROCESS_DEFINITION__GROUPS:
-				return !getGroups().isEmpty();
-			case BwPackage.PROCESS_DEFINITION__TRANSITIONS:
-				return !getTransitions().isEmpty();
 			case BwPackage.PROCESS_DEFINITION__LABELS:
 				return !getLabels().isEmpty();
 			case BwPackage.PROCESS_DEFINITION__PROCESS_VARIABLES:

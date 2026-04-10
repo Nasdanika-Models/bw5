@@ -103,14 +103,14 @@ public interface BwPackage extends EPackage {
 	int NAMED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl <em>Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl
-	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getProcessDefinition()
+	 * @see org.nasdanika.models.tibco.bw.impl.ContainerImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getContainer()
 	 * @generated
 	 */
-	int PROCESS_DEFINITION = 1;
+	int CONTAINER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -119,7 +119,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__NAME = 0;
+	int CONTAINER__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -128,106 +128,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__DESCRIPTION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Start Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Start Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_TYPE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Start X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_X = 4;
-
-	/**
-	 * The feature id for the '<em><b>Start Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_Y = 5;
-
-	/**
-	 * The feature id for the '<em><b>End Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_NAME = 6;
-
-	/**
-	 * The feature id for the '<em><b>End Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_TYPE = 7;
-
-	/**
-	 * The feature id for the '<em><b>End X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_X = 8;
-
-	/**
-	 * The feature id for the '<em><b>End Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_Y = 9;
-
-	/**
-	 * The feature id for the '<em><b>Target Namespace</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__TARGET_NAMESPACE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__RETURN_BINDINGS = 11;
-
-	/**
-	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__STARTER = 12;
+	int CONTAINER__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -236,7 +137,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ACTIVITIES = 13;
+	int CONTAINER__ACTIVITIES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -245,7 +146,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__GROUPS = 14;
+	int CONTAINER__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -254,7 +155,179 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__TRANSITIONS = 15;
+	int CONTAINER__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getProcessDefinition()
+	 * @generated
+	 */
+	int PROCESS_DEFINITION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__NAME = CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__DESCRIPTION = CONTAINER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__ACTIVITIES = CONTAINER__ACTIVITIES;
+
+	/**
+	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__GROUPS = CONTAINER__GROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__TRANSITIONS = CONTAINER__TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__START_NAME = CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Start X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__START_X = CONTAINER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Start Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__START_Y = CONTAINER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>End Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__END_NAME = CONTAINER_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>End Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>End X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__END_X = CONTAINER_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>End Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__END_Y = CONTAINER_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Target Namespace</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -263,7 +336,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__LABELS = 16;
+	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Process Variables</b></em>' containment reference list.
@@ -272,7 +345,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__PROCESS_VARIABLES = 17;
+	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Error Schemas</b></em>' attribute.
@@ -281,7 +354,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ERROR_SCHEMAS = 18;
+	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Process Definition</em>' class.
@@ -290,7 +363,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_FEATURE_COUNT = 19;
+	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Process Definition</em>' class.
@@ -299,7 +372,244 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_OPERATION_COUNT = 0;
+	int PROCESS_DEFINITION_OPERATION_COUNT = CONTAINER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.NodeImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__X = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__Y = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__OUTGOING_TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__INCOMING_TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.TypedElementImpl <em>Typed Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.TypedElementImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getTypedElement()
+	 * @generated
+	 */
+	int TYPED_ELEMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Typed Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Typed Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.TypedNodeImpl <em>Typed Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.TypedNodeImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getTypedNode()
+	 * @generated
+	 */
+	int TYPED_NODE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__NAME = TYPED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__DESCRIPTION = TYPED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__TYPE = TYPED_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__X = TYPED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__Y = TYPED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__OUTGOING_TRANSITIONS = TYPED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__INCOMING_TRANSITIONS = TYPED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE__RESOURCE_TYPE = TYPED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Typed Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE_FEATURE_COUNT = TYPED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Typed Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NODE_OPERATION_COUNT = TYPED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ActivityImpl <em>Activity</em>}' class.
@@ -309,7 +619,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 2;
+	int ACTIVITY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -318,7 +628,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__NAME = NAMED_ELEMENT__NAME;
+	int ACTIVITY__NAME = TYPED_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -327,7 +637,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
+	int ACTIVITY__DESCRIPTION = TYPED_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -336,16 +646,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__RESOURCE_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int ACTIVITY__TYPE = TYPED_NODE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -354,7 +655,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__X = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int ACTIVITY__X = TYPED_NODE__X;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -363,7 +664,34 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__Y = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int ACTIVITY__Y = TYPED_NODE__Y;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__OUTGOING_TRANSITIONS = TYPED_NODE__OUTGOING_TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__INCOMING_TRANSITIONS = TYPED_NODE__INCOMING_TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__RESOURCE_TYPE = TYPED_NODE__RESOURCE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -372,7 +700,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__CONFIG = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int ACTIVITY__CONFIG = TYPED_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Input Bindings</b></em>' attribute.
@@ -381,7 +709,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__INPUT_BINDINGS = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int ACTIVITY__INPUT_BINDINGS = TYPED_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -390,7 +718,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int ACTIVITY_FEATURE_COUNT = TYPED_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -399,7 +727,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int ACTIVITY_OPERATION_COUNT = TYPED_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.StarterImpl <em>Starter</em>}' class.
@@ -409,7 +737,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getStarter()
 	 * @generated
 	 */
-	int STARTER = 3;
+	int STARTER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -439,15 +767,6 @@ public interface BwPackage extends EPackage {
 	int STARTER__TYPE = ACTIVITY__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STARTER__RESOURCE_TYPE = ACTIVITY__RESOURCE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -464,6 +783,33 @@ public interface BwPackage extends EPackage {
 	 * @ordered
 	 */
 	int STARTER__Y = ACTIVITY__Y;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__OUTGOING_TRANSITIONS = ACTIVITY__OUTGOING_TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__INCOMING_TRANSITIONS = ACTIVITY__INCOMING_TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__RESOURCE_TYPE = ACTIVITY__RESOURCE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -509,7 +855,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getGroup()
 	 * @generated
 	 */
-	int GROUP = 4;
+	int GROUP = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -518,7 +864,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__NAME = NAMED_ELEMENT__NAME;
+	int GROUP__NAME = ACTIVITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -527,7 +873,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
+	int GROUP__DESCRIPTION = ACTIVITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -536,16 +882,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__RESOURCE_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int GROUP__TYPE = ACTIVITY__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -554,7 +891,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__X = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int GROUP__X = ACTIVITY__X;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -563,52 +900,34 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__Y = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int GROUP__Y = ACTIVITY__Y;
 
 	/**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__WIDTH = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int GROUP__OUTGOING_TRANSITIONS = ACTIVITY__OUTGOING_TRANSITIONS;
 
 	/**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__HEIGHT = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int GROUP__INCOMING_TRANSITIONS = ACTIVITY__INCOMING_TRANSITIONS;
 
 	/**
-	 * The feature id for the '<em><b>Collapsed Width</b></em>' attribute.
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__COLLAPSED_WIDTH = NAMED_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Collapsed Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__COLLAPSED_HEIGHT = NAMED_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Expanded</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__EXPANDED = NAMED_ELEMENT_FEATURE_COUNT + 8;
+	int GROUP__RESOURCE_TYPE = ACTIVITY__RESOURCE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -617,7 +936,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__CONFIG = NAMED_ELEMENT_FEATURE_COUNT + 9;
+	int GROUP__CONFIG = ACTIVITY__CONFIG;
 
 	/**
 	 * The feature id for the '<em><b>Input Bindings</b></em>' attribute.
@@ -626,7 +945,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__INPUT_BINDINGS = NAMED_ELEMENT_FEATURE_COUNT + 10;
+	int GROUP__INPUT_BINDINGS = ACTIVITY__INPUT_BINDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -635,7 +954,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__ACTIVITIES = NAMED_ELEMENT_FEATURE_COUNT + 11;
+	int GROUP__ACTIVITIES = ACTIVITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -644,7 +963,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 12;
+	int GROUP__GROUPS = ACTIVITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -653,7 +972,52 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 13;
+	int GROUP__TRANSITIONS = ACTIVITY_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__WIDTH = ACTIVITY_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__HEIGHT = ACTIVITY_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__COLLAPSED_WIDTH = ACTIVITY_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__COLLAPSED_HEIGHT = ACTIVITY_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Expanded</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__EXPANDED = ACTIVITY_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -662,7 +1026,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 14;
+	int GROUP_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -671,7 +1035,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int GROUP_OPERATION_COUNT = ACTIVITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.TransitionImpl <em>Transition</em>}' class.
@@ -681,7 +1045,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITION = 5;
+	int TRANSITION = 9;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -693,13 +1057,31 @@ public interface BwPackage extends EPackage {
 	int TRANSITION__FROM = 0;
 
 	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__SOURCE = 1;
+
+	/**
 	 * The feature id for the '<em><b>To</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__TO = 1;
+	int TRANSITION__TO = 2;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__TARGET = 3;
 
 	/**
 	 * The feature id for the '<em><b>Line Type</b></em>' attribute.
@@ -708,7 +1090,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__LINE_TYPE = 2;
+	int TRANSITION__LINE_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -717,7 +1099,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__LINE_COLOR = 3;
+	int TRANSITION__LINE_COLOR = 5;
 
 	/**
 	 * The feature id for the '<em><b>Condition Type</b></em>' attribute.
@@ -726,7 +1108,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__CONDITION_TYPE = 4;
+	int TRANSITION__CONDITION_TYPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' attribute.
@@ -735,7 +1117,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__CONDITION = 5;
+	int TRANSITION__CONDITION = 7;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -744,7 +1126,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = 6;
+	int TRANSITION_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -763,7 +1145,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 6;
+	int LABEL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -772,7 +1154,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__NAME = 0;
+	int LABEL__NAME = NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -781,7 +1163,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__DESCRIPTION = 1;
+	int LABEL__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -790,7 +1172,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__X = 2;
+	int LABEL__X = NODE__X;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -799,7 +1181,25 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__Y = 3;
+	int LABEL__Y = NODE__Y;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__OUTGOING_TRANSITIONS = NODE__OUTGOING_TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__INCOMING_TRANSITIONS = NODE__INCOMING_TRANSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -808,7 +1208,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__WIDTH = 4;
+	int LABEL__WIDTH = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -817,7 +1217,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__HEIGHT = 5;
+	int LABEL__HEIGHT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Font Color</b></em>' attribute.
@@ -826,7 +1226,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FONT_COLOR = 6;
+	int LABEL__FONT_COLOR = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -835,7 +1235,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__COLOR = 7;
+	int LABEL__COLOR = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -844,7 +1244,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TYPE = 8;
+	int LABEL__TYPE = NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Thickness</b></em>' attribute.
@@ -853,7 +1253,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__THICKNESS = 9;
+	int LABEL__THICKNESS = NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Fade</b></em>' attribute.
@@ -862,7 +1262,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FADE = 10;
+	int LABEL__FADE = NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Label</em>' class.
@@ -871,7 +1271,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = 11;
+	int LABEL_FEATURE_COUNT = NODE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Label</em>' class.
@@ -880,7 +1280,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_OPERATION_COUNT = 0;
+	int LABEL_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ProcessVariableImpl <em>Process Variable</em>}' class.
@@ -890,7 +1290,7 @@ public interface BwPackage extends EPackage {
 	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getProcessVariable()
 	 * @generated
 	 */
-	int PROCESS_VARIABLE = 7;
+	int PROCESS_VARIABLE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -899,16 +1299,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_VARIABLE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_VARIABLE__TYPE = 1;
+	int PROCESS_VARIABLE__NAME = TYPED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -917,7 +1308,16 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_VARIABLE__DESCRIPTION = 2;
+	int PROCESS_VARIABLE__DESCRIPTION = TYPED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_VARIABLE__TYPE = TYPED_ELEMENT__TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Process Variable</em>' class.
@@ -926,7 +1326,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_VARIABLE_FEATURE_COUNT = 3;
+	int PROCESS_VARIABLE_FEATURE_COUNT = TYPED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Process Variable</em>' class.
@@ -935,7 +1335,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_VARIABLE_OPERATION_COUNT = 0;
+	int PROCESS_VARIABLE_OPERATION_COUNT = TYPED_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -971,6 +1371,49 @@ public interface BwPackage extends EPackage {
 	EAttribute getNamedElement_Description();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Container <em>Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Container</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container
+	 * @generated
+	 */
+	EClass getContainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Container#getActivities <em>Activities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Activities</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container#getActivities()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_Activities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Container#getGroups <em>Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Groups</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container#getGroups()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_Groups();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Container#getTransitions <em>Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container#getTransitions()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_Transitions();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.ProcessDefinition <em>Process Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -979,28 +1422,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getProcessDefinition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getName()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getDescription()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartName <em>Start Name</em>}'.
@@ -1124,39 +1545,6 @@ public interface BwPackage extends EPackage {
 	EReference getProcessDefinition_Starter();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getActivities <em>Activities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getActivities()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EReference getProcessDefinition_Activities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getGroups <em>Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Groups</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getGroups()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EReference getProcessDefinition_Groups();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getTransitions <em>Transitions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getTransitions()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EReference getProcessDefinition_Transitions();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getLabels <em>Labels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1190,6 +1578,102 @@ public interface BwPackage extends EPackage {
 	EAttribute getProcessDefinition_ErrorSchemas();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Node#getX <em>X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>X</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Node#getX()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_X();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Node#getY <em>Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Y</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Node#getY()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Y();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.tibco.bw.Node#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Outgoing Transitions</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Node#getOutgoingTransitions()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_OutgoingTransitions();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.tibco.bw.Node#getIncomingTransitions <em>Incoming Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Incoming Transitions</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Node#getIncomingTransitions()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_IncomingTransitions();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.TypedElement <em>Typed Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Typed Element</em>'.
+	 * @see org.nasdanika.models.tibco.bw.TypedElement
+	 * @generated
+	 */
+	EClass getTypedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.TypedElement#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.nasdanika.models.tibco.bw.TypedElement#getType()
+	 * @see #getTypedElement()
+	 * @generated
+	 */
+	EAttribute getTypedElement_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.TypedNode <em>Typed Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Typed Node</em>'.
+	 * @see org.nasdanika.models.tibco.bw.TypedNode
+	 * @generated
+	 */
+	EClass getTypedNode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.TypedNode#getResourceType <em>Resource Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resource Type</em>'.
+	 * @see org.nasdanika.models.tibco.bw.TypedNode#getResourceType()
+	 * @see #getTypedNode()
+	 * @generated
+	 */
+	EAttribute getTypedNode_ResourceType();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Activity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1198,50 +1682,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getActivity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Activity#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Activity#getType()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Activity#getResourceType <em>Resource Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resource Type</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Activity#getResourceType()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_ResourceType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Activity#getX <em>X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Activity#getX()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_X();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Activity#getY <em>Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Activity#getY()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_Y();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Activity#getConfig <em>Config</em>}'.
@@ -1284,50 +1724,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGroup();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getType()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getResourceType <em>Resource Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resource Type</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getResourceType()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_ResourceType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getX <em>X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getX()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_X();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getY <em>Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getY()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_Y();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getWidth <em>Width</em>}'.
@@ -1385,61 +1781,6 @@ public interface BwPackage extends EPackage {
 	EAttribute getGroup_Expanded();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getConfig <em>Config</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Config</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getConfig()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_Config();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Group#getInputBindings <em>Input Bindings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Bindings</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getInputBindings()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EAttribute getGroup_InputBindings();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Group#getActivities <em>Activities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getActivities()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EReference getGroup_Activities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Group#getGroups <em>Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Groups</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getGroups()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EReference getGroup_Groups();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Group#getTransitions <em>Transitions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Group#getTransitions()
-	 * @see #getGroup()
-	 * @generated
-	 */
-	EReference getGroup_Transitions();
-
-	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1461,6 +1802,17 @@ public interface BwPackage extends EPackage {
 	EAttribute getTransition_From();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Transition#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Transition#getSource()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Source();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Transition#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1470,6 +1822,17 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTransition_To();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Transition#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Transition#getTarget()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Target();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Transition#getLineType <em>Line Type</em>}'.
@@ -1524,50 +1887,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Label#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Label#getName()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Label#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Label#getDescription()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Description();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Label#getX <em>X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Label#getX()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_X();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Label#getY <em>Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.nasdanika.models.tibco.bw.Label#getY()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Y();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Label#getWidth <em>Width</em>}'.
@@ -1657,39 +1976,6 @@ public interface BwPackage extends EPackage {
 	EClass getProcessVariable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessVariable#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessVariable#getName()
-	 * @see #getProcessVariable()
-	 * @generated
-	 */
-	EAttribute getProcessVariable_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessVariable#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessVariable#getType()
-	 * @see #getProcessVariable()
-	 * @generated
-	 */
-	EAttribute getProcessVariable_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessVariable#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessVariable#getDescription()
-	 * @see #getProcessVariable()
-	 * @generated
-	 */
-	EAttribute getProcessVariable_Description();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1739,6 +2025,40 @@ public interface BwPackage extends EPackage {
 		EAttribute NAMED_ELEMENT__DESCRIPTION = eINSTANCE.getNamedElement_Description();
 
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl <em>Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.ContainerImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getContainer()
+		 * @generated
+		 */
+		EClass CONTAINER = eINSTANCE.getContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__ACTIVITIES = eINSTANCE.getContainer_Activities();
+
+		/**
+		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__GROUPS = eINSTANCE.getContainer_Groups();
+
+		/**
+		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__TRANSITIONS = eINSTANCE.getContainer_Transitions();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1747,22 +2067,6 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROCESS_DEFINITION = eINSTANCE.getProcessDefinition();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__NAME = eINSTANCE.getProcessDefinition_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__DESCRIPTION = eINSTANCE.getProcessDefinition_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Start Name</b></em>' attribute feature.
@@ -1853,30 +2157,6 @@ public interface BwPackage extends EPackage {
 		EReference PROCESS_DEFINITION__STARTER = eINSTANCE.getProcessDefinition_Starter();
 
 		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESS_DEFINITION__ACTIVITIES = eINSTANCE.getProcessDefinition_Activities();
-
-		/**
-		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESS_DEFINITION__GROUPS = eINSTANCE.getProcessDefinition_Groups();
-
-		/**
-		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESS_DEFINITION__TRANSITIONS = eINSTANCE.getProcessDefinition_Transitions();
-
-		/**
 		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1901,6 +2181,84 @@ public interface BwPackage extends EPackage {
 		EAttribute PROCESS_DEFINITION__ERROR_SCHEMAS = eINSTANCE.getProcessDefinition_ErrorSchemas();
 
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.NodeImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__X = eINSTANCE.getNode_X();
+
+		/**
+		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__Y = eINSTANCE.getNode_Y();
+
+		/**
+		 * The meta object literal for the '<em><b>Outgoing Transitions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__OUTGOING_TRANSITIONS = eINSTANCE.getNode_OutgoingTransitions();
+
+		/**
+		 * The meta object literal for the '<em><b>Incoming Transitions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__INCOMING_TRANSITIONS = eINSTANCE.getNode_IncomingTransitions();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.TypedElementImpl <em>Typed Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.TypedElementImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getTypedElement()
+		 * @generated
+		 */
+		EClass TYPED_ELEMENT = eINSTANCE.getTypedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPED_ELEMENT__TYPE = eINSTANCE.getTypedElement_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.TypedNodeImpl <em>Typed Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.TypedNodeImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getTypedNode()
+		 * @generated
+		 */
+		EClass TYPED_NODE = eINSTANCE.getTypedNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPED_NODE__RESOURCE_TYPE = eINSTANCE.getTypedNode_ResourceType();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ActivityImpl <em>Activity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1909,38 +2267,6 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ACTIVITY = eINSTANCE.getActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__TYPE = eINSTANCE.getActivity_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__RESOURCE_TYPE = eINSTANCE.getActivity_ResourceType();
-
-		/**
-		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__X = eINSTANCE.getActivity_X();
-
-		/**
-		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__Y = eINSTANCE.getActivity_Y();
 
 		/**
 		 * The meta object literal for the '<em><b>Config</b></em>' attribute feature.
@@ -1977,38 +2303,6 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GROUP = eINSTANCE.getGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__TYPE = eINSTANCE.getGroup_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__RESOURCE_TYPE = eINSTANCE.getGroup_ResourceType();
-
-		/**
-		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__X = eINSTANCE.getGroup_X();
-
-		/**
-		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__Y = eINSTANCE.getGroup_Y();
 
 		/**
 		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
@@ -2051,46 +2345,6 @@ public interface BwPackage extends EPackage {
 		EAttribute GROUP__EXPANDED = eINSTANCE.getGroup_Expanded();
 
 		/**
-		 * The meta object literal for the '<em><b>Config</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__CONFIG = eINSTANCE.getGroup_Config();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Bindings</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUP__INPUT_BINDINGS = eINSTANCE.getGroup_InputBindings();
-
-		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP__ACTIVITIES = eINSTANCE.getGroup_Activities();
-
-		/**
-		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP__GROUPS = eINSTANCE.getGroup_Groups();
-
-		/**
-		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP__TRANSITIONS = eINSTANCE.getGroup_Transitions();
-
-		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2109,12 +2363,28 @@ public interface BwPackage extends EPackage {
 		EAttribute TRANSITION__FROM = eINSTANCE.getTransition_From();
 
 		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
+
+		/**
 		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute TRANSITION__TO = eINSTANCE.getTransition_To();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
 
 		/**
 		 * The meta object literal for the '<em><b>Line Type</b></em>' attribute feature.
@@ -2157,38 +2427,6 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LABEL = eINSTANCE.getLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__NAME = eINSTANCE.getLabel_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__DESCRIPTION = eINSTANCE.getLabel_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__X = eINSTANCE.getLabel_X();
-
-		/**
-		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__Y = eINSTANCE.getLabel_Y();
 
 		/**
 		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
@@ -2255,30 +2493,6 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROCESS_VARIABLE = eINSTANCE.getProcessVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_VARIABLE__NAME = eINSTANCE.getProcessVariable_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_VARIABLE__TYPE = eINSTANCE.getProcessVariable_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_VARIABLE__DESCRIPTION = eINSTANCE.getProcessVariable_Description();
 
 	}
 

@@ -29,23 +29,31 @@ abstract class NamedElement {
     String description
 }
 
+abstract class Container extends NamedElement {
+
+    /**
+     * Activities (tasks/steps) at the top level of this process.
+     */
+    contains Activity[] activities keys name
+
+    /**
+     * Groups of activities at the top level of this process (loops, scope, etc.).
+     */
+    contains Group[] groups keys name
+
+    /**
+     * Transitions at the top level of this process.
+     */
+    contains Transition[] transitions
+    
+}
+
 /**
  * Root element of a Tibco BW 5.x process file (.process).
  * Corresponds to pd:ProcessDefinition in the XML namespace
  * http://xmlns.tibco.com/bw/process/2003.
  */
-class ProcessDefinition {
-
-    /**
-     * Fully-qualified process name (including package path),
-     * e.g. "Processes/MyProcess.process".
-     */
-    String name
-
-    /**
-     * Optional human-readable description.
-     */
-    String description
+class ProcessDefinition extends Container {
 
     /**
      * Name of the implicit Start node (the process trigger).
@@ -109,21 +117,6 @@ class ProcessDefinition {
     contains Starter starter
 
     /**
-     * Activities (tasks/steps) at the top level of this process.
-     */
-    contains Activity[] activities
-
-    /**
-     * Groups of activities at the top level of this process (loops, scope, etc.).
-     */
-    contains Group[] groups
-
-    /**
-     * Transitions at the top level of this process.
-     */
-    contains Transition[] transitions
-
-    /**
      * Visual annotation labels on the diagram.
      */
     contains Label[] labels
@@ -131,7 +124,7 @@ class ProcessDefinition {
     /**
      * Process-scoped variables declared in the process.
      */
-    contains ProcessVariable[] processVariables
+    contains ProcessVariable[] processVariables keys name
 
     /**
      * Error schemas that this process can throw.
@@ -140,23 +133,8 @@ class ProcessDefinition {
     String errorSchemas
 }
 
-/**
- * An activity (task or step) within a BW process or group.
- * Corresponds to pd:activity in the process XML.
- */
-class Activity extends NamedElement {
 
-    /**
-     * Fully-qualified Java class name of the activity implementation,
-     * e.g. "com.tibco.pe.core.WriteToLogActivity".
-     */
-    String ^type
-
-    /**
-     * Palette / resource-type identifier used by the BW Designer,
-     * e.g. "ae.activities.log".
-     */
-    String resourceType
+class Node extends NamedElement {
 
     /**
      * X coordinate on the design canvas.
@@ -167,6 +145,38 @@ class Activity extends NamedElement {
      * Y coordinate on the design canvas.
      */
     int y
+    
+    refers Transition[] outgoingTransitions opposite source
+    
+    refers Transition[] incomingTransitions opposite target
+    
+}
+
+class TypedElement extends NamedElement {
+
+    /**
+     * Fully-qualified Java class name of the activity implementation,
+     * e.g. "com.tibco.pe.core.WriteToLogActivity".
+     */
+    String ^type
+    
+}
+
+class TypedNode extends TypedElement, Node {
+
+    /**
+     * Palette / resource-type identifier used by the BW Designer,
+     * e.g. "ae.activities.log".
+     */
+    String resourceType
+    
+}
+
+/**
+ * An activity (task or step) within a BW process or group.
+ * Corresponds to pd:activity in the process XML.
+ */
+class Activity extends TypedNode {
 
     /**
      * Activity-specific configuration, stored as raw XML text.
@@ -178,6 +188,9 @@ class Activity extends NamedElement {
      * XSL input bindings for this activity, stored as raw XML text.
      */
     String inputBindings
+    
+    // TODO - input/output transitions, perhaps derived        
+    
 }
 
 /**
@@ -200,28 +213,7 @@ class Starter extends Activity {
  *
  * Corresponds to pd:group in the process XML.
  */
-class Group extends NamedElement {
-
-    /**
-     * Fully-qualified Java class name of the group implementation,
-     * e.g. "com.tibco.pe.core.LoopGroup".
-     */
-    String ^type
-
-    /**
-     * Palette / resource-type identifier, e.g. "ae.process.group".
-     */
-    String resourceType
-
-    /**
-     * X coordinate of the group frame on the design canvas.
-     */
-    int x
-
-    /**
-     * Y coordinate of the group frame on the design canvas.
-     */
-    int y
+class Group extends Activity, Container {
 
     /**
      * Width of the expanded group frame on the design canvas.
@@ -248,31 +240,6 @@ class Group extends NamedElement {
      */
     boolean expanded
 
-    /**
-     * Group-type-specific configuration, stored as raw XML text.
-     * For a LoopGroup this contains the loop condition and index slot.
-     */
-    String config
-
-    /**
-     * XSL input bindings for the group, stored as raw XML text.
-     */
-    String inputBindings
-
-    /**
-     * Activities contained inside this group.
-     */
-    contains Activity[] activities
-
-    /**
-     * Sub-groups nested inside this group.
-     */
-    contains Group[] groups
-
-    /**
-     * Transitions between the activities inside this group.
-     */
-    contains Transition[] transitions
 }
 
 /**
@@ -290,12 +257,16 @@ class Transition {
      * (e.g. "Log", "Start", "IterateAndFindMatch").
      */
     String from
+    
+    refers Node source opposite outgoingTransitions
 
     /**
      * Name of the target activity, group, or pseudo-state
      * (e.g. "End", "MapResultToResponse").
      */
     String to
+    
+    refers Node target opposite incomingTransitions
 
     /**
      * Visual style of the transition line.
@@ -327,27 +298,7 @@ class Transition {
  * A visual annotation (sticky-note style label) placed on the design canvas.
  * Corresponds to pd:label in the process XML.
  */
-class Label {
-
-    /**
-     * Label title / identifier on the canvas.
-     */
-    String name
-
-    /**
-     * Text content of the label.
-     */
-    String description
-
-    /**
-     * X coordinate on the design canvas.
-     */
-    int x
-
-    /**
-     * Y coordinate on the design canvas.
-     */
-    int y
+class Label extends Node {
 
     /**
      * Width of the label box on the canvas.
@@ -390,21 +341,6 @@ class Label {
  * Process variables hold state that is visible to all activities within
  * the same process instance.
  */
-class ProcessVariable {
+class ProcessVariable extends TypedElement {
 
-    /**
-     * Variable name.
-     */
-    String name
-
-    /**
-     * XSD type of the variable, e.g. "xsd:string", "xsd:integer".
-     * May reference a custom XSD type declared in the AESchemas folder.
-     */
-    String ^type
-
-    /**
-     * Optional documentation / description.
-     */
-    String description
 }

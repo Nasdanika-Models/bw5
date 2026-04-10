@@ -2,7 +2,6 @@
  */
 package org.nasdanika.models.tibco.bw;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.tibco.bw.Label#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.Label#getDescription <em>Description</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.Label#getX <em>X</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.Label#getY <em>Y</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Label#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Label#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Label#getFontColor <em>Font Color</em>}</li>
@@ -36,111 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Label extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Label title / identifier on the canvas.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getLabel_Name()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Label#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Text content of the label.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getLabel_Description()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Label#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
-	/**
-	 * Returns the value of the '<em><b>X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * X coordinate on the design canvas.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(int)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getLabel_X()
-	 * @model unique="false"
-	 * @generated
-	 */
-	int getX();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Label#getX <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>X</em>' attribute.
-	 * @see #getX()
-	 * @generated
-	 */
-	void setX(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Y coordinate on the design canvas.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(int)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getLabel_Y()
-	 * @model unique="false"
-	 * @generated
-	 */
-	int getY();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Label#getY <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Y</em>' attribute.
-	 * @see #getY()
-	 * @generated
-	 */
-	void setY(int value);
-
+public interface Label extends Node {
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->

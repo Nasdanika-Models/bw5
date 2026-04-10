@@ -4,8 +4,6 @@ package org.nasdanika.models.tibco.bw.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.tibco.bw.BwPackage;
 import org.nasdanika.models.tibco.bw.Label;
 
@@ -17,10 +15,6 @@ import org.nasdanika.models.tibco.bw.Label;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getX <em>X</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.LabelImpl#getFontColor <em>Font Color</em>}</li>
@@ -32,47 +26,7 @@ import org.nasdanika.models.tibco.bw.Label;
  *
  * @generated
  */
-public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int X_EDEFAULT = 0;
-
-	/**
-	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int Y_EDEFAULT = 0;
-
+public class LabelImpl extends NodeImpl implements Label {
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -160,96 +114,6 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
 	@Override
 	protected EClass eStaticClass() {
 		return BwPackage.Literals.LABEL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getName() {
-		return (String)eDynamicGet(BwPackage.LABEL__NAME, BwPackage.Literals.LABEL__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		eDynamicSet(BwPackage.LABEL__NAME, BwPackage.Literals.LABEL__NAME, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDescription() {
-		return (String)eDynamicGet(BwPackage.LABEL__DESCRIPTION, BwPackage.Literals.LABEL__DESCRIPTION, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDescription(String newDescription) {
-		eDynamicSet(BwPackage.LABEL__DESCRIPTION, BwPackage.Literals.LABEL__DESCRIPTION, newDescription);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getX() {
-		return (Integer)eDynamicGet(BwPackage.LABEL__X, BwPackage.Literals.LABEL__X, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setX(int newX) {
-		eDynamicSet(BwPackage.LABEL__X, BwPackage.Literals.LABEL__X, newX);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getY() {
-		return (Integer)eDynamicGet(BwPackage.LABEL__Y, BwPackage.Literals.LABEL__Y, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setY(int newY) {
-		eDynamicSet(BwPackage.LABEL__Y, BwPackage.Literals.LABEL__Y, newY);
 	}
 
 	/**
@@ -400,14 +264,6 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BwPackage.LABEL__NAME:
-				return getName();
-			case BwPackage.LABEL__DESCRIPTION:
-				return getDescription();
-			case BwPackage.LABEL__X:
-				return getX();
-			case BwPackage.LABEL__Y:
-				return getY();
 			case BwPackage.LABEL__WIDTH:
 				return getWidth();
 			case BwPackage.LABEL__HEIGHT:
@@ -434,18 +290,6 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BwPackage.LABEL__NAME:
-				setName((String)newValue);
-				return;
-			case BwPackage.LABEL__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
-			case BwPackage.LABEL__X:
-				setX((Integer)newValue);
-				return;
-			case BwPackage.LABEL__Y:
-				setY((Integer)newValue);
-				return;
 			case BwPackage.LABEL__WIDTH:
 				setWidth((Integer)newValue);
 				return;
@@ -479,18 +323,6 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BwPackage.LABEL__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case BwPackage.LABEL__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-			case BwPackage.LABEL__X:
-				setX(X_EDEFAULT);
-				return;
-			case BwPackage.LABEL__Y:
-				setY(Y_EDEFAULT);
-				return;
 			case BwPackage.LABEL__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
@@ -524,14 +356,6 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BwPackage.LABEL__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case BwPackage.LABEL__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case BwPackage.LABEL__X:
-				return getX() != X_EDEFAULT;
-			case BwPackage.LABEL__Y:
-				return getY() != Y_EDEFAULT;
 			case BwPackage.LABEL__WIDTH:
 				return getWidth() != WIDTH_EDEFAULT;
 			case BwPackage.LABEL__HEIGHT:

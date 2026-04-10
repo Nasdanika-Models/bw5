@@ -24,7 +24,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getFrom <em>From</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getTo <em>To</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getLineType <em>Line Type</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getLineColor <em>Line Color</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Transition#getConditionType <em>Condition Type</em>}</li>
@@ -64,6 +66,30 @@ public interface Transition extends EObject {
 	void setFrom(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.tibco.bw.Node#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(Node)
+	 * @see org.nasdanika.models.tibco.bw.BwPackage#getTransition_Source()
+	 * @see org.nasdanika.models.tibco.bw.Node#getOutgoingTransitions
+	 * @model opposite="outgoingTransitions"
+	 * @generated
+	 */
+	Node getSource();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Transition#getSource <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(Node value);
+
+	/**
 	 * Returns the value of the '<em><b>To</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,6 +115,30 @@ public interface Transition extends EObject {
 	 * @generated
 	 */
 	void setTo(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.tibco.bw.Node#getIncomingTransitions <em>Incoming Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(Node)
+	 * @see org.nasdanika.models.tibco.bw.BwPackage#getTransition_Target()
+	 * @see org.nasdanika.models.tibco.bw.Node#getIncomingTransitions
+	 * @model opposite="incomingTransitions"
+	 * @generated
+	 */
+	Node getTarget();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Transition#getTarget <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
+	 * @generated
+	 */
+	void setTarget(Node value);
 
 	/**
 	 * Returns the value of the '<em><b>Line Type</b></em>' attribute.

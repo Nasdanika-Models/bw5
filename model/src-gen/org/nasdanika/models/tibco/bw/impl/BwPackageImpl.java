@@ -16,10 +16,13 @@ import org.nasdanika.models.tibco.bw.BwPackage;
 import org.nasdanika.models.tibco.bw.Group;
 import org.nasdanika.models.tibco.bw.Label;
 import org.nasdanika.models.tibco.bw.NamedElement;
+import org.nasdanika.models.tibco.bw.Node;
 import org.nasdanika.models.tibco.bw.ProcessDefinition;
 import org.nasdanika.models.tibco.bw.ProcessVariable;
 import org.nasdanika.models.tibco.bw.Starter;
 import org.nasdanika.models.tibco.bw.Transition;
+import org.nasdanika.models.tibco.bw.TypedElement;
+import org.nasdanika.models.tibco.bw.TypedNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +43,35 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass containerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass processDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typedNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,6 +214,46 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getContainer() {
+		return containerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_Activities() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_Groups() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_Transitions() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProcessDefinition() {
 		return processDefinitionEClass;
 	}
@@ -193,7 +264,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_Name() {
+	public EAttribute getProcessDefinition_StartName() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -203,7 +274,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_Description() {
+	public EAttribute getProcessDefinition_StartType() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -213,7 +284,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartName() {
+	public EAttribute getProcessDefinition_StartX() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -223,7 +294,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartType() {
+	public EAttribute getProcessDefinition_StartY() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -233,7 +304,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartX() {
+	public EAttribute getProcessDefinition_EndName() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -243,7 +314,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartY() {
+	public EAttribute getProcessDefinition_EndType() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -253,7 +324,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_EndName() {
+	public EAttribute getProcessDefinition_EndX() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -263,7 +334,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_EndType() {
+	public EAttribute getProcessDefinition_EndY() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -273,7 +344,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_EndX() {
+	public EAttribute getProcessDefinition_TargetNamespace() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -283,7 +354,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_EndY() {
+	public EAttribute getProcessDefinition_ReturnBindings() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -293,58 +364,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_TargetNamespace() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_ReturnBindings() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getProcessDefinition_Starter() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProcessDefinition_Activities() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProcessDefinition_Groups() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProcessDefinition_Transitions() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(15);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -354,7 +375,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EReference getProcessDefinition_Labels() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(16);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -364,7 +385,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EReference getProcessDefinition_ProcessVariables() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(17);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -374,7 +395,97 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EAttribute getProcessDefinition_ErrorSchemas() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(18);
+		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNode() {
+		return nodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNode_X() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNode_Y() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_OutgoingTransitions() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_IncomingTransitions() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTypedElement() {
+		return typedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTypedElement_Type() {
+		return (EAttribute)typedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTypedNode() {
+		return typedNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTypedNode_ResourceType() {
+		return (EAttribute)typedNodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -393,7 +504,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getActivity_Type() {
+	public EAttribute getActivity_Config() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -403,48 +514,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getActivity_ResourceType() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getActivity_X() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getActivity_Y() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getActivity_Config() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getActivity_InputBindings() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -473,7 +544,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGroup_Type() {
+	public EAttribute getGroup_Width() {
 		return (EAttribute)groupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -483,7 +554,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGroup_ResourceType() {
+	public EAttribute getGroup_Height() {
 		return (EAttribute)groupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -493,7 +564,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGroup_X() {
+	public EAttribute getGroup_CollapsedWidth() {
 		return (EAttribute)groupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -503,7 +574,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGroup_Y() {
+	public EAttribute getGroup_CollapsedHeight() {
 		return (EAttribute)groupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -513,98 +584,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGroup_Width() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGroup_Height() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGroup_CollapsedWidth() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGroup_CollapsedHeight() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getGroup_Expanded() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGroup_Config() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGroup_InputBindings() {
-		return (EAttribute)groupEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getGroup_Activities() {
-		return (EReference)groupEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getGroup_Groups() {
-		return (EReference)groupEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getGroup_Transitions() {
-		return (EReference)groupEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)groupEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -633,8 +614,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_To() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(1);
+	public EReference getTransition_Source() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -643,7 +624,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_LineType() {
+	public EAttribute getTransition_To() {
 		return (EAttribute)transitionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -653,8 +634,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_LineColor() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(3);
+	public EReference getTransition_Target() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -663,7 +644,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_ConditionType() {
+	public EAttribute getTransition_LineType() {
 		return (EAttribute)transitionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -673,8 +654,28 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_Condition() {
+	public EAttribute getTransition_LineColor() {
 		return (EAttribute)transitionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTransition_ConditionType() {
+		return (EAttribute)transitionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTransition_Condition() {
+		return (EAttribute)transitionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -693,7 +694,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Name() {
+	public EAttribute getLabel_Width() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -703,7 +704,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Description() {
+	public EAttribute getLabel_Height() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -713,7 +714,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_X() {
+	public EAttribute getLabel_FontColor() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -723,7 +724,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Y() {
+	public EAttribute getLabel_Color() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -733,7 +734,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Width() {
+	public EAttribute getLabel_Type() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -743,7 +744,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Height() {
+	public EAttribute getLabel_Thickness() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -753,48 +754,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_FontColor() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Color() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Type() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Thickness() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getLabel_Fade() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(10);
+		return (EAttribute)labelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -805,36 +766,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	@Override
 	public EClass getProcessVariable() {
 		return processVariableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessVariable_Name() {
-		return (EAttribute)processVariableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessVariable_Type() {
-		return (EAttribute)processVariableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessVariable_Description() {
-		return (EAttribute)processVariableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -870,9 +801,12 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__DESCRIPTION);
 
+		containerEClass = createEClass(CONTAINER);
+		createEReference(containerEClass, CONTAINER__ACTIVITIES);
+		createEReference(containerEClass, CONTAINER__GROUPS);
+		createEReference(containerEClass, CONTAINER__TRANSITIONS);
+
 		processDefinitionEClass = createEClass(PROCESS_DEFINITION);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__NAME);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__DESCRIPTION);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_NAME);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_TYPE);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_X);
@@ -884,52 +818,46 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__TARGET_NAMESPACE);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__RETURN_BINDINGS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__STARTER);
-		createEReference(processDefinitionEClass, PROCESS_DEFINITION__ACTIVITIES);
-		createEReference(processDefinitionEClass, PROCESS_DEFINITION__GROUPS);
-		createEReference(processDefinitionEClass, PROCESS_DEFINITION__TRANSITIONS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__LABELS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__PROCESS_VARIABLES);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__ERROR_SCHEMAS);
 
+		nodeEClass = createEClass(NODE);
+		createEAttribute(nodeEClass, NODE__X);
+		createEAttribute(nodeEClass, NODE__Y);
+		createEReference(nodeEClass, NODE__OUTGOING_TRANSITIONS);
+		createEReference(nodeEClass, NODE__INCOMING_TRANSITIONS);
+
+		typedElementEClass = createEClass(TYPED_ELEMENT);
+		createEAttribute(typedElementEClass, TYPED_ELEMENT__TYPE);
+
+		typedNodeEClass = createEClass(TYPED_NODE);
+		createEAttribute(typedNodeEClass, TYPED_NODE__RESOURCE_TYPE);
+
 		activityEClass = createEClass(ACTIVITY);
-		createEAttribute(activityEClass, ACTIVITY__TYPE);
-		createEAttribute(activityEClass, ACTIVITY__RESOURCE_TYPE);
-		createEAttribute(activityEClass, ACTIVITY__X);
-		createEAttribute(activityEClass, ACTIVITY__Y);
 		createEAttribute(activityEClass, ACTIVITY__CONFIG);
 		createEAttribute(activityEClass, ACTIVITY__INPUT_BINDINGS);
 
 		starterEClass = createEClass(STARTER);
 
 		groupEClass = createEClass(GROUP);
-		createEAttribute(groupEClass, GROUP__TYPE);
-		createEAttribute(groupEClass, GROUP__RESOURCE_TYPE);
-		createEAttribute(groupEClass, GROUP__X);
-		createEAttribute(groupEClass, GROUP__Y);
 		createEAttribute(groupEClass, GROUP__WIDTH);
 		createEAttribute(groupEClass, GROUP__HEIGHT);
 		createEAttribute(groupEClass, GROUP__COLLAPSED_WIDTH);
 		createEAttribute(groupEClass, GROUP__COLLAPSED_HEIGHT);
 		createEAttribute(groupEClass, GROUP__EXPANDED);
-		createEAttribute(groupEClass, GROUP__CONFIG);
-		createEAttribute(groupEClass, GROUP__INPUT_BINDINGS);
-		createEReference(groupEClass, GROUP__ACTIVITIES);
-		createEReference(groupEClass, GROUP__GROUPS);
-		createEReference(groupEClass, GROUP__TRANSITIONS);
 
 		transitionEClass = createEClass(TRANSITION);
 		createEAttribute(transitionEClass, TRANSITION__FROM);
+		createEReference(transitionEClass, TRANSITION__SOURCE);
 		createEAttribute(transitionEClass, TRANSITION__TO);
+		createEReference(transitionEClass, TRANSITION__TARGET);
 		createEAttribute(transitionEClass, TRANSITION__LINE_TYPE);
 		createEAttribute(transitionEClass, TRANSITION__LINE_COLOR);
 		createEAttribute(transitionEClass, TRANSITION__CONDITION_TYPE);
 		createEAttribute(transitionEClass, TRANSITION__CONDITION);
 
 		labelEClass = createEClass(LABEL);
-		createEAttribute(labelEClass, LABEL__NAME);
-		createEAttribute(labelEClass, LABEL__DESCRIPTION);
-		createEAttribute(labelEClass, LABEL__X);
-		createEAttribute(labelEClass, LABEL__Y);
 		createEAttribute(labelEClass, LABEL__WIDTH);
 		createEAttribute(labelEClass, LABEL__HEIGHT);
 		createEAttribute(labelEClass, LABEL__FONT_COLOR);
@@ -939,9 +867,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createEAttribute(labelEClass, LABEL__FADE);
 
 		processVariableEClass = createEClass(PROCESS_VARIABLE);
-		createEAttribute(processVariableEClass, PROCESS_VARIABLE__NAME);
-		createEAttribute(processVariableEClass, PROCESS_VARIABLE__TYPE);
-		createEAttribute(processVariableEClass, PROCESS_VARIABLE__DESCRIPTION);
 	}
 
 	/**
@@ -975,18 +900,32 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		activityEClass.getESuperTypes().add(this.getNamedElement());
+		containerEClass.getESuperTypes().add(this.getNamedElement());
+		processDefinitionEClass.getESuperTypes().add(this.getContainer());
+		nodeEClass.getESuperTypes().add(this.getNamedElement());
+		typedElementEClass.getESuperTypes().add(this.getNamedElement());
+		typedNodeEClass.getESuperTypes().add(this.getTypedElement());
+		typedNodeEClass.getESuperTypes().add(this.getNode());
+		activityEClass.getESuperTypes().add(this.getTypedNode());
 		starterEClass.getESuperTypes().add(this.getActivity());
-		groupEClass.getESuperTypes().add(this.getNamedElement());
+		groupEClass.getESuperTypes().add(this.getActivity());
+		groupEClass.getESuperTypes().add(this.getContainer());
+		labelEClass.getESuperTypes().add(this.getNode());
+		processVariableEClass.getESuperTypes().add(this.getTypedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNamedElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(containerEClass, org.nasdanika.models.tibco.bw.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContainer_Activities(), this.getActivity(), null, "activities", null, 0, -1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getContainer_Activities().getEKeys().add(this.getNamedElement_Name());
+		initEReference(getContainer_Groups(), this.getGroup(), null, "groups", null, 0, -1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getContainer_Groups().getEKeys().add(this.getNamedElement_Name());
+		initEReference(getContainer_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(processDefinitionEClass, ProcessDefinition.class, "ProcessDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcessDefinition_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_StartName(), theEcorePackage.getEString(), "startName", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_StartType(), theEcorePackage.getEString(), "startType", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_StartX(), theEcorePackage.getEInt(), "startX", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -998,52 +937,47 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		initEAttribute(getProcessDefinition_TargetNamespace(), theEcorePackage.getEString(), "targetNamespace", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_ReturnBindings(), theEcorePackage.getEString(), "returnBindings", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_Starter(), this.getStarter(), null, "starter", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessDefinition_Activities(), this.getActivity(), null, "activities", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessDefinition_Groups(), this.getGroup(), null, "groups", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessDefinition_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_Labels(), this.getLabel(), null, "labels", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_ProcessVariables(), this.getProcessVariable(), null, "processVariables", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getProcessDefinition_ProcessVariables().getEKeys().add(this.getNamedElement_Name());
 		initEAttribute(getProcessDefinition_ErrorSchemas(), theEcorePackage.getEString(), "errorSchemas", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNode_X(), theEcorePackage.getEInt(), "x", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Y(), theEcorePackage.getEInt(), "y", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_OutgoingTransitions(), this.getTransition(), this.getTransition_Source(), "outgoingTransitions", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_IncomingTransitions(), this.getTransition(), this.getTransition_Target(), "incomingTransitions", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(typedElementEClass, TypedElement.class, "TypedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTypedElement_Type(), theEcorePackage.getEString(), "type", null, 0, 1, TypedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(typedNodeEClass, TypedNode.class, "TypedNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTypedNode_ResourceType(), theEcorePackage.getEString(), "resourceType", null, 0, 1, TypedNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getActivity_Type(), theEcorePackage.getEString(), "type", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_ResourceType(), theEcorePackage.getEString(), "resourceType", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_X(), theEcorePackage.getEInt(), "x", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_Y(), theEcorePackage.getEInt(), "y", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Config(), theEcorePackage.getEString(), "config", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_InputBindings(), theEcorePackage.getEString(), "inputBindings", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(starterEClass, Starter.class, "Starter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGroup_Type(), theEcorePackage.getEString(), "type", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroup_ResourceType(), theEcorePackage.getEString(), "resourceType", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroup_X(), theEcorePackage.getEInt(), "x", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroup_Y(), theEcorePackage.getEInt(), "y", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroup_Width(), theEcorePackage.getEInt(), "width", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroup_Height(), theEcorePackage.getEInt(), "height", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroup_CollapsedWidth(), theEcorePackage.getEInt(), "collapsedWidth", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroup_CollapsedHeight(), theEcorePackage.getEInt(), "collapsedHeight", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroup_Expanded(), theEcorePackage.getEBoolean(), "expanded", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroup_Config(), theEcorePackage.getEString(), "config", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroup_InputBindings(), theEcorePackage.getEString(), "inputBindings", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroup_Activities(), this.getActivity(), null, "activities", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroup_Groups(), this.getGroup(), null, "groups", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroup_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransition_From(), theEcorePackage.getEString(), "from", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Source(), this.getNode(), this.getNode_OutgoingTransitions(), "source", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_To(), theEcorePackage.getEString(), "to", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Target(), this.getNode(), this.getNode_IncomingTransitions(), "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_LineType(), theEcorePackage.getEString(), "lineType", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_LineColor(), theEcorePackage.getEString(), "lineColor", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_ConditionType(), theEcorePackage.getEString(), "conditionType", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Condition(), theEcorePackage.getEString(), "condition", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLabel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_X(), theEcorePackage.getEInt(), "x", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Y(), theEcorePackage.getEInt(), "y", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Width(), theEcorePackage.getEInt(), "width", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Height(), theEcorePackage.getEInt(), "height", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_FontColor(), theEcorePackage.getEString(), "fontColor", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1053,9 +987,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		initEAttribute(getLabel_Fade(), theEcorePackage.getEString(), "fade", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processVariableEClass, ProcessVariable.class, "ProcessVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcessVariable_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ProcessVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessVariable_Type(), theEcorePackage.getEString(), "type", null, 0, 1, ProcessVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessVariable_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ProcessVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1118,22 +1049,28 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nOptional human-readable description of this element."
 		   });
 		addAnnotation
+		  (getContainer_Activities(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nActivities (tasks/steps) at the top level of this process."
+		   });
+		addAnnotation
+		  (getContainer_Groups(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nGroups of activities at the top level of this process (loops, scope, etc.)."
+		   });
+		addAnnotation
+		  (getContainer_Transitions(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nTransitions at the top level of this process."
+		   });
+		addAnnotation
 		  (processDefinitionEClass,
 		   source,
 		   new String[] {
 			   "documentation", "*\nRoot element of a Tibco BW 5.x process file (.process).\nCorresponds to pd:ProcessDefinition in the XML namespace\nhttp://xmlns.tibco.com/bw/process/2003."
-		   });
-		addAnnotation
-		  (getProcessDefinition_Name(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nFully-qualified process name (including package path),\ne.g. \"Processes/MyProcess.process\"."
-		   });
-		addAnnotation
-		  (getProcessDefinition_Description(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nOptional human-readable description."
 		   });
 		addAnnotation
 		  (getProcessDefinition_StartName(),
@@ -1202,24 +1139,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nThe optional event-source activity that starts this process\n(e.g. an HTTP receiver, JMS queue listener, Timer, ...).\nWhen present, startName refers to this starter\'s name."
 		   });
 		addAnnotation
-		  (getProcessDefinition_Activities(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nActivities (tasks/steps) at the top level of this process."
-		   });
-		addAnnotation
-		  (getProcessDefinition_Groups(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nGroups of activities at the top level of this process (loops, scope, etc.)."
-		   });
-		addAnnotation
-		  (getProcessDefinition_Transitions(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nTransitions at the top level of this process."
-		   });
-		addAnnotation
 		  (getProcessDefinition_Labels(),
 		   source,
 		   new String[] {
@@ -1238,34 +1157,34 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nError schemas that this process can throw.\nStored as raw XML text because they are arbitrary XSD fragments."
 		   });
 		addAnnotation
-		  (activityEClass,
-		   source,
-		   new String[] {
-			   "documentation", "*\nAn activity (task or step) within a BW process or group.\nCorresponds to pd:activity in the process XML."
-		   });
-		addAnnotation
-		  (getActivity_Type(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nFully-qualified Java class name of the activity implementation,\ne.g. \"com.tibco.pe.core.WriteToLogActivity\"."
-		   });
-		addAnnotation
-		  (getActivity_ResourceType(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nPalette / resource-type identifier used by the BW Designer,\ne.g. \"ae.activities.log\"."
-		   });
-		addAnnotation
-		  (getActivity_X(),
+		  (getNode_X(),
 		   source,
 		   new String[] {
 			   "documentation", "*\nX coordinate on the design canvas."
 		   });
 		addAnnotation
-		  (getActivity_Y(),
+		  (getNode_Y(),
 		   source,
 		   new String[] {
 			   "documentation", "*\nY coordinate on the design canvas."
+		   });
+		addAnnotation
+		  (getTypedElement_Type(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nFully-qualified Java class name of the activity implementation,\ne.g. \"com.tibco.pe.core.WriteToLogActivity\"."
+		   });
+		addAnnotation
+		  (getTypedNode_ResourceType(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nPalette / resource-type identifier used by the BW Designer,\ne.g. \"ae.activities.log\"."
+		   });
+		addAnnotation
+		  (activityEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nAn activity (task or step) within a BW process or group.\nCorresponds to pd:activity in the process XML."
 		   });
 		addAnnotation
 		  (getActivity_Config(),
@@ -1290,30 +1209,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		   source,
 		   new String[] {
 			   "documentation", "*\nA group of activities, used to model structured constructs such as:\n  - Loops (Repeat-Until, For-Each, While)\n  - Error handlers / Fault handlers\n  - Critical sections\n  - Scope groups\n\nCorresponds to pd:group in the process XML."
-		   });
-		addAnnotation
-		  (getGroup_Type(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nFully-qualified Java class name of the group implementation,\ne.g. \"com.tibco.pe.core.LoopGroup\"."
-		   });
-		addAnnotation
-		  (getGroup_ResourceType(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nPalette / resource-type identifier, e.g. \"ae.process.group\"."
-		   });
-		addAnnotation
-		  (getGroup_X(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nX coordinate of the group frame on the design canvas."
-		   });
-		addAnnotation
-		  (getGroup_Y(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nY coordinate of the group frame on the design canvas."
 		   });
 		addAnnotation
 		  (getGroup_Width(),
@@ -1344,36 +1239,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		   source,
 		   new String[] {
 			   "documentation", "*\nWhether the group is shown in expanded form on the canvas."
-		   });
-		addAnnotation
-		  (getGroup_Config(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nGroup-type-specific configuration, stored as raw XML text.\nFor a LoopGroup this contains the loop condition and index slot."
-		   });
-		addAnnotation
-		  (getGroup_InputBindings(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nXSL input bindings for the group, stored as raw XML text."
-		   });
-		addAnnotation
-		  (getGroup_Activities(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nActivities contained inside this group."
-		   });
-		addAnnotation
-		  (getGroup_Groups(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nSub-groups nested inside this group."
-		   });
-		addAnnotation
-		  (getGroup_Transitions(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nTransitions between the activities inside this group."
 		   });
 		addAnnotation
 		  (transitionEClass,
@@ -1424,30 +1289,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nA visual annotation (sticky-note style label) placed on the design canvas.\nCorresponds to pd:label in the process XML."
 		   });
 		addAnnotation
-		  (getLabel_Name(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nLabel title / identifier on the canvas."
-		   });
-		addAnnotation
-		  (getLabel_Description(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nText content of the label."
-		   });
-		addAnnotation
-		  (getLabel_X(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nX coordinate on the design canvas."
-		   });
-		addAnnotation
-		  (getLabel_Y(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nY coordinate on the design canvas."
-		   });
-		addAnnotation
 		  (getLabel_Width(),
 		   source,
 		   new String[] {
@@ -1494,24 +1335,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		   source,
 		   new String[] {
 			   "documentation", "*\nA process-level variable declared in the processVariables section.\nProcess variables hold state that is visible to all activities within\nthe same process instance."
-		   });
-		addAnnotation
-		  (getProcessVariable_Name(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nVariable name."
-		   });
-		addAnnotation
-		  (getProcessVariable_Type(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nXSD type of the variable, e.g. \"xsd:string\", \"xsd:integer\".\nMay reference a custom XSD type declared in the AESchemas folder."
-		   });
-		addAnnotation
-		  (getProcessVariable_Description(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nOptional documentation / description."
 		   });
 	}
 

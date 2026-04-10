@@ -57,6 +57,9 @@ public class BwFactoryImpl extends EFactoryImpl implements BwFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case BwPackage.PROCESS_DEFINITION: return createProcessDefinition();
+			case BwPackage.NODE: return createNode();
+			case BwPackage.TYPED_ELEMENT: return createTypedElement();
+			case BwPackage.TYPED_NODE: return createTypedNode();
 			case BwPackage.ACTIVITY: return createActivity();
 			case BwPackage.STARTER: return createStarter();
 			case BwPackage.GROUP: return createGroup();
@@ -77,6 +80,39 @@ public class BwFactoryImpl extends EFactoryImpl implements BwFactory {
 	public ProcessDefinition createProcessDefinition() {
 		ProcessDefinitionImpl processDefinition = new ProcessDefinitionImpl();
 		return processDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Node createNode() {
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TypedElement createTypedElement() {
+		TypedElementImpl typedElement = new TypedElementImpl();
+		return typedElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TypedNode createTypedNode() {
+		TypedNodeImpl typedNode = new TypedNodeImpl();
+		return typedNode;
 	}
 
 	/**

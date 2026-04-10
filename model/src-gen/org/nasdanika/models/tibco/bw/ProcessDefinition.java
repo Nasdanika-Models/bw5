@@ -4,8 +4,6 @@ package org.nasdanika.models.tibco.bw;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Process Definition</b></em>'.
@@ -22,8 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getDescription <em>Description</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartName <em>Start Name</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartX <em>Start X</em>}</li>
@@ -35,9 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getTargetNamespace <em>Target Namespace</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getReturnBindings <em>Return Bindings</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStarter <em>Starter</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getActivities <em>Activities</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getGroups <em>Groups</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getProcessVariables <em>Process Variables</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getErrorSchemas <em>Error Schemas</em>}</li>
@@ -47,60 +40,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ProcessDefinition extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Fully-qualified process name (including package path),
-	 * e.g. "Processes/MyProcess.process".
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_Name()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Optional human-readable description.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_Description()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
+public interface ProcessDefinition extends Container {
 	/**
 	 * Returns the value of the '<em><b>Start Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -394,54 +334,6 @@ public interface ProcessDefinition extends EObject {
 	void setStarter(Starter value);
 
 	/**
-	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.models.tibco.bw.Activity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Activities (tasks/steps) at the top level of this process.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Activities</em>' containment reference list.
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_Activities()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Activity> getActivities();
-
-	/**
-	 * Returns the value of the '<em><b>Groups</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.models.tibco.bw.Group}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Groups of activities at the top level of this process (loops, scope, etc.).
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Groups</em>' containment reference list.
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_Groups()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Group> getGroups();
-
-	/**
-	 * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.models.tibco.bw.Transition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Transitions at the top level of this process.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Transitions</em>' containment reference list.
-	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_Transitions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Transition> getTransitions();
-
-	/**
 	 * Returns the value of the '<em><b>Labels</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.tibco.bw.Label}.
 	 * <!-- begin-user-doc -->
@@ -468,7 +360,7 @@ public interface ProcessDefinition extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Process Variables</em>' containment reference list.
 	 * @see org.nasdanika.models.tibco.bw.BwPackage#getProcessDefinition_ProcessVariables()
-	 * @model containment="true"
+	 * @model containment="true" keys="name"
 	 * @generated
 	 */
 	EList<ProcessVariable> getProcessVariables();

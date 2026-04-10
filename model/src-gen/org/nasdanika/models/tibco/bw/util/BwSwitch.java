@@ -72,15 +72,50 @@ public class BwSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BwPackage.CONTAINER: {
+				Container container = (Container)theEObject;
+				T result = caseContainer(container);
+				if (result == null) result = caseNamedElement(container);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BwPackage.PROCESS_DEFINITION: {
 				ProcessDefinition processDefinition = (ProcessDefinition)theEObject;
 				T result = caseProcessDefinition(processDefinition);
+				if (result == null) result = caseContainer(processDefinition);
+				if (result == null) result = caseNamedElement(processDefinition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BwPackage.NODE: {
+				Node node = (Node)theEObject;
+				T result = caseNode(node);
+				if (result == null) result = caseNamedElement(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BwPackage.TYPED_ELEMENT: {
+				TypedElement typedElement = (TypedElement)theEObject;
+				T result = caseTypedElement(typedElement);
+				if (result == null) result = caseNamedElement(typedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BwPackage.TYPED_NODE: {
+				TypedNode typedNode = (TypedNode)theEObject;
+				T result = caseTypedNode(typedNode);
+				if (result == null) result = caseTypedElement(typedNode);
+				if (result == null) result = caseNode(typedNode);
+				if (result == null) result = caseNamedElement(typedNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BwPackage.ACTIVITY: {
 				Activity activity = (Activity)theEObject;
 				T result = caseActivity(activity);
+				if (result == null) result = caseTypedNode(activity);
+				if (result == null) result = caseTypedElement(activity);
+				if (result == null) result = caseNode(activity);
 				if (result == null) result = caseNamedElement(activity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -89,6 +124,9 @@ public class BwSwitch<T> extends Switch<T> {
 				Starter starter = (Starter)theEObject;
 				T result = caseStarter(starter);
 				if (result == null) result = caseActivity(starter);
+				if (result == null) result = caseTypedNode(starter);
+				if (result == null) result = caseTypedElement(starter);
+				if (result == null) result = caseNode(starter);
 				if (result == null) result = caseNamedElement(starter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -96,6 +134,11 @@ public class BwSwitch<T> extends Switch<T> {
 			case BwPackage.GROUP: {
 				Group group = (Group)theEObject;
 				T result = caseGroup(group);
+				if (result == null) result = caseActivity(group);
+				if (result == null) result = caseContainer(group);
+				if (result == null) result = caseTypedNode(group);
+				if (result == null) result = caseTypedElement(group);
+				if (result == null) result = caseNode(group);
 				if (result == null) result = caseNamedElement(group);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -109,12 +152,16 @@ public class BwSwitch<T> extends Switch<T> {
 			case BwPackage.LABEL: {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
+				if (result == null) result = caseNode(label);
+				if (result == null) result = caseNamedElement(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BwPackage.PROCESS_VARIABLE: {
 				ProcessVariable processVariable = (ProcessVariable)theEObject;
 				T result = caseProcessVariable(processVariable);
+				if (result == null) result = caseTypedElement(processVariable);
+				if (result == null) result = caseNamedElement(processVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,6 +185,21 @@ public class BwSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContainer(Container object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Process Definition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -149,6 +211,51 @@ public class BwSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProcessDefinition(ProcessDefinition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypedElement(TypedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypedNode(TypedNode object) {
 		return null;
 	}
 
