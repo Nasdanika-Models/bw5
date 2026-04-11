@@ -28,7 +28,7 @@ class BwProcessLoaderTest {
 		BwProcessLoader loader = new BwProcessLoader();
 		try (InputStream in = getClass().getResourceAsStream("/sample-process.process")) {
 			assertNotNull(in, "Test resource sample-process.process not found");
-			pd = loader.load(in);
+			pd = loader.load(in, "sample-process.process");
 		}
 		assertNotNull(pd, "ProcessDefinition must not be null");
 	}

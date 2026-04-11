@@ -21,8 +21,8 @@ public class TibcoBwResource extends ResourceImpl {
 	@Override
 	protected void doLoad(InputStream inputStream, Map<?, ?> options) throws IOException {
 		BwProcessLoader loader = new BwProcessLoader();
-		try (InputStream in = getClass().getResourceAsStream("/sample-process.process")) {
-			ProcessDefinition pd = loader.load(in);
+		try (inputStream) {
+			ProcessDefinition pd = loader.load(inputStream, getURI().toString());
 			getContents().add(pd);			
 		} catch (XMLStreamException e) {
 			throw new NasdanikaException(e);

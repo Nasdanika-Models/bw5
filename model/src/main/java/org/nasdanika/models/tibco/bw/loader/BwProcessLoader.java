@@ -66,13 +66,17 @@ public class BwProcessLoader {
 	 * @throws XMLStreamException if the XML is malformed
 	 * @throws IOException        if an I/O error occurs while reading
 	 */
-	public ProcessDefinition load(InputStream inputStream) throws XMLStreamException, IOException {
+	public ProcessDefinition load(InputStream inputStream, String systemId) throws XMLStreamException, IOException {
 		XMLInputFactory xmlFactory = XMLInputFactory.newInstance();
 		// Harden against XXE attacks
 		xmlFactory.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, Boolean.FALSE);
 		xmlFactory.setProperty(XMLInputFactory.SUPPORT_DTD, Boolean.FALSE);
 
-		XMLStreamReader reader = xmlFactory.createXMLStreamReader(inputStream);
+		XMLStreamReader reader = xmlFactory.createXMLStreamReader(systemId, inputStream);
+		return load(reader);
+	}
+
+	public ProcessDefinition load(XMLStreamReader reader) throws XMLStreamException {
 		try {
 			while (reader.hasNext()) {
 				int event = reader.next();
@@ -219,7 +223,7 @@ public class BwProcessLoader {
 					pd.setStartName(reader.getElementText());
 					break;
 				case "startType":
-					pd.setStartType(reader.getElementText());
+					pd.setStartType(captureXmlContent(reader));
 					break;
 				case "startX":
 					pd.setStartX(parseIntText(reader));
@@ -231,7 +235,7 @@ public class BwProcessLoader {
 					pd.setEndName(reader.getElementText());
 					break;
 				case "endType":
-					pd.setEndType(reader.getElementText());
+					pd.setEndType(captureXmlContent(reader));
 					break;
 				case "endX":
 					pd.setEndX(parseIntText(reader));

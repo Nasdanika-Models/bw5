@@ -12,6 +12,7 @@ module org.nasdanika.models.tibco.bw {
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
 	requires org.nasdanika.capability;
+	requires transitive java.xml;
 	
 	provides CapabilityFactory with 
 		TibcoBwEPackageResourceSetCapabilityFactory,
