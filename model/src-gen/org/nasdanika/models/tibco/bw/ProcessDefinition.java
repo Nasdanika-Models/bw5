@@ -40,7 +40,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ProcessDefinition extends Container {
+public interface ProcessDefinition extends Container, CallTarget, Resource {
 	/**
 	 * Returns the value of the '<em><b>Start Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

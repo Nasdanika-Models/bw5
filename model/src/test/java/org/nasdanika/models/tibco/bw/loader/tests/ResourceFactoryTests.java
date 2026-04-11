@@ -27,7 +27,7 @@ public class ResourceFactoryTests {
 		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
 		
-		File processFile = new File("src/test/resources/clean-my-messages.process").getCanonicalFile();
+		File processFile = new File("src/test/resources/sample-process.process").getCanonicalFile();
 		Resource resource = resourceSet.getResource(URI.createFileURI(processFile.getAbsolutePath()), true);		
 		resource.getAllContents().forEachRemaining(e -> {
 			System.out.println(e.eClass().getName());

@@ -53,7 +53,7 @@ abstract class Container extends NamedElement {
  * Corresponds to pd:ProcessDefinition in the XML namespace
  * http://xmlns.tibco.com/bw/process/2003.
  */
-class ProcessDefinition extends Container {
+class ProcessDefinition extends Container, CallTarget, Resource {
 
     /**
      * Name of the implicit Start node (the process trigger).
@@ -176,7 +176,7 @@ class TypedNode extends TypedElement, Node {
  * An activity (task or step) within a BW process or group.
  * Corresponds to pd:activity in the process XML.
  */
-class Activity extends TypedNode {
+class Activity extends TypedNode, Caller {
 
     /**
      * Activity-specific configuration, stored as raw XML text.
@@ -344,3 +344,74 @@ class Label extends Node {
 class ProcessVariable extends TypedElement {
 
 }
+
+/**
+ * Calls are used for resolving inter-process communications. 
+ * 
+ */
+class Call {
+    
+    String description
+    
+    refers CallTarget target opposite incomingCalls
+    
+    container Caller caller opposite outgoingCalls
+}
+
+/**
+ * Something that can receive calls
+ */
+interface CallTarget {
+    
+    refers Call[] incomingCalls opposite target
+    
+}
+
+/**
+ * Something making calls
+ */
+interface Caller {
+    
+    contains Call[] outgoingCalls opposite caller
+    
+}
+
+// --- Project structure ---
+
+/**
+ * Project resource - process definition, XSD, ...
+ */
+class Resource {
+    
+    /**
+     * Relative path in the project
+     */
+    String projectPath
+    
+    refers Folder parent opposite resources
+    
+}
+
+class Folder extends Resource {
+    
+    refers Resource[] resources opposite parent  
+    
+    /**
+     * Loaded from .folder file repository/folder resourceType attribute
+     */
+    String resourceType
+    
+    /**
+     * Loaded from .folder file repository/folder name attribute
+     */
+    String name
+        
+}
+
+/**
+ * Project is folder with vcrepo.dat file and with resourceType="ae.rootfolder" in the .folder file
+ */
+class Project extends Folder {
+    
+}
+

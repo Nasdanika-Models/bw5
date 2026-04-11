@@ -231,13 +231,40 @@ public interface BwPackage extends EPackage {
 	int PROCESS_DEFINITION__TRANSITIONS = CONTAINER__TRANSITIONS;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Calls</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__INCOMING_CALLS = CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__PROJECT_PATH = CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__PARENT = CONTAINER_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Start Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_NAME = CONTAINER_FEATURE_COUNT + 0;
+	int PROCESS_DEFINITION__START_NAME = CONTAINER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Start Type</b></em>' attribute.
@@ -246,7 +273,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 1;
+	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Start X</b></em>' attribute.
@@ -255,7 +282,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_X = CONTAINER_FEATURE_COUNT + 2;
+	int PROCESS_DEFINITION__START_X = CONTAINER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Start Y</b></em>' attribute.
@@ -264,7 +291,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_Y = CONTAINER_FEATURE_COUNT + 3;
+	int PROCESS_DEFINITION__START_Y = CONTAINER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>End Name</b></em>' attribute.
@@ -273,7 +300,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_NAME = CONTAINER_FEATURE_COUNT + 4;
+	int PROCESS_DEFINITION__END_NAME = CONTAINER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>End Type</b></em>' attribute.
@@ -282,7 +309,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 5;
+	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>End X</b></em>' attribute.
@@ -291,7 +318,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_X = CONTAINER_FEATURE_COUNT + 6;
+	int PROCESS_DEFINITION__END_X = CONTAINER_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>End Y</b></em>' attribute.
@@ -300,7 +327,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_Y = CONTAINER_FEATURE_COUNT + 7;
+	int PROCESS_DEFINITION__END_Y = CONTAINER_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Target Namespace</b></em>' attribute.
@@ -309,7 +336,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 8;
+	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
@@ -318,7 +345,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 9;
+	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
@@ -327,7 +354,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 10;
+	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -336,7 +363,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 11;
+	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Process Variables</b></em>' containment reference list.
@@ -345,7 +372,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 12;
+	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Error Schemas</b></em>' attribute.
@@ -354,7 +381,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 13;
+	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Process Definition</em>' class.
@@ -363,7 +390,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 14;
+	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Process Definition</em>' class.
@@ -694,13 +721,22 @@ public interface BwPackage extends EPackage {
 	int ACTIVITY__RESOURCE_TYPE = TYPED_NODE__RESOURCE_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Outgoing Calls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__OUTGOING_CALLS = TYPED_NODE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__CONFIG = TYPED_NODE_FEATURE_COUNT + 0;
+	int ACTIVITY__CONFIG = TYPED_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Input Bindings</b></em>' attribute.
@@ -709,7 +745,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__INPUT_BINDINGS = TYPED_NODE_FEATURE_COUNT + 1;
+	int ACTIVITY__INPUT_BINDINGS = TYPED_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -718,7 +754,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = TYPED_NODE_FEATURE_COUNT + 2;
+	int ACTIVITY_FEATURE_COUNT = TYPED_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -810,6 +846,15 @@ public interface BwPackage extends EPackage {
 	 * @ordered
 	 */
 	int STARTER__RESOURCE_TYPE = ACTIVITY__RESOURCE_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Calls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__OUTGOING_CALLS = ACTIVITY__OUTGOING_CALLS;
 
 	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -928,6 +973,15 @@ public interface BwPackage extends EPackage {
 	 * @ordered
 	 */
 	int GROUP__RESOURCE_TYPE = ACTIVITY__RESOURCE_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Calls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__OUTGOING_CALLS = ACTIVITY__OUTGOING_CALLS;
 
 	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -1336,6 +1390,327 @@ public interface BwPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROCESS_VARIABLE_OPERATION_COUNT = TYPED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.CallImpl <em>Call</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.CallImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCall()
+	 * @generated
+	 */
+	int CALL = 12;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL__DESCRIPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL__TARGET = 1;
+
+	/**
+	 * The feature id for the '<em><b>Caller</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL__CALLER = 2;
+
+	/**
+	 * The number of structural features of the '<em>Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.CallTarget <em>Call Target</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.CallTarget
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCallTarget()
+	 * @generated
+	 */
+	int CALL_TARGET = 13;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Calls</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_TARGET__INCOMING_CALLS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Call Target</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_TARGET_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Call Target</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_TARGET_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.Caller <em>Caller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.Caller
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCaller()
+	 * @generated
+	 */
+	int CALLER = 14;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Calls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLER__OUTGOING_CALLS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Caller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Caller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ResourceImpl <em>Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.ResourceImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getResource()
+	 * @generated
+	 */
+	int RESOURCE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__PROJECT_PATH = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__PARENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.FolderImpl <em>Folder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.FolderImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getFolder()
+	 * @generated
+	 */
+	int FOLDER = 16;
+
+	/**
+	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__PROJECT_PATH = RESOURCE__PROJECT_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__PARENT = RESOURCE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Resources</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__RESOURCES = RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__RESOURCE_TYPE = RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__NAME = RESOURCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Folder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Folder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.tibco.bw.impl.ProjectImpl <em>Project</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.tibco.bw.impl.ProjectImpl
+	 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getProject()
+	 * @generated
+	 */
+	int PROJECT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__PROJECT_PATH = FOLDER__PROJECT_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__PARENT = FOLDER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Resources</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__RESOURCES = FOLDER__RESOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__RESOURCE_TYPE = FOLDER__RESOURCE_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__NAME = FOLDER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Project</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_FEATURE_COUNT = FOLDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Project</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_OPERATION_COUNT = FOLDER_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1976,6 +2351,176 @@ public interface BwPackage extends EPackage {
 	EClass getProcessVariable();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Call <em>Call</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Call</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Call
+	 * @generated
+	 */
+	EClass getCall();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Call#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Call#getDescription()
+	 * @see #getCall()
+	 * @generated
+	 */
+	EAttribute getCall_Description();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Call#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Call#getTarget()
+	 * @see #getCall()
+	 * @generated
+	 */
+	EReference getCall_Target();
+
+	/**
+	 * Returns the meta object for the container reference '{@link org.nasdanika.models.tibco.bw.Call#getCaller <em>Caller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Caller</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Call#getCaller()
+	 * @see #getCall()
+	 * @generated
+	 */
+	EReference getCall_Caller();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.CallTarget <em>Call Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Call Target</em>'.
+	 * @see org.nasdanika.models.tibco.bw.CallTarget
+	 * @generated
+	 */
+	EClass getCallTarget();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.tibco.bw.CallTarget#getIncomingCalls <em>Incoming Calls</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Incoming Calls</em>'.
+	 * @see org.nasdanika.models.tibco.bw.CallTarget#getIncomingCalls()
+	 * @see #getCallTarget()
+	 * @generated
+	 */
+	EReference getCallTarget_IncomingCalls();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Caller <em>Caller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Caller</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Caller
+	 * @generated
+	 */
+	EClass getCaller();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.tibco.bw.Caller#getOutgoingCalls <em>Outgoing Calls</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outgoing Calls</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Caller#getOutgoingCalls()
+	 * @see #getCaller()
+	 * @generated
+	 */
+	EReference getCaller_OutgoingCalls();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Resource
+	 * @generated
+	 */
+	EClass getResource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Resource#getProjectPath <em>Project Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Project Path</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Resource#getProjectPath()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EAttribute getResource_ProjectPath();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Resource#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Resource#getParent()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Folder <em>Folder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Folder</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Folder
+	 * @generated
+	 */
+	EClass getFolder();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.tibco.bw.Folder#getResources <em>Resources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Resources</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Folder#getResources()
+	 * @see #getFolder()
+	 * @generated
+	 */
+	EReference getFolder_Resources();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Folder#getResourceType <em>Resource Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resource Type</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Folder#getResourceType()
+	 * @see #getFolder()
+	 * @generated
+	 */
+	EAttribute getFolder_ResourceType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.Folder#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Folder#getName()
+	 * @see #getFolder()
+	 * @generated
+	 */
+	EAttribute getFolder_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.Project <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Project</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Project
+	 * @generated
+	 */
+	EClass getProject();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2493,6 +3038,146 @@ public interface BwPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROCESS_VARIABLE = eINSTANCE.getProcessVariable();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.CallImpl <em>Call</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.CallImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCall()
+		 * @generated
+		 */
+		EClass CALL = eINSTANCE.getCall();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CALL__DESCRIPTION = eINSTANCE.getCall_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL__TARGET = eINSTANCE.getCall_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Caller</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL__CALLER = eINSTANCE.getCall_Caller();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.CallTarget <em>Call Target</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.CallTarget
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCallTarget()
+		 * @generated
+		 */
+		EClass CALL_TARGET = eINSTANCE.getCallTarget();
+
+		/**
+		 * The meta object literal for the '<em><b>Incoming Calls</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_TARGET__INCOMING_CALLS = eINSTANCE.getCallTarget_IncomingCalls();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.Caller <em>Caller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.Caller
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getCaller()
+		 * @generated
+		 */
+		EClass CALLER = eINSTANCE.getCaller();
+
+		/**
+		 * The meta object literal for the '<em><b>Outgoing Calls</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALLER__OUTGOING_CALLS = eINSTANCE.getCaller_OutgoingCalls();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ResourceImpl <em>Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.ResourceImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getResource()
+		 * @generated
+		 */
+		EClass RESOURCE = eINSTANCE.getResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Project Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE__PROJECT_PATH = eINSTANCE.getResource_ProjectPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__PARENT = eINSTANCE.getResource_Parent();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.FolderImpl <em>Folder</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.FolderImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getFolder()
+		 * @generated
+		 */
+		EClass FOLDER = eINSTANCE.getFolder();
+
+		/**
+		 * The meta object literal for the '<em><b>Resources</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FOLDER__RESOURCES = eINSTANCE.getFolder_Resources();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FOLDER__RESOURCE_TYPE = eINSTANCE.getFolder_ResourceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FOLDER__NAME = eINSTANCE.getFolder_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ProjectImpl <em>Project</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.tibco.bw.impl.ProjectImpl
+		 * @see org.nasdanika.models.tibco.bw.impl.BwPackageImpl#getProject()
+		 * @generated
+		 */
+		EClass PROJECT = eINSTANCE.getProject();
 
 	}
 

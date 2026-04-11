@@ -2,817 +2,1112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://risk.models.nasdanika.org/circular-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2026-04-10T08:43:04.209-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.179-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.201-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.169-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/classifiers.html</loc>
-    <lastmod>2026-04-10T08:43:04.192-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.158-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/default-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2026-04-10T08:43:04.207-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.177-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.199-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.167-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/diagram.html</loc>
-    <lastmod>2026-04-10T08:43:04.198-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.165-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph-3d-detailed.html</loc>
-    <lastmod>2026-04-10T08:43:04.206-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.175-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph-3d-with-dependencies-and-subpackages-detailed.html</loc>
-    <lastmod>2026-04-10T08:43:04.214-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.186-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph-3d-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2026-04-10T08:43:04.213-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.183-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.204-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.172-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2026-04-10T08:43:04.211-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.181-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.202-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.170-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.920-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.707-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:03.927-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.714-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.940-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.731-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.938-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.729-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:03.944-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.736-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.942-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.734-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.925-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.712-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:03.935-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.724-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:03.946-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.738-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/references/eStructuralFeatures/config/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.929-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.717-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/references/eStructuralFeatures/inputBindings/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.931-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.720-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Activity/references.html</loc>
-    <lastmod>2026-04-10T08:43:03.937-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.726-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/attributes.html</loc>
+    <lastmod>2026-04-11T09:55:45.743-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.758-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.756-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:45.763-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.761-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.741-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/load-specification.html</loc>
+    <lastmod>2026-04-11T09:55:45.765-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/references/eStructuralFeatures/caller/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.749-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/references/eStructuralFeatures/description/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.746-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/references/eStructuralFeatures/target/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.751-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Call/references.html</loc>
+    <lastmod>2026-04-11T09:55:45.754-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.799-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.797-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:45.803-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.801-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.786-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/inheritance.html</loc>
+    <lastmod>2026-04-11T09:55:45.795-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/references/eStructuralFeatures/outgoingCalls/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.791-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Caller/references.html</loc>
+    <lastmod>2026-04-11T09:55:45.788-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.780-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.777-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:45.784-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.782-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.768-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/inheritance.html</loc>
+    <lastmod>2026-04-11T09:55:45.775-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/references/eStructuralFeatures/incomingCalls/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.773-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/CallTarget/references.html</loc>
+    <lastmod>2026-04-11T09:55:45.770-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:03.961-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.819-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.966-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.825-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.964-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.823-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:03.970-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.829-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.968-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.826-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.950-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.808-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:03.962-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.821-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/references/eStructuralFeatures/activities/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.955-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.813-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/references/eStructuralFeatures/groups/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.957-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.815-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/references/eStructuralFeatures/transitions/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.959-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.817-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Container/references.html</loc>
-    <lastmod>2026-04-10T08:43:03.952-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.811-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/attributes.html</loc>
+    <lastmod>2026-04-11T09:55:45.833-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.847-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.845-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:45.851-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:45.849-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.832-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/inheritance.html</loc>
+    <lastmod>2026-04-11T09:55:45.843-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/load-specification.html</loc>
+    <lastmod>2026-04-11T09:55:45.852-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/references/eStructuralFeatures/name/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.835-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/references/eStructuralFeatures/resources/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.839-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/references/eStructuralFeatures/resourceType/index.html</loc>
+    <lastmod>2026-04-11T09:55:45.837-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Folder/references.html</loc>
+    <lastmod>2026-04-11T09:55:45.841-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:03.974-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.857-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.991-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.876-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.989-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.874-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:03.995-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.880-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:03.992-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.878-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.973-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.855-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:03.986-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.871-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:03.997-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.882-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references/eStructuralFeatures/collapsedHeight/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.977-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.860-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references/eStructuralFeatures/collapsedWidth/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.979-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.862-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references/eStructuralFeatures/expanded/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.981-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.864-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references/eStructuralFeatures/height/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.983-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.867-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references/eStructuralFeatures/width/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.984-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.869-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Group/references.html</loc>
-    <lastmod>2026-04-10T08:43:03.988-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.872-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.001-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.887-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.019-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.909-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.018-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.907-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.022-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.912-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.021-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.910-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/index.html</loc>
-    <lastmod>2026-04-10T08:43:03.999-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.885-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.015-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.903-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.023-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.913-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/color/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.003-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.890-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/fade/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.005-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.892-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/fontColor/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.006-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.893-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/height/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.007-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.895-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/thickness/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.010-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.898-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/type/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.012-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.900-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references/eStructuralFeatures/width/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.014-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.902-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Label/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.017-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.905-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.027-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.919-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.035-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.928-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.033-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.927-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.038-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.932-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.036-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.930-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.026-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.917-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.032-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.925-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/references/eStructuralFeatures/description/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.029-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.922-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/NamedElement/references/eStructuralFeatures/name/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.031-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.924-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.043-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.937-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.056-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.953-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.054-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.951-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.059-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.956-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.057-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.954-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.041-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.935-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.053-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.949-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.060-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.958-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/references/eStructuralFeatures/incomingTransitions/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.048-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.943-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/references/eStructuralFeatures/outgoingTransitions/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.050-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.946-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/references/eStructuralFeatures/x/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.045-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.940-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/references/eStructuralFeatures/y/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.046-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.941-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Node/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.051-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.948-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.065-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.964-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.098-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.096-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.997-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.101-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.004-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.100-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.002-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.063-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.962-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.095-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.995-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.103-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.007-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endName/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.068-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.967-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endType/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.069-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.969-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endX/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.071-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.970-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endY/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.072-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.972-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/errorSchemas/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.074-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.974-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/labels/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.086-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.988-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/processVariables/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.089-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.990-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/returnBindings/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.076-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.976-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/starter/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.091-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.992-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startName/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.077-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.978-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startType/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.079-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.980-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startX/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.080-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.981-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startY/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.082-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.984-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/targetNamespace/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.084-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.986-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessDefinition/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.093-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:45.994-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.107-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.012-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.112-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.018-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.110-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.016-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.114-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.021-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.113-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.020-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.105-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.010-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.109-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.015-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/ProcessVariable/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.116-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.023-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/attributes.html</loc>
+    <lastmod>2026-04-11T09:55:46.027-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.035-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.034-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:46.039-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.037-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/index.html</loc>
+    <lastmod>2026-04-11T09:55:46.026-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/inheritance.html</loc>
+    <lastmod>2026-04-11T09:55:46.029-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/load-specification.html</loc>
+    <lastmod>2026-04-11T09:55:46.041-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Project/references.html</loc>
+    <lastmod>2026-04-11T09:55:46.032-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/attributes.html</loc>
+    <lastmod>2026-04-11T09:55:46.046-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/circular-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.058-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/default-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.056-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/force-layout-graph-3d.html</loc>
+    <lastmod>2026-04-11T09:55:46.063-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/force-layout-graph.html</loc>
+    <lastmod>2026-04-11T09:55:46.061-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/index.html</loc>
+    <lastmod>2026-04-11T09:55:46.044-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/inheritance.html</loc>
+    <lastmod>2026-04-11T09:55:46.055-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/load-specification.html</loc>
+    <lastmod>2026-04-11T09:55:46.064-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/references/eStructuralFeatures/parent/index.html</loc>
+    <lastmod>2026-04-11T09:55:46.051-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/references/eStructuralFeatures/projectPath/index.html</loc>
+    <lastmod>2026-04-11T09:55:46.049-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://risk.models.nasdanika.org/references/eClassifiers/Resource/references.html</loc>
+    <lastmod>2026-04-11T09:55:46.053-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.120-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.070-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.126-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.077-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.125-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.075-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.129-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.081-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.127-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.079-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.118-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.068-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.120-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.071-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.131-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.083-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Starter/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.123-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.074-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.134-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.088-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.153-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.111-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.151-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.109-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.155-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.115-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.154-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.113-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.133-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.086-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.157-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.117-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/condition/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.137-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.091-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/conditionType/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.138-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.093-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/from/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.140-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.095-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/lineColor/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.142-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.097-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/lineType/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.143-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.099-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/source/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.147-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.103-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/target/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.148-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.105-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/to/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.145-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.101-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/Transition/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.150-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.108-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.161-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.121-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.168-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.130-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.167-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.128-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.171-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.134-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.169-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.131-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.159-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.119-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.165-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.126-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.172-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.135-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedElement/references/eStructuralFeatures/type/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.164-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.124-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/attributes.html</loc>
-    <lastmod>2026-04-10T08:43:04.176-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.140-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/circular-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.186-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.150-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/default-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.184-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.148-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/force-layout-graph-3d.html</loc>
-    <lastmod>2026-04-10T08:43:04.188-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.154-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/force-layout-graph.html</loc>
-    <lastmod>2026-04-10T08:43:04.187-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.152-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.175-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.139-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/inheritance.html</loc>
-    <lastmod>2026-04-10T08:43:04.181-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.145-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/load-specification.html</loc>
-    <lastmod>2026-04-10T08:43:04.190-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.156-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/references/eStructuralFeatures/resourceType/index.html</loc>
-    <lastmod>2026-04-10T08:43:04.179-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.144-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/references/eClassifiers/TypedNode/references.html</loc>
-    <lastmod>2026-04-10T08:43:04.183-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.147-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://risk.models.nasdanika.org/search.html</loc>
-    <lastmod>2026-04-10T08:43:04.219-04:00</lastmod>
+    <lastmod>2026-04-11T09:55:46.192-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

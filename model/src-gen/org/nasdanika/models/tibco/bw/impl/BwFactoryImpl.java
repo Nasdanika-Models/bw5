@@ -66,6 +66,10 @@ public class BwFactoryImpl extends EFactoryImpl implements BwFactory {
 			case BwPackage.TRANSITION: return createTransition();
 			case BwPackage.LABEL: return createLabel();
 			case BwPackage.PROCESS_VARIABLE: return createProcessVariable();
+			case BwPackage.CALL: return createCall();
+			case BwPackage.RESOURCE: return createResource();
+			case BwPackage.FOLDER: return createFolder();
+			case BwPackage.PROJECT: return createProject();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -179,6 +183,50 @@ public class BwFactoryImpl extends EFactoryImpl implements BwFactory {
 	public ProcessVariable createProcessVariable() {
 		ProcessVariableImpl processVariable = new ProcessVariableImpl();
 		return processVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Call createCall() {
+		CallImpl call = new CallImpl();
+		return call;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Resource createResource() {
+		ResourceImpl resource = new ResourceImpl();
+		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Folder createFolder() {
+		FolderImpl folder = new FolderImpl();
+		return folder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Project createProject() {
+		ProjectImpl project = new ProjectImpl();
+		return project;
 	}
 
 	/**

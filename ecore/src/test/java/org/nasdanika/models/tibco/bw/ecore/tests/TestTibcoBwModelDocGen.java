@@ -106,7 +106,7 @@ public class TestTibcoBwModelDocGen {
 		
 		System.out.println("There are " + errorCount + " site errors");
 		
-		if (errorCount != 185) {
+		if (errorCount != 129) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}

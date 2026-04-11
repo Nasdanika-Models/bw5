@@ -26,7 +26,7 @@ package org.nasdanika.models.tibco.bw;
  * @model
  * @generated
  */
-public interface Activity extends TypedNode {
+public interface Activity extends TypedNode, Caller {
 	/**
 	 * Returns the value of the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -14,9 +14,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.tibco.bw.BwPackage;
+import org.nasdanika.models.tibco.bw.Call;
+import org.nasdanika.models.tibco.bw.CallTarget;
+import org.nasdanika.models.tibco.bw.Folder;
 import org.nasdanika.models.tibco.bw.Label;
 import org.nasdanika.models.tibco.bw.ProcessDefinition;
 import org.nasdanika.models.tibco.bw.ProcessVariable;
+import org.nasdanika.models.tibco.bw.Resource;
 import org.nasdanika.models.tibco.bw.Starter;
 
 /**
@@ -27,6 +31,9 @@ import org.nasdanika.models.tibco.bw.Starter;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getIncomingCalls <em>Incoming Calls</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getProjectPath <em>Project Path</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartName <em>Start Name</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartX <em>Start X</em>}</li>
@@ -46,6 +53,16 @@ import org.nasdanika.models.tibco.bw.Starter;
  * @generated
  */
 public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefinition {
+	/**
+	 * The default value of the '{@link #getProjectPath() <em>Project Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProjectPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROJECT_PATH_EDEFAULT = null;
+
 	/**
 	 * The default value of the '{@link #getStartName() <em>Start Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -173,6 +190,76 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	protected EClass eStaticClass() {
 		return BwPackage.Literals.PROCESS_DEFINITION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Call> getIncomingCalls() {
+		return (EList<Call>)eDynamicGet(BwPackage.PROCESS_DEFINITION__INCOMING_CALLS, BwPackage.Literals.CALL_TARGET__INCOMING_CALLS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getProjectPath() {
+		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__PROJECT_PATH, BwPackage.Literals.RESOURCE__PROJECT_PATH, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setProjectPath(String newProjectPath) {
+		eDynamicSet(BwPackage.PROCESS_DEFINITION__PROJECT_PATH, BwPackage.Literals.RESOURCE__PROJECT_PATH, newProjectPath);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Folder getParent() {
+		return (Folder)eDynamicGet(BwPackage.PROCESS_DEFINITION__PARENT, BwPackage.Literals.RESOURCE__PARENT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Folder basicGetParent() {
+		return (Folder)eDynamicGet(BwPackage.PROCESS_DEFINITION__PARENT, BwPackage.Literals.RESOURCE__PARENT, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParent(Folder newParent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newParent, BwPackage.PROCESS_DEFINITION__PARENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setParent(Folder newParent) {
+		eDynamicSet(BwPackage.PROCESS_DEFINITION__PARENT, BwPackage.Literals.RESOURCE__PARENT, newParent);
 	}
 
 	/**
@@ -452,9 +539,33 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingCalls()).basicAdd(otherEnd, msgs);
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				Folder parent = basicGetParent();
+				if (parent != null)
+					msgs = ((InternalEObject)parent).eInverseRemove(this, BwPackage.FOLDER__RESOURCES, Folder.class, msgs);
+				return basicSetParent((Folder)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				return ((InternalEList<?>)getIncomingCalls()).basicRemove(otherEnd, msgs);
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				return basicSetParent(null, msgs);
 			case BwPackage.PROCESS_DEFINITION__STARTER:
 				return basicSetStarter(null, msgs);
 			case BwPackage.PROCESS_DEFINITION__LABELS:
@@ -473,6 +584,13 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				return getIncomingCalls();
+			case BwPackage.PROCESS_DEFINITION__PROJECT_PATH:
+				return getProjectPath();
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				if (resolve) return getParent();
+				return basicGetParent();
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				return getStartName();
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
@@ -514,6 +632,16 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				getIncomingCalls().clear();
+				getIncomingCalls().addAll((Collection<? extends Call>)newValue);
+				return;
+			case BwPackage.PROCESS_DEFINITION__PROJECT_PATH:
+				setProjectPath((String)newValue);
+				return;
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				setParent((Folder)newValue);
+				return;
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				setStartName((String)newValue);
 				return;
@@ -570,6 +698,15 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				getIncomingCalls().clear();
+				return;
+			case BwPackage.PROCESS_DEFINITION__PROJECT_PATH:
+				setProjectPath(PROJECT_PATH_EDEFAULT);
+				return;
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				setParent((Folder)null);
+				return;
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				setStartName(START_NAME_EDEFAULT);
 				return;
@@ -624,6 +761,12 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS:
+				return !getIncomingCalls().isEmpty();
+			case BwPackage.PROCESS_DEFINITION__PROJECT_PATH:
+				return PROJECT_PATH_EDEFAULT == null ? getProjectPath() != null : !PROJECT_PATH_EDEFAULT.equals(getProjectPath());
+			case BwPackage.PROCESS_DEFINITION__PARENT:
+				return basicGetParent() != null;
 			case BwPackage.PROCESS_DEFINITION__START_NAME:
 				return START_NAME_EDEFAULT == null ? getStartName() != null : !START_NAME_EDEFAULT.equals(getStartName());
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
@@ -654,6 +797,52 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return ERROR_SCHEMAS_EDEFAULT == null ? getErrorSchemas() != null : !ERROR_SCHEMAS_EDEFAULT.equals(getErrorSchemas());
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == CallTarget.class) {
+			switch (derivedFeatureID) {
+				case BwPackage.PROCESS_DEFINITION__INCOMING_CALLS: return BwPackage.CALL_TARGET__INCOMING_CALLS;
+				default: return -1;
+			}
+		}
+		if (baseClass == Resource.class) {
+			switch (derivedFeatureID) {
+				case BwPackage.PROCESS_DEFINITION__PROJECT_PATH: return BwPackage.RESOURCE__PROJECT_PATH;
+				case BwPackage.PROCESS_DEFINITION__PARENT: return BwPackage.RESOURCE__PARENT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == CallTarget.class) {
+			switch (baseFeatureID) {
+				case BwPackage.CALL_TARGET__INCOMING_CALLS: return BwPackage.PROCESS_DEFINITION__INCOMING_CALLS;
+				default: return -1;
+			}
+		}
+		if (baseClass == Resource.class) {
+			switch (baseFeatureID) {
+				case BwPackage.RESOURCE__PROJECT_PATH: return BwPackage.PROCESS_DEFINITION__PROJECT_PATH;
+				case BwPackage.RESOURCE__PARENT: return BwPackage.PROCESS_DEFINITION__PARENT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //ProcessDefinitionImpl

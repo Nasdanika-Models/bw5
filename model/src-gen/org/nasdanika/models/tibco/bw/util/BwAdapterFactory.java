@@ -116,6 +116,30 @@ public class BwAdapterFactory extends AdapterFactoryImpl {
 				return createProcessVariableAdapter();
 			}
 			@Override
+			public Adapter caseCall(Call object) {
+				return createCallAdapter();
+			}
+			@Override
+			public Adapter caseCallTarget(CallTarget object) {
+				return createCallTargetAdapter();
+			}
+			@Override
+			public Adapter caseCaller(Caller object) {
+				return createCallerAdapter();
+			}
+			@Override
+			public Adapter caseResource(Resource object) {
+				return createResourceAdapter();
+			}
+			@Override
+			public Adapter caseFolder(Folder object) {
+				return createFolderAdapter();
+			}
+			@Override
+			public Adapter caseProject(Project object) {
+				return createProjectAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +324,90 @@ public class BwAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProcessVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.Call <em>Call</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.Call
+	 * @generated
+	 */
+	public Adapter createCallAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.CallTarget <em>Call Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.CallTarget
+	 * @generated
+	 */
+	public Adapter createCallTargetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.Caller <em>Caller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.Caller
+	 * @generated
+	 */
+	public Adapter createCallerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.Resource
+	 * @generated
+	 */
+	public Adapter createResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.Folder <em>Folder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.Folder
+	 * @generated
+	 */
+	public Adapter createFolderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.tibco.bw.Project <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.tibco.bw.Project
+	 * @generated
+	 */
+	public Adapter createProjectAdapter() {
 		return null;
 	}
 

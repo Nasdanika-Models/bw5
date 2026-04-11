@@ -13,12 +13,18 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.nasdanika.models.tibco.bw.Activity;
 import org.nasdanika.models.tibco.bw.BwFactory;
 import org.nasdanika.models.tibco.bw.BwPackage;
+import org.nasdanika.models.tibco.bw.Call;
+import org.nasdanika.models.tibco.bw.CallTarget;
+import org.nasdanika.models.tibco.bw.Caller;
+import org.nasdanika.models.tibco.bw.Folder;
 import org.nasdanika.models.tibco.bw.Group;
 import org.nasdanika.models.tibco.bw.Label;
 import org.nasdanika.models.tibco.bw.NamedElement;
 import org.nasdanika.models.tibco.bw.Node;
 import org.nasdanika.models.tibco.bw.ProcessDefinition;
 import org.nasdanika.models.tibco.bw.ProcessVariable;
+import org.nasdanika.models.tibco.bw.Project;
+import org.nasdanika.models.tibco.bw.Resource;
 import org.nasdanika.models.tibco.bw.Starter;
 import org.nasdanika.models.tibco.bw.Transition;
 import org.nasdanika.models.tibco.bw.TypedElement;
@@ -114,6 +120,48 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	private EClass processVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callTargetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass resourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass folderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass projectEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -774,6 +822,166 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getCall() {
+		return callEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCall_Description() {
+		return (EAttribute)callEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCall_Target() {
+		return (EReference)callEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCall_Caller() {
+		return (EReference)callEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCallTarget() {
+		return callTargetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCallTarget_IncomingCalls() {
+		return (EReference)callTargetEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCaller() {
+		return callerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCaller_OutgoingCalls() {
+		return (EReference)callerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getResource() {
+		return resourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getResource_ProjectPath() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getResource_Parent() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFolder() {
+		return folderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFolder_Resources() {
+		return (EReference)folderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFolder_ResourceType() {
+		return (EAttribute)folderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFolder_Name() {
+		return (EAttribute)folderEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getProject() {
+		return projectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public BwFactory getBwFactory() {
 		return (BwFactory)getEFactoryInstance();
 	}
@@ -867,6 +1075,28 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createEAttribute(labelEClass, LABEL__FADE);
 
 		processVariableEClass = createEClass(PROCESS_VARIABLE);
+
+		callEClass = createEClass(CALL);
+		createEAttribute(callEClass, CALL__DESCRIPTION);
+		createEReference(callEClass, CALL__TARGET);
+		createEReference(callEClass, CALL__CALLER);
+
+		callTargetEClass = createEClass(CALL_TARGET);
+		createEReference(callTargetEClass, CALL_TARGET__INCOMING_CALLS);
+
+		callerEClass = createEClass(CALLER);
+		createEReference(callerEClass, CALLER__OUTGOING_CALLS);
+
+		resourceEClass = createEClass(RESOURCE);
+		createEAttribute(resourceEClass, RESOURCE__PROJECT_PATH);
+		createEReference(resourceEClass, RESOURCE__PARENT);
+
+		folderEClass = createEClass(FOLDER);
+		createEReference(folderEClass, FOLDER__RESOURCES);
+		createEAttribute(folderEClass, FOLDER__RESOURCE_TYPE);
+		createEAttribute(folderEClass, FOLDER__NAME);
+
+		projectEClass = createEClass(PROJECT);
 	}
 
 	/**
@@ -902,16 +1132,21 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		// Add supertypes to classes
 		containerEClass.getESuperTypes().add(this.getNamedElement());
 		processDefinitionEClass.getESuperTypes().add(this.getContainer());
+		processDefinitionEClass.getESuperTypes().add(this.getCallTarget());
+		processDefinitionEClass.getESuperTypes().add(this.getResource());
 		nodeEClass.getESuperTypes().add(this.getNamedElement());
 		typedElementEClass.getESuperTypes().add(this.getNamedElement());
 		typedNodeEClass.getESuperTypes().add(this.getTypedElement());
 		typedNodeEClass.getESuperTypes().add(this.getNode());
 		activityEClass.getESuperTypes().add(this.getTypedNode());
+		activityEClass.getESuperTypes().add(this.getCaller());
 		starterEClass.getESuperTypes().add(this.getActivity());
 		groupEClass.getESuperTypes().add(this.getActivity());
 		groupEClass.getESuperTypes().add(this.getContainer());
 		labelEClass.getESuperTypes().add(this.getNode());
 		processVariableEClass.getESuperTypes().add(this.getTypedElement());
+		folderEClass.getESuperTypes().add(this.getResource());
+		projectEClass.getESuperTypes().add(this.getFolder());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -987,6 +1222,28 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		initEAttribute(getLabel_Fade(), theEcorePackage.getEString(), "fade", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processVariableEClass, ProcessVariable.class, "ProcessVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(callEClass, Call.class, "Call", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCall_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCall_Target(), this.getCallTarget(), this.getCallTarget_IncomingCalls(), "target", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCall_Caller(), this.getCaller(), this.getCaller_OutgoingCalls(), "caller", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(callTargetEClass, CallTarget.class, "CallTarget", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCallTarget_IncomingCalls(), this.getCall(), this.getCall_Target(), "incomingCalls", null, 0, -1, CallTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(callerEClass, Caller.class, "Caller", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCaller_OutgoingCalls(), this.getCall(), this.getCall_Caller(), "outgoingCalls", null, 0, -1, Caller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResource_ProjectPath(), theEcorePackage.getEString(), "projectPath", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_Parent(), this.getFolder(), this.getFolder_Resources(), "parent", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFolder_Resources(), this.getResource(), this.getResource_Parent(), "resources", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFolder_ResourceType(), theEcorePackage.getEString(), "resourceType", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFolder_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1335,6 +1592,54 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		   source,
 		   new String[] {
 			   "documentation", "*\nA process-level variable declared in the processVariables section.\nProcess variables hold state that is visible to all activities within\nthe same process instance."
+		   });
+		addAnnotation
+		  (callEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nCalls are used for resolving inter-process communications."
+		   });
+		addAnnotation
+		  (callTargetEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nSomething that can receive calls"
+		   });
+		addAnnotation
+		  (callerEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nSomething making calls"
+		   });
+		addAnnotation
+		  (resourceEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nProject resource - process definition, XSD, ..."
+		   });
+		addAnnotation
+		  (getResource_ProjectPath(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nRelative path in the project"
+		   });
+		addAnnotation
+		  (getFolder_ResourceType(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nLoaded from .folder file repository/folder resourceType attribute"
+		   });
+		addAnnotation
+		  (getFolder_Name(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nLoaded from .folder file repository/folder name attribute"
+		   });
+		addAnnotation
+		  (projectEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nProject is folder with vcrepo.dat file and with resourceType=\"ae.rootfolder\" in the .folder file"
 		   });
 	}
 

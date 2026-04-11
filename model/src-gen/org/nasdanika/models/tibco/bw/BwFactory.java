@@ -112,6 +112,42 @@ public interface BwFactory extends EFactory {
 	ProcessVariable createProcessVariable();
 
 	/**
+	 * Returns a new object of class '<em>Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Call</em>'.
+	 * @generated
+	 */
+	Call createCall();
+
+	/**
+	 * Returns a new object of class '<em>Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource</em>'.
+	 * @generated
+	 */
+	Resource createResource();
+
+	/**
+	 * Returns a new object of class '<em>Folder</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Folder</em>'.
+	 * @generated
+	 */
+	Folder createFolder();
+
+	/**
+	 * Returns a new object of class '<em>Project</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Project</em>'.
+	 * @generated
+	 */
+	Project createProject();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
