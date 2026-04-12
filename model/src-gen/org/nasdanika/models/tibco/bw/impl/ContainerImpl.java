@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.tibco.bw.Activity;
 import org.nasdanika.models.tibco.bw.BwPackage;
 import org.nasdanika.models.tibco.bw.Group;
+import org.nasdanika.models.tibco.bw.Node;
 import org.nasdanika.models.tibco.bw.Transition;
 
 /**
@@ -29,6 +30,8 @@ import org.nasdanika.models.tibco.bw.Transition;
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl#getActivities <em>Activities</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl#getStart <em>Start</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.ContainerImpl#getEnd <em>End</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,6 +95,64 @@ public abstract class ContainerImpl extends NamedElementImpl implements org.nasd
 	 * @generated
 	 */
 	@Override
+	public Node getStart() {
+		return (Node)eDynamicGet(BwPackage.CONTAINER__START, BwPackage.Literals.CONTAINER__START, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetStart() {
+		return (Node)eDynamicGet(BwPackage.CONTAINER__START, BwPackage.Literals.CONTAINER__START, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStart(Node newStart) {
+		eDynamicSet(BwPackage.CONTAINER__START, BwPackage.Literals.CONTAINER__START, newStart);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Node getEnd() {
+		return (Node)eDynamicGet(BwPackage.CONTAINER__END, BwPackage.Literals.CONTAINER__END, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetEnd() {
+		return (Node)eDynamicGet(BwPackage.CONTAINER__END, BwPackage.Literals.CONTAINER__END, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEnd(Node newEnd) {
+		eDynamicSet(BwPackage.CONTAINER__END, BwPackage.Literals.CONTAINER__END, newEnd);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BwPackage.CONTAINER__ACTIVITIES:
@@ -118,6 +179,12 @@ public abstract class ContainerImpl extends NamedElementImpl implements org.nasd
 				return getGroups();
 			case BwPackage.CONTAINER__TRANSITIONS:
 				return getTransitions();
+			case BwPackage.CONTAINER__START:
+				if (resolve) return getStart();
+				return basicGetStart();
+			case BwPackage.CONTAINER__END:
+				if (resolve) return getEnd();
+				return basicGetEnd();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,6 +210,12 @@ public abstract class ContainerImpl extends NamedElementImpl implements org.nasd
 				getTransitions().clear();
 				getTransitions().addAll((Collection<? extends Transition>)newValue);
 				return;
+			case BwPackage.CONTAINER__START:
+				setStart((Node)newValue);
+				return;
+			case BwPackage.CONTAINER__END:
+				setEnd((Node)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -164,6 +237,12 @@ public abstract class ContainerImpl extends NamedElementImpl implements org.nasd
 			case BwPackage.CONTAINER__TRANSITIONS:
 				getTransitions().clear();
 				return;
+			case BwPackage.CONTAINER__START:
+				setStart((Node)null);
+				return;
+			case BwPackage.CONTAINER__END:
+				setEnd((Node)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -182,6 +261,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements org.nasd
 				return !getGroups().isEmpty();
 			case BwPackage.CONTAINER__TRANSITIONS:
 				return !getTransitions().isEmpty();
+			case BwPackage.CONTAINER__START:
+				return basicGetStart() != null;
+			case BwPackage.CONTAINER__END:
+				return basicGetEnd() != null;
 		}
 		return super.eIsSet(featureID);
 	}

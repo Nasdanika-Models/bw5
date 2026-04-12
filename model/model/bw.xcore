@@ -46,6 +46,16 @@ abstract class Container extends NamedElement {
      */
     contains Transition[] transitions
     
+    /**
+     * A synthetic node populated from startName, startType, startX, startY
+     */
+    refers Node start
+    
+    /**
+     * A synthetic node populated from endName, endType, endX, endY
+     */
+    refers Node end
+    
 }
 
 /**
@@ -56,46 +66,14 @@ abstract class Container extends NamedElement {
 class ProcessDefinition extends Container, CallTarget, Resource {
 
     /**
-     * Name of the implicit Start node (the process trigger).
-     * When a Starter is present this is the starter's name; otherwise BW
-     * generates a plain Start pseudo-state.
-     */
-    String startName
-
-    /**
      * Canonical type of the start element (optional).
      */
     String startType
 
     /**
-     * X coordinate of the Start node on the design canvas.
-     */
-    int startX
-
-    /**
-     * Y coordinate of the Start node on the design canvas.
-     */
-    int startY
-
-    /**
-     * Name of the implicit End node.
-     */
-    String endName
-
-    /**
      * Canonical type of the end element (optional).
      */
     String endType
-
-    /**
-     * X coordinate of the End node on the design canvas.
-     */
-    int endX
-
-    /**
-     * Y coordinate of the End node on the design canvas.
-     */
-    int endY
 
     /**
      * The XML target namespace declared in the process file.
@@ -202,6 +180,7 @@ class Activity extends TypedNode, Caller {
  * class so that tooling can easily distinguish starters from regular steps.
  */
 class Starter extends Activity {
+    
 }
 
 /**

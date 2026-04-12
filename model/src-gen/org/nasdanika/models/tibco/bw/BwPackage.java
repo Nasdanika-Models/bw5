@@ -158,13 +158,31 @@ public interface BwPackage extends EPackage {
 	int CONTAINER__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__START = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__END = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Container</em>' class.
@@ -231,6 +249,24 @@ public interface BwPackage extends EPackage {
 	int PROCESS_DEFINITION__TRANSITIONS = CONTAINER__TRANSITIONS;
 
 	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__START = CONTAINER__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__END = CONTAINER__END;
+
+	/**
 	 * The feature id for the '<em><b>Incoming Calls</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,49 +294,13 @@ public interface BwPackage extends EPackage {
 	int PROCESS_DEFINITION__PARENT = CONTAINER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Start Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_NAME = CONTAINER_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Start Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Start X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_X = CONTAINER_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Start Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__START_Y = CONTAINER_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>End Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_NAME = CONTAINER_FEATURE_COUNT + 7;
+	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>End Type</b></em>' attribute.
@@ -309,25 +309,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>End X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_X = CONTAINER_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>End Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__END_Y = CONTAINER_FEATURE_COUNT + 10;
+	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Target Namespace</b></em>' attribute.
@@ -336,7 +318,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 11;
+	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
@@ -345,7 +327,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 12;
+	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
@@ -354,7 +336,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 13;
+	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -363,7 +345,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 14;
+	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Process Variables</b></em>' containment reference list.
@@ -372,7 +354,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 15;
+	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Error Schemas</b></em>' attribute.
@@ -381,7 +363,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 16;
+	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Process Definition</em>' class.
@@ -390,7 +372,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 17;
+	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Process Definition</em>' class.
@@ -1029,13 +1011,31 @@ public interface BwPackage extends EPackage {
 	int GROUP__TRANSITIONS = ACTIVITY_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__START = ACTIVITY_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__END = ACTIVITY_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__WIDTH = ACTIVITY_FEATURE_COUNT + 3;
+	int GROUP__WIDTH = ACTIVITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1044,7 +1044,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__HEIGHT = ACTIVITY_FEATURE_COUNT + 4;
+	int GROUP__HEIGHT = ACTIVITY_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed Width</b></em>' attribute.
@@ -1053,7 +1053,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__COLLAPSED_WIDTH = ACTIVITY_FEATURE_COUNT + 5;
+	int GROUP__COLLAPSED_WIDTH = ACTIVITY_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed Height</b></em>' attribute.
@@ -1062,7 +1062,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__COLLAPSED_HEIGHT = ACTIVITY_FEATURE_COUNT + 6;
+	int GROUP__COLLAPSED_HEIGHT = ACTIVITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Expanded</b></em>' attribute.
@@ -1071,7 +1071,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__EXPANDED = ACTIVITY_FEATURE_COUNT + 7;
+	int GROUP__EXPANDED = ACTIVITY_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -1080,7 +1080,7 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 8;
+	int GROUP_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -1789,6 +1789,28 @@ public interface BwPackage extends EPackage {
 	EReference getContainer_Transitions();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Container#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container#getStart()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.models.tibco.bw.Container#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see org.nasdanika.models.tibco.bw.Container#getEnd()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_End();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.tibco.bw.ProcessDefinition <em>Process Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1797,17 +1819,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getProcessDefinition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartName <em>Start Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start Name</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getStartName()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_StartName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartType <em>Start Type</em>}'.
@@ -1821,39 +1832,6 @@ public interface BwPackage extends EPackage {
 	EAttribute getProcessDefinition_StartType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartX <em>Start X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start X</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getStartX()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_StartX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getStartY <em>Start Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start Y</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getStartY()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_StartY();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getEndName <em>End Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End Name</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getEndName()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_EndName();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getEndType <em>End Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1863,28 +1841,6 @@ public interface BwPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProcessDefinition_EndType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getEndX <em>End X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End X</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getEndX()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_EndX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getEndY <em>End Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End Y</em>'.
-	 * @see org.nasdanika.models.tibco.bw.ProcessDefinition#getEndY()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_EndY();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.tibco.bw.ProcessDefinition#getTargetNamespace <em>Target Namespace</em>}'.
@@ -2604,6 +2560,22 @@ public interface BwPackage extends EPackage {
 		EReference CONTAINER__TRANSITIONS = eINSTANCE.getContainer_Transitions();
 
 		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__START = eINSTANCE.getContainer_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__END = eINSTANCE.getContainer_End();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2614,14 +2586,6 @@ public interface BwPackage extends EPackage {
 		EClass PROCESS_DEFINITION = eINSTANCE.getProcessDefinition();
 
 		/**
-		 * The meta object literal for the '<em><b>Start Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__START_NAME = eINSTANCE.getProcessDefinition_StartName();
-
-		/**
 		 * The meta object literal for the '<em><b>Start Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2630,52 +2594,12 @@ public interface BwPackage extends EPackage {
 		EAttribute PROCESS_DEFINITION__START_TYPE = eINSTANCE.getProcessDefinition_StartType();
 
 		/**
-		 * The meta object literal for the '<em><b>Start X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__START_X = eINSTANCE.getProcessDefinition_StartX();
-
-		/**
-		 * The meta object literal for the '<em><b>Start Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__START_Y = eINSTANCE.getProcessDefinition_StartY();
-
-		/**
-		 * The meta object literal for the '<em><b>End Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__END_NAME = eINSTANCE.getProcessDefinition_EndName();
-
-		/**
 		 * The meta object literal for the '<em><b>End Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute PROCESS_DEFINITION__END_TYPE = eINSTANCE.getProcessDefinition_EndType();
-
-		/**
-		 * The meta object literal for the '<em><b>End X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__END_X = eINSTANCE.getProcessDefinition_EndX();
-
-		/**
-		 * The meta object literal for the '<em><b>End Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__END_Y = eINSTANCE.getProcessDefinition_EndY();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Namespace</b></em>' attribute feature.

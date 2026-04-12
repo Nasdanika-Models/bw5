@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.tibco.bw.Activity;
 import org.nasdanika.models.tibco.bw.BwPackage;
 import org.nasdanika.models.tibco.bw.Group;
+import org.nasdanika.models.tibco.bw.Node;
 import org.nasdanika.models.tibco.bw.Transition;
 
 /**
@@ -29,6 +30,8 @@ import org.nasdanika.models.tibco.bw.Transition;
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getActivities <em>Activities</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getStart <em>Start</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getEnd <em>End</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.GroupImpl#getCollapsedWidth <em>Collapsed Width</em>}</li>
@@ -139,6 +142,64 @@ public class GroupImpl extends ActivityImpl implements Group {
 	@Override
 	public EList<Transition> getTransitions() {
 		return (EList<Transition>)eDynamicGet(BwPackage.GROUP__TRANSITIONS, BwPackage.Literals.CONTAINER__TRANSITIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Node getStart() {
+		return (Node)eDynamicGet(BwPackage.GROUP__START, BwPackage.Literals.CONTAINER__START, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetStart() {
+		return (Node)eDynamicGet(BwPackage.GROUP__START, BwPackage.Literals.CONTAINER__START, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStart(Node newStart) {
+		eDynamicSet(BwPackage.GROUP__START, BwPackage.Literals.CONTAINER__START, newStart);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Node getEnd() {
+		return (Node)eDynamicGet(BwPackage.GROUP__END, BwPackage.Literals.CONTAINER__END, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetEnd() {
+		return (Node)eDynamicGet(BwPackage.GROUP__END, BwPackage.Literals.CONTAINER__END, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEnd(Node newEnd) {
+		eDynamicSet(BwPackage.GROUP__END, BwPackage.Literals.CONTAINER__END, newEnd);
 	}
 
 	/**
@@ -273,6 +334,12 @@ public class GroupImpl extends ActivityImpl implements Group {
 				return getGroups();
 			case BwPackage.GROUP__TRANSITIONS:
 				return getTransitions();
+			case BwPackage.GROUP__START:
+				if (resolve) return getStart();
+				return basicGetStart();
+			case BwPackage.GROUP__END:
+				if (resolve) return getEnd();
+				return basicGetEnd();
 			case BwPackage.GROUP__WIDTH:
 				return getWidth();
 			case BwPackage.GROUP__HEIGHT:
@@ -307,6 +374,12 @@ public class GroupImpl extends ActivityImpl implements Group {
 			case BwPackage.GROUP__TRANSITIONS:
 				getTransitions().clear();
 				getTransitions().addAll((Collection<? extends Transition>)newValue);
+				return;
+			case BwPackage.GROUP__START:
+				setStart((Node)newValue);
+				return;
+			case BwPackage.GROUP__END:
+				setEnd((Node)newValue);
 				return;
 			case BwPackage.GROUP__WIDTH:
 				setWidth((Integer)newValue);
@@ -344,6 +417,12 @@ public class GroupImpl extends ActivityImpl implements Group {
 			case BwPackage.GROUP__TRANSITIONS:
 				getTransitions().clear();
 				return;
+			case BwPackage.GROUP__START:
+				setStart((Node)null);
+				return;
+			case BwPackage.GROUP__END:
+				setEnd((Node)null);
+				return;
 			case BwPackage.GROUP__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
@@ -377,6 +456,10 @@ public class GroupImpl extends ActivityImpl implements Group {
 				return !getGroups().isEmpty();
 			case BwPackage.GROUP__TRANSITIONS:
 				return !getTransitions().isEmpty();
+			case BwPackage.GROUP__START:
+				return basicGetStart() != null;
+			case BwPackage.GROUP__END:
+				return basicGetEnd() != null;
 			case BwPackage.GROUP__WIDTH:
 				return getWidth() != WIDTH_EDEFAULT;
 			case BwPackage.GROUP__HEIGHT:
@@ -403,6 +486,8 @@ public class GroupImpl extends ActivityImpl implements Group {
 				case BwPackage.GROUP__ACTIVITIES: return BwPackage.CONTAINER__ACTIVITIES;
 				case BwPackage.GROUP__GROUPS: return BwPackage.CONTAINER__GROUPS;
 				case BwPackage.GROUP__TRANSITIONS: return BwPackage.CONTAINER__TRANSITIONS;
+				case BwPackage.GROUP__START: return BwPackage.CONTAINER__START;
+				case BwPackage.GROUP__END: return BwPackage.CONTAINER__END;
 				default: return -1;
 			}
 		}
@@ -421,6 +506,8 @@ public class GroupImpl extends ActivityImpl implements Group {
 				case BwPackage.CONTAINER__ACTIVITIES: return BwPackage.GROUP__ACTIVITIES;
 				case BwPackage.CONTAINER__GROUPS: return BwPackage.GROUP__GROUPS;
 				case BwPackage.CONTAINER__TRANSITIONS: return BwPackage.GROUP__TRANSITIONS;
+				case BwPackage.CONTAINER__START: return BwPackage.GROUP__START;
+				case BwPackage.CONTAINER__END: return BwPackage.GROUP__END;
 				default: return -1;
 			}
 		}

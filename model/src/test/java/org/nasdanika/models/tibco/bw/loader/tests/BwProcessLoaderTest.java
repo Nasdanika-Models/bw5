@@ -47,18 +47,18 @@ class BwProcessLoaderTest {
 
 	@Test
 	void testStartProperties() {
-		assertEquals("Start", pd.getStartName());
+		assertEquals("Start", pd.getStart().getName());
 		assertEquals("com.tibco.pe.core.None", pd.getStartType());
-		assertEquals(60, pd.getStartX());
-		assertEquals(64, pd.getStartY());
+		assertEquals(60, pd.getStart().getX());
+		assertEquals(64, pd.getStart().getY());
 	}
 
 	@Test
 	void testEndProperties() {
-		assertEquals("End", pd.getEndName());
+		assertEquals("End", pd.getEnd().getName());
 		assertEquals("com.tibco.pe.core.None", pd.getEndType());
-		assertEquals(800, pd.getEndX());
-		assertEquals(64, pd.getEndY());
+		assertEquals(800, pd.getEnd().getX());
+		assertEquals(64, pd.getEnd().getY());
 	}
 
 	@Test

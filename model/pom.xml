@@ -78,7 +78,7 @@
     <dependencies>
         <dependency>
             <groupId>org.nasdanika.core</groupId>
-            <artifactId>capability</artifactId>
+            <artifactId>graph</artifactId>
             <version>${core.version}</version>
         </dependency>
         <dependency>

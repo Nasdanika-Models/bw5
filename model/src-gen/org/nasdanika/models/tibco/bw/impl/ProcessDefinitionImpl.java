@@ -34,14 +34,8 @@ import org.nasdanika.models.tibco.bw.Starter;
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getIncomingCalls <em>Incoming Calls</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getProjectPath <em>Project Path</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartName <em>Start Name</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartType <em>Start Type</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartX <em>Start X</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStartY <em>Start Y</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getEndName <em>End Name</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getEndType <em>End Type</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getEndX <em>End X</em>}</li>
- *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getEndY <em>End Y</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getTargetNamespace <em>Target Namespace</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getReturnBindings <em>Return Bindings</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.impl.ProcessDefinitionImpl#getStarter <em>Starter</em>}</li>
@@ -64,16 +58,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	protected static final String PROJECT_PATH_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getStartName() <em>Start Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStartName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String START_NAME_EDEFAULT = null;
-
-	/**
 	 * The default value of the '{@link #getStartType() <em>Start Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,36 +68,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	protected static final String START_TYPE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getStartX() <em>Start X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStartX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int START_X_EDEFAULT = 0;
-
-	/**
-	 * The default value of the '{@link #getStartY() <em>Start Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStartY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int START_Y_EDEFAULT = 0;
-
-	/**
-	 * The default value of the '{@link #getEndName() <em>End Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String END_NAME_EDEFAULT = null;
-
-	/**
 	 * The default value of the '{@link #getEndType() <em>End Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,26 +76,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @ordered
 	 */
 	protected static final String END_TYPE_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getEndX() <em>End X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int END_X_EDEFAULT = 0;
-
-	/**
-	 * The default value of the '{@link #getEndY() <em>End Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int END_Y_EDEFAULT = 0;
 
 	/**
 	 * The default value of the '{@link #getTargetNamespace() <em>Target Namespace</em>}' attribute.
@@ -268,26 +202,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @generated
 	 */
 	@Override
-	public String getStartName() {
-		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__START_NAME, BwPackage.Literals.PROCESS_DEFINITION__START_NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStartName(String newStartName) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__START_NAME, BwPackage.Literals.PROCESS_DEFINITION__START_NAME, newStartName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getStartType() {
 		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__START_TYPE, BwPackage.Literals.PROCESS_DEFINITION__START_TYPE, true, true);
 	}
@@ -308,66 +222,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @generated
 	 */
 	@Override
-	public int getStartX() {
-		return (Integer)eDynamicGet(BwPackage.PROCESS_DEFINITION__START_X, BwPackage.Literals.PROCESS_DEFINITION__START_X, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStartX(int newStartX) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__START_X, BwPackage.Literals.PROCESS_DEFINITION__START_X, newStartX);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getStartY() {
-		return (Integer)eDynamicGet(BwPackage.PROCESS_DEFINITION__START_Y, BwPackage.Literals.PROCESS_DEFINITION__START_Y, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStartY(int newStartY) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__START_Y, BwPackage.Literals.PROCESS_DEFINITION__START_Y, newStartY);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getEndName() {
-		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__END_NAME, BwPackage.Literals.PROCESS_DEFINITION__END_NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEndName(String newEndName) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__END_NAME, BwPackage.Literals.PROCESS_DEFINITION__END_NAME, newEndName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getEndType() {
 		return (String)eDynamicGet(BwPackage.PROCESS_DEFINITION__END_TYPE, BwPackage.Literals.PROCESS_DEFINITION__END_TYPE, true, true);
 	}
@@ -380,46 +234,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public void setEndType(String newEndType) {
 		eDynamicSet(BwPackage.PROCESS_DEFINITION__END_TYPE, BwPackage.Literals.PROCESS_DEFINITION__END_TYPE, newEndType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getEndX() {
-		return (Integer)eDynamicGet(BwPackage.PROCESS_DEFINITION__END_X, BwPackage.Literals.PROCESS_DEFINITION__END_X, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEndX(int newEndX) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__END_X, BwPackage.Literals.PROCESS_DEFINITION__END_X, newEndX);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getEndY() {
-		return (Integer)eDynamicGet(BwPackage.PROCESS_DEFINITION__END_Y, BwPackage.Literals.PROCESS_DEFINITION__END_Y, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEndY(int newEndY) {
-		eDynamicSet(BwPackage.PROCESS_DEFINITION__END_Y, BwPackage.Literals.PROCESS_DEFINITION__END_Y, newEndY);
 	}
 
 	/**
@@ -591,22 +405,10 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case BwPackage.PROCESS_DEFINITION__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case BwPackage.PROCESS_DEFINITION__START_NAME:
-				return getStartName();
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
 				return getStartType();
-			case BwPackage.PROCESS_DEFINITION__START_X:
-				return getStartX();
-			case BwPackage.PROCESS_DEFINITION__START_Y:
-				return getStartY();
-			case BwPackage.PROCESS_DEFINITION__END_NAME:
-				return getEndName();
 			case BwPackage.PROCESS_DEFINITION__END_TYPE:
 				return getEndType();
-			case BwPackage.PROCESS_DEFINITION__END_X:
-				return getEndX();
-			case BwPackage.PROCESS_DEFINITION__END_Y:
-				return getEndY();
 			case BwPackage.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				return getTargetNamespace();
 			case BwPackage.PROCESS_DEFINITION__RETURN_BINDINGS:
@@ -642,29 +444,11 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case BwPackage.PROCESS_DEFINITION__PARENT:
 				setParent((Folder)newValue);
 				return;
-			case BwPackage.PROCESS_DEFINITION__START_NAME:
-				setStartName((String)newValue);
-				return;
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
 				setStartType((String)newValue);
 				return;
-			case BwPackage.PROCESS_DEFINITION__START_X:
-				setStartX((Integer)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__START_Y:
-				setStartY((Integer)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_NAME:
-				setEndName((String)newValue);
-				return;
 			case BwPackage.PROCESS_DEFINITION__END_TYPE:
 				setEndType((String)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_X:
-				setEndX((Integer)newValue);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_Y:
-				setEndY((Integer)newValue);
 				return;
 			case BwPackage.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				setTargetNamespace((String)newValue);
@@ -707,29 +491,11 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case BwPackage.PROCESS_DEFINITION__PARENT:
 				setParent((Folder)null);
 				return;
-			case BwPackage.PROCESS_DEFINITION__START_NAME:
-				setStartName(START_NAME_EDEFAULT);
-				return;
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
 				setStartType(START_TYPE_EDEFAULT);
 				return;
-			case BwPackage.PROCESS_DEFINITION__START_X:
-				setStartX(START_X_EDEFAULT);
-				return;
-			case BwPackage.PROCESS_DEFINITION__START_Y:
-				setStartY(START_Y_EDEFAULT);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_NAME:
-				setEndName(END_NAME_EDEFAULT);
-				return;
 			case BwPackage.PROCESS_DEFINITION__END_TYPE:
 				setEndType(END_TYPE_EDEFAULT);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_X:
-				setEndX(END_X_EDEFAULT);
-				return;
-			case BwPackage.PROCESS_DEFINITION__END_Y:
-				setEndY(END_Y_EDEFAULT);
 				return;
 			case BwPackage.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				setTargetNamespace(TARGET_NAMESPACE_EDEFAULT);
@@ -767,22 +533,10 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return PROJECT_PATH_EDEFAULT == null ? getProjectPath() != null : !PROJECT_PATH_EDEFAULT.equals(getProjectPath());
 			case BwPackage.PROCESS_DEFINITION__PARENT:
 				return basicGetParent() != null;
-			case BwPackage.PROCESS_DEFINITION__START_NAME:
-				return START_NAME_EDEFAULT == null ? getStartName() != null : !START_NAME_EDEFAULT.equals(getStartName());
 			case BwPackage.PROCESS_DEFINITION__START_TYPE:
 				return START_TYPE_EDEFAULT == null ? getStartType() != null : !START_TYPE_EDEFAULT.equals(getStartType());
-			case BwPackage.PROCESS_DEFINITION__START_X:
-				return getStartX() != START_X_EDEFAULT;
-			case BwPackage.PROCESS_DEFINITION__START_Y:
-				return getStartY() != START_Y_EDEFAULT;
-			case BwPackage.PROCESS_DEFINITION__END_NAME:
-				return END_NAME_EDEFAULT == null ? getEndName() != null : !END_NAME_EDEFAULT.equals(getEndName());
 			case BwPackage.PROCESS_DEFINITION__END_TYPE:
 				return END_TYPE_EDEFAULT == null ? getEndType() != null : !END_TYPE_EDEFAULT.equals(getEndType());
-			case BwPackage.PROCESS_DEFINITION__END_X:
-				return getEndX() != END_X_EDEFAULT;
-			case BwPackage.PROCESS_DEFINITION__END_Y:
-				return getEndY() != END_Y_EDEFAULT;
 			case BwPackage.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				return TARGET_NAMESPACE_EDEFAULT == null ? getTargetNamespace() != null : !TARGET_NAMESPACE_EDEFAULT.equals(getTargetNamespace());
 			case BwPackage.PROCESS_DEFINITION__RETURN_BINDINGS:

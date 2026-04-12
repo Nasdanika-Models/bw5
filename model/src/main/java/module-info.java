@@ -8,10 +8,11 @@ module org.nasdanika.models.tibco.bw {
 	exports org.nasdanika.models.tibco.bw.impl;
 	exports org.nasdanika.models.tibco.bw.loader;
 	exports org.nasdanika.models.tibco.bw.util;
+	exports org.nasdanika.models.tibco.bw.graph;
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
-	requires org.nasdanika.capability;
+	requires transitive org.nasdanika.graph;
 	requires transitive java.xml;
 	
 	provides CapabilityFactory with 

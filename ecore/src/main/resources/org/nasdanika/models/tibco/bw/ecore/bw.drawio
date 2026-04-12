@@ -1,9 +1,20 @@
 <mxfile compressed="false" host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram id="bfb3035a-3074-4bcc-8edb-61851177c3de" name="Tibco BW">
-    <mxGraphModel dx="2677" dy="2387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2231" dy="2131" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="d4744ac9-9eab-4d69-8f62-b4766c36d955" edge="1" parent="1" source="cd082249-6b47-4db8-803a-91cfeaa08673" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;shadow=0;jumpStyle=arc;" target="9e36cfe5-a0b7-4909-a42b-8a180225cfd4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eb6892b3-af18-4bf0-b31c-95a88736b667" edge="1" parent="1" source="4d4b9dba-4d67-4127-9e85-ff6b213572e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;jumpStyle=arc;" target="9e36cfe5-a0b7-4909-a42b-8a180225cfd4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="170" />
+              <mxPoint x="686" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <object label="Transition" link="references/eClassifiers/Transition/index.html" id="7f01a8e5-8cdf-4c78-a3cb-581ce9348c27">
           <mxCell parent="1" vertex="1">
             <mxGeometry height="30" width="120" x="149.9972132034838" y="-120.00240845253518" as="geometry" />
@@ -149,17 +160,6 @@
           </mxCell>
         </object>
         <mxCell id="4b6fe0c3-7cf4-4cc6-8eb3-9c3781b16a10" edge="1" parent="1" source="9e36cfe5-a0b7-4909-a42b-8a180225cfd4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0" target="f4352911-3b3c-4c52-9427-629cd18d24e1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="eb6892b3-af18-4bf0-b31c-95a88736b667" edge="1" parent="1" source="4d4b9dba-4d67-4127-9e85-ff6b213572e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;jumpStyle=arc;" target="9e36cfe5-a0b7-4909-a42b-8a180225cfd4">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="970" y="170" />
-              <mxPoint x="686" y="170" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d4744ac9-9eab-4d69-8f62-b4766c36d955" edge="1" parent="1" source="cd082249-6b47-4db8-803a-91cfeaa08673" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0" target="9e36cfe5-a0b7-4909-a42b-8a180225cfd4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Activity" link="references/eClassifiers/Activity/index.html" id="fb7026a0-cb31-4854-b251-5a87cfbbca42">
@@ -310,6 +310,36 @@
             <mxPoint x="350" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <object label="start" link="references/eClassifiers/Container/references/eStructuralFeatures/start/index.html" id="VEBiH_UswRoL4Tm4Jeav-1">
+          <mxCell edge="1" parent="1" source="256c49dc-860e-4253-a3c0-20bf26888139" style="rounded=0;orthogonalLoop=1;jettySize=1;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="f5c8c755-052e-46ba-a364-7f7b77237c98">
+            <mxGeometry relative="1" x="0.4479" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="770" y="-112" />
+                <mxPoint x="770" y="-70" />
+                <mxPoint x="590" y="-70" />
+                <mxPoint x="590" y="-112" />
+              </Array>
+              <mxPoint x="660" y="710" as="sourcePoint" />
+              <mxPoint x="1280" y="460" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="end" link="references/eClassifiers/Container/references/eStructuralFeatures/end/index.html" id="VEBiH_UswRoL4Tm4Jeav-2">
+          <mxCell edge="1" parent="1" source="256c49dc-860e-4253-a3c0-20bf26888139" style="rounded=0;orthogonalLoop=1;jettySize=1;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;shadow=1;" target="f5c8c755-052e-46ba-a364-7f7b77237c98">
+            <mxGeometry relative="1" x="0.5303" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="780" y="-97" />
+                <mxPoint x="780" y="-60" />
+                <mxPoint x="580" y="-60" />
+                <mxPoint x="580" y="-97" />
+              </Array>
+              <mxPoint x="670" y="780" as="sourcePoint" />
+              <mxPoint x="1290" y="600" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
       </root>
     </mxGraphModel>
   </diagram>

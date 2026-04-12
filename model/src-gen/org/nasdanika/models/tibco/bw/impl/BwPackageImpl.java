@@ -302,6 +302,26 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getContainer_Start() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_End() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProcessDefinition() {
 		return processDefinitionEClass;
 	}
@@ -312,7 +332,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartName() {
+	public EAttribute getProcessDefinition_StartType() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -322,7 +342,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartType() {
+	public EAttribute getProcessDefinition_EndType() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -332,7 +352,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartX() {
+	public EAttribute getProcessDefinition_TargetNamespace() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -342,7 +362,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_StartY() {
+	public EAttribute getProcessDefinition_ReturnBindings() {
 		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -352,68 +372,8 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_EndName() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_EndType() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_EndX() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_EndY() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_TargetNamespace() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProcessDefinition_ReturnBindings() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getProcessDefinition_Starter() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(10);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -423,7 +383,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EReference getProcessDefinition_Labels() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(11);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -433,7 +393,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EReference getProcessDefinition_ProcessVariables() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(12);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -443,7 +403,7 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 	 */
 	@Override
 	public EAttribute getProcessDefinition_ErrorSchemas() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1013,16 +973,12 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createEReference(containerEClass, CONTAINER__ACTIVITIES);
 		createEReference(containerEClass, CONTAINER__GROUPS);
 		createEReference(containerEClass, CONTAINER__TRANSITIONS);
+		createEReference(containerEClass, CONTAINER__START);
+		createEReference(containerEClass, CONTAINER__END);
 
 		processDefinitionEClass = createEClass(PROCESS_DEFINITION);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_NAME);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_TYPE);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_X);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_Y);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__END_NAME);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__END_TYPE);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__END_X);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__END_Y);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__TARGET_NAMESPACE);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__RETURN_BINDINGS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__STARTER);
@@ -1159,16 +1115,12 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		initEReference(getContainer_Groups(), this.getGroup(), null, "groups", null, 0, -1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getContainer_Groups().getEKeys().add(this.getNamedElement_Name());
 		initEReference(getContainer_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainer_Start(), this.getNode(), null, "start", null, 0, 1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainer_End(), this.getNode(), null, "end", null, 0, 1, org.nasdanika.models.tibco.bw.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processDefinitionEClass, ProcessDefinition.class, "ProcessDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcessDefinition_StartName(), theEcorePackage.getEString(), "startName", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_StartType(), theEcorePackage.getEString(), "startType", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_StartX(), theEcorePackage.getEInt(), "startX", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_StartY(), theEcorePackage.getEInt(), "startY", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_EndName(), theEcorePackage.getEString(), "endName", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_EndType(), theEcorePackage.getEString(), "endType", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_EndX(), theEcorePackage.getEInt(), "endX", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_EndY(), theEcorePackage.getEInt(), "endY", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_TargetNamespace(), theEcorePackage.getEString(), "targetNamespace", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_ReturnBindings(), theEcorePackage.getEString(), "returnBindings", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_Starter(), this.getStarter(), null, "starter", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1324,16 +1276,22 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nTransitions at the top level of this process."
 		   });
 		addAnnotation
+		  (getContainer_Start(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nA synthetic node populated from startName, startType, startX, startY"
+		   });
+		addAnnotation
+		  (getContainer_End(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nA synthetic node populated from endName, endType, endX, endY"
+		   });
+		addAnnotation
 		  (processDefinitionEClass,
 		   source,
 		   new String[] {
 			   "documentation", "*\nRoot element of a Tibco BW 5.x process file (.process).\nCorresponds to pd:ProcessDefinition in the XML namespace\nhttp://xmlns.tibco.com/bw/process/2003."
-		   });
-		addAnnotation
-		  (getProcessDefinition_StartName(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nName of the implicit Start node (the process trigger).\nWhen a Starter is present this is the starter\'s name; otherwise BW\ngenerates a plain Start pseudo-state."
 		   });
 		addAnnotation
 		  (getProcessDefinition_StartType(),
@@ -1342,40 +1300,10 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "documentation", "*\nCanonical type of the start element (optional)."
 		   });
 		addAnnotation
-		  (getProcessDefinition_StartX(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nX coordinate of the Start node on the design canvas."
-		   });
-		addAnnotation
-		  (getProcessDefinition_StartY(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nY coordinate of the Start node on the design canvas."
-		   });
-		addAnnotation
-		  (getProcessDefinition_EndName(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nName of the implicit End node."
-		   });
-		addAnnotation
 		  (getProcessDefinition_EndType(),
 		   source,
 		   new String[] {
 			   "documentation", "*\nCanonical type of the end element (optional)."
-		   });
-		addAnnotation
-		  (getProcessDefinition_EndX(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nX coordinate of the End node on the design canvas."
-		   });
-		addAnnotation
-		  (getProcessDefinition_EndY(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nY coordinate of the End node on the design canvas."
 		   });
 		addAnnotation
 		  (getProcessDefinition_TargetNamespace(),

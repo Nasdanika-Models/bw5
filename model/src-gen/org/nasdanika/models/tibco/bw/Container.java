@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.models.tibco.bw.Container#getActivities <em>Activities</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Container#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.nasdanika.models.tibco.bw.Container#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.Container#getStart <em>Start</em>}</li>
+ *   <li>{@link org.nasdanika.models.tibco.bw.Container#getEnd <em>End</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.tibco.bw.BwPackage#getContainer()
@@ -70,5 +72,57 @@ public interface Container extends NamedElement {
 	 * @generated
 	 */
 	EList<Transition> getTransitions();
+
+	/**
+	 * Returns the value of the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * A synthetic node populated from startName, startType, startX, startY
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Start</em>' reference.
+	 * @see #setStart(Node)
+	 * @see org.nasdanika.models.tibco.bw.BwPackage#getContainer_Start()
+	 * @model
+	 * @generated
+	 */
+	Node getStart();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Container#getStart <em>Start</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start</em>' reference.
+	 * @see #getStart()
+	 * @generated
+	 */
+	void setStart(Node value);
+
+	/**
+	 * Returns the value of the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * A synthetic node populated from endName, endType, endX, endY
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>End</em>' reference.
+	 * @see #setEnd(Node)
+	 * @see org.nasdanika.models.tibco.bw.BwPackage#getContainer_End()
+	 * @model
+	 * @generated
+	 */
+	Node getEnd();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.tibco.bw.Container#getEnd <em>End</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>End</em>' reference.
+	 * @see #getEnd()
+	 * @generated
+	 */
+	void setEnd(Node value);
 
 } // Container

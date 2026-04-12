@@ -2,6 +2,7 @@ package org.nasdanika.models.tibco.bw.loader;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -97,11 +98,11 @@ public class BwProcessLoader {
 	private void resolve(Container container) {
 		container.getTransitions().forEach(t -> {
 			if (t.getFrom() != null && t.getTo() != null) {
-				t.setSource(findNodeByName(container, t.getFrom()));
-				t.setTarget(findNodeByName(container, t.getTo()));
+				t.setSource(Objects.requireNonNull(findNodeByName(container, t.getFrom())));
+				t.setTarget(Objects.requireNonNull(findNodeByName(container, t.getTo())));
 			}
 		});
-		
+		container.getGroups().forEach(this::resolve);
 	}
 	
 	final Node findNodeByName(Container container, String name) {
@@ -115,7 +116,37 @@ public class BwProcessLoader {
 				return group;
 			}
 		}
-		return null;
+		
+		Node start = container.getStart();
+		if (start != null && name.equals(start.getName())) {
+			return start;
+		}
+		Node end = container.getEnd();
+		if (end != null && name.equals(end.getName())) {
+			return end;
+		}						
+		
+		if (container instanceof Group group) {
+			// start and end special cases
+			if ("start".equals(name)) {
+				if (start == null) {
+					start = factory.createNode();
+					start.setName(name);
+					group.setStart(start);
+				}
+				return start;
+			}
+			if ("end".equals(name)) {
+				if (end == null) {
+					end = factory.createNode();
+					end.setName(name);
+					group.setEnd(end);
+				}
+				return end;
+			}			
+		}
+		
+		throw new IllegalArgumentException("No node named '" + name + "' found in container '" + container.getName() + "'");
 	}
 
 	// -------------------------------------------------------------------------
@@ -205,14 +236,26 @@ public class BwProcessLoader {
 			skipElement(reader);
 		}
 	}
+		
+	private Node getStart(ProcessDefinition pd) {
+		if (pd.getStart() == null) {
+			pd.setStart(factory.createNode());
+		}
+		return pd.getStart();
+	}
 	
+	private Node getEnd(ProcessDefinition pd) {
+		if (pd.getEnd() == null) {
+			pd.setEnd(factory.createNode());
+		}
+		return pd.getEnd();
+	}
 
 	/**
 	 * Dispatches a child element of {@code pd:ProcessDefinition} to the
 	 * appropriate handler.
 	 */
-	private void handleProcessDefinitionChild(XMLStreamReader reader, ProcessDefinition pd)
-			throws XMLStreamException {
+	private void handleProcessDefinitionChild(XMLStreamReader reader, ProcessDefinition pd)	throws XMLStreamException {
 
 		String ns = reader.getNamespaceURI();
 		String localName = reader.getLocalName();
@@ -220,28 +263,28 @@ public class BwProcessLoader {
 		if (PD_NAMESPACE.equals(ns)) {
 			switch (localName) {
 				case "startName":
-					pd.setStartName(reader.getElementText());
+					getStart(pd).setName(reader.getElementText());
 					break;
 				case "startType":
 					pd.setStartType(captureXmlContent(reader));
 					break;
 				case "startX":
-					pd.setStartX(parseIntText(reader));
+					getStart(pd).setX(parseIntText(reader));
 					break;
 				case "startY":
-					pd.setStartY(parseIntText(reader));
+					getStart(pd).setY(parseIntText(reader));
 					break;
 				case "endName":
-					pd.setEndName(reader.getElementText());
+					getEnd(pd).setName(reader.getElementText());
 					break;
 				case "endType":
 					pd.setEndType(captureXmlContent(reader));
 					break;
 				case "endX":
-					pd.setEndX(parseIntText(reader));
+					getEnd(pd).setX(parseIntText(reader));
 					break;
 				case "endY":
-					pd.setEndY(parseIntText(reader));
+					getEnd(pd).setY(parseIntText(reader));
 					break;
 				case "targetNamespace":
 					pd.setTargetNamespace(reader.getElementText());
