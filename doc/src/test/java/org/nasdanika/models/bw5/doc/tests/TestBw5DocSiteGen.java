@@ -8,7 +8,6 @@ import java.util.Map.Entry;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.capability.CapabilityLoader;
@@ -23,25 +22,31 @@ import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.html.bootstrap.Theme;
 import org.nasdanika.models.app.gen.AppSiteGenerator;
+import org.nasdanika.models.bw5.Project;
+import org.nasdanika.models.bw5.loader.Bw5ProjectLoader;
 import org.nasdanika.models.ecore.graph.processors.EcoreHtmlAppGenerator;
-import org.nasdanika.models.sql.Database;
 
-public class TestDocSiteGen {
+public class TestBw5DocSiteGen {
 		
 	@Test
-	public void testGenerateDatabaseDocSite() throws Exception {
+	public void testGenerateBw5ProjectDocSite() throws Exception {
 		CapabilityLoader capabilityLoader = new CapabilityLoader();
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
-		
 		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
-		Resource resource = resourceSet.getResource(URI.createFileURI("test-metadata.xml"), true);
-		Database database = (Database) resource.getContents().get(0);
+		
+		Bw5ProjectLoader loader = new Bw5ProjectLoader(resourceSet);		
+		Project project = loader.loadProject(new File("../model/src/test/resources/sample-project"));
+		
+		project.getResources().forEach(r -> {
+			System.out.println(r.getProjectPath() + " : " + r.eClass().getName());
+		});		
+		
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);		
 		EcoreHtmlAppGenerator htmlAppGenerator = EcoreHtmlAppGenerator.loadEcoreHtmlAppGenerator(
-				Collections.singleton(database), 
+				Collections.singleton(project), 
 				context,
 				null, // java.util.function.BiFunction<URI, ProgressMonitor, Action> prototypeProvider,			
 				null, // Predicate<Object> factoryPredicate,
@@ -51,14 +56,14 @@ public class TestDocSiteGen {
 		
 		File actionModelsDir = new File("target\\action-models\\");
 		actionModelsDir.mkdirs();
-		File output = new File(actionModelsDir, "sql-actions.xmi");
+		File output = new File(actionModelsDir, "actions.xmi");
 		htmlAppGenerator.generateHtmlAppModel(
 				diagnosticConsumer, 
 				output,
 				progressMonitor);
 				
 		// Generating a web site
-		String rootActionResource = "sql-actions.yml";
+		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
 		
 		AppSiteGenerator actionSiteGenerator = new AppSiteGenerator() {

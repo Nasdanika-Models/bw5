@@ -43,7 +43,7 @@ public class Bw5NodeProcessorFactoryCapabilityFactory implements CapabilityFacto
 			cp.getPublisher().subscribe(df -> documentationFactories.add(df));
 		}				
 
-		SqlNodeProcessorFactory factory = new SqlNodeProcessorFactory(
+		Bw5NodeProcessorFactory factory = new Bw5NodeProcessorFactory(
 				requirement.context(), 
 				requirement.prototypeProvider(),
 				documentationFactories);
