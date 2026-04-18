@@ -3,14 +3,14 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.nasdanika.models.tibco.bw</groupId>
+        <groupId>org.nasdanika.models.bw5</groupId>
         <version>2026.2.0</version>
         <artifactId>parent</artifactId>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>model</artifactId>
     <packaging>jar</packaging>
-    <name>Ecore Tibco BW 5.x Model</name>
+    <name>Ecore BW 5.x Model</name>
 
     <build>
         <plugins>

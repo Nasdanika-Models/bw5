@@ -14,7 +14,7 @@ app.Action:
               content.Resource: classpath://org/nasdanika/models/app/gen/search.html
   navigation:
     - app.Action:
-        location: https://github.com/Nasdanika-Models/tibco-bw
+        location: https://github.com/Nasdanika-Models/bw5
         icon: fab fa-github
         text: Sources
           

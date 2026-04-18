@@ -1,7 +1,0 @@
-
-
-
-```drawio-resource
-bw.drawio
-```
-

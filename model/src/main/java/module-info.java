@@ -1,14 +1,13 @@
 import org.nasdanika.capability.CapabilityFactory;
-import org.nasdanika.models.tibco.bw.capability.TibcoBwEPackageResourceSetCapabilityFactory;
-import org.nasdanika.models.tibco.bw.capability.TibcoBwResourceFactoryCapabilityFactory;
+import org.nasdanika.models.bw5.capability.Bw5EPackageResourceSetCapabilityFactory;
+import org.nasdanika.models.bw5.capability.Bw5ResourceFactoryCapabilityFactory;
 
-module org.nasdanika.models.tibco.bw {
+module org.nasdanika.models.bw5 {
 	
-	exports org.nasdanika.models.tibco.bw;
-	exports org.nasdanika.models.tibco.bw.impl;
-	exports org.nasdanika.models.tibco.bw.loader;
-	exports org.nasdanika.models.tibco.bw.util;
-	exports org.nasdanika.models.tibco.bw.graph;
+	exports org.nasdanika.models.bw5;
+	exports org.nasdanika.models.bw5.impl;
+	exports org.nasdanika.models.bw5.loader;
+	exports org.nasdanika.models.bw5.util;
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
@@ -16,7 +15,7 @@ module org.nasdanika.models.tibco.bw {
 	requires transitive java.xml;
 	
 	provides CapabilityFactory with 
-		TibcoBwEPackageResourceSetCapabilityFactory,
-		TibcoBwResourceFactoryCapabilityFactory;
+		Bw5EPackageResourceSetCapabilityFactory,
+		Bw5ResourceFactoryCapabilityFactory;
 	
 }

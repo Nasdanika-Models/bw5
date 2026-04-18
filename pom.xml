@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.nasdanika.models.tibco.bw</groupId>
+	<groupId>org.nasdanika.models.bw5</groupId>
 	<artifactId>parent</artifactId>
 	<version>2026.2.0</version>
 	<packaging>pom</packaging>
-	<name>Tibco BW Model</name>
-	<description>A model of Tibco BW 5.x concepts</description>
-	<url>https://bw.tibco.models.nasdanika.org/</url>
+	<name>BW5 Model</name>
+	<description>A model of BW 5.x concepts</description>
+	<url>https://bw5.models.nasdanika.org/</url>
 
 	<licenses>
 		<license>
@@ -18,7 +18,7 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/Nasdanika-Models/tibco-bw</url>
+		<url>https://github.com/Nasdanika-Models/bw5</url>
 	</scm>
 
 	<properties>
