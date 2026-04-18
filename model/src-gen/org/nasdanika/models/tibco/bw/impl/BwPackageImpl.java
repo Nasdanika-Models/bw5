@@ -1201,20 +1201,20 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		createResource(eNS_URI);
 
 		// Create annotations
-		// null
-		createNullAnnotations();
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
+		// http://www.eclipse.org/emf/2011/Xcore
+		createXcoreAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>null</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createNullAnnotations() {
-		String source = null;
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
 		  (this,
 		   source,
@@ -1229,16 +1229,6 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 			   "importOrganizing", "true",
 			   "basePackage", "org.nasdanika.models.tibco"
 		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createGenModelAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
 		  (namedElementEClass,
 		   source,
@@ -1568,6 +1558,23 @@ public class BwPackageImpl extends EPackageImpl implements BwPackage {
 		   source,
 		   new String[] {
 			   "documentation", "*\nProject is folder with vcrepo.dat file and with resourceType=\"ae.rootfolder\" in the .folder file"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2011/Xcore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createXcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2011/Xcore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "Ecore", "http://www.eclipse.org/emf/2002/Ecore",
+			   "GenModel", "http://www.eclipse.org/emf/2002/GenModel"
 		   });
 	}
 

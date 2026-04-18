@@ -78,7 +78,7 @@ public class TestTibcoBwModelDocGen {
 		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
 		URI pageTeplateURI = URI.createFileURI(new File("page-template.yml").getAbsolutePath());//.appendFragment("/");
-		String siteMapDomain = "https://risk.models.nasdanika.org";		
+		String siteMapDomain = "https://bw.tibco.models.nasdanika.org";		
 		AppSiteGenerator actionSiteGenerator = new AppSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
