@@ -34,6 +34,7 @@ import org.nasdanika.models.bw5.Starter;
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getIncomingCalls <em>Incoming Calls</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getProjectPath <em>Project Path</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getFileName <em>File Name</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getEndType <em>End Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getTargetNamespace <em>Target Namespace</em>}</li>
@@ -56,6 +57,16 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @ordered
 	 */
 	protected static final String PROJECT_PATH_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getFileName() <em>File Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFileName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FILE_NAME_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getStartType() <em>Start Type</em>}' attribute.
@@ -194,6 +205,26 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	@Override
 	public void setParent(Folder newParent) {
 		eDynamicSet(Bw5Package.PROCESS_DEFINITION__PARENT, Bw5Package.Literals.RESOURCE__PARENT, newParent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFileName() {
+		return (String)eDynamicGet(Bw5Package.PROCESS_DEFINITION__FILE_NAME, Bw5Package.Literals.RESOURCE__FILE_NAME, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFileName(String newFileName) {
+		eDynamicSet(Bw5Package.PROCESS_DEFINITION__FILE_NAME, Bw5Package.Literals.RESOURCE__FILE_NAME, newFileName);
 	}
 
 	/**
@@ -405,6 +436,8 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case Bw5Package.PROCESS_DEFINITION__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
+			case Bw5Package.PROCESS_DEFINITION__FILE_NAME:
+				return getFileName();
 			case Bw5Package.PROCESS_DEFINITION__START_TYPE:
 				return getStartType();
 			case Bw5Package.PROCESS_DEFINITION__END_TYPE:
@@ -443,6 +476,9 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return;
 			case Bw5Package.PROCESS_DEFINITION__PARENT:
 				setParent((Folder)newValue);
+				return;
+			case Bw5Package.PROCESS_DEFINITION__FILE_NAME:
+				setFileName((String)newValue);
 				return;
 			case Bw5Package.PROCESS_DEFINITION__START_TYPE:
 				setStartType((String)newValue);
@@ -491,6 +527,9 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case Bw5Package.PROCESS_DEFINITION__PARENT:
 				setParent((Folder)null);
 				return;
+			case Bw5Package.PROCESS_DEFINITION__FILE_NAME:
+				setFileName(FILE_NAME_EDEFAULT);
+				return;
 			case Bw5Package.PROCESS_DEFINITION__START_TYPE:
 				setStartType(START_TYPE_EDEFAULT);
 				return;
@@ -533,6 +572,8 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return PROJECT_PATH_EDEFAULT == null ? getProjectPath() != null : !PROJECT_PATH_EDEFAULT.equals(getProjectPath());
 			case Bw5Package.PROCESS_DEFINITION__PARENT:
 				return basicGetParent() != null;
+			case Bw5Package.PROCESS_DEFINITION__FILE_NAME:
+				return FILE_NAME_EDEFAULT == null ? getFileName() != null : !FILE_NAME_EDEFAULT.equals(getFileName());
 			case Bw5Package.PROCESS_DEFINITION__START_TYPE:
 				return START_TYPE_EDEFAULT == null ? getStartType() != null : !START_TYPE_EDEFAULT.equals(getStartType());
 			case Bw5Package.PROCESS_DEFINITION__END_TYPE:
@@ -570,6 +611,7 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			switch (derivedFeatureID) {
 				case Bw5Package.PROCESS_DEFINITION__PROJECT_PATH: return Bw5Package.RESOURCE__PROJECT_PATH;
 				case Bw5Package.PROCESS_DEFINITION__PARENT: return Bw5Package.RESOURCE__PARENT;
+				case Bw5Package.PROCESS_DEFINITION__FILE_NAME: return Bw5Package.RESOURCE__FILE_NAME;
 				default: return -1;
 			}
 		}
@@ -593,6 +635,7 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			switch (baseFeatureID) {
 				case Bw5Package.RESOURCE__PROJECT_PATH: return Bw5Package.PROCESS_DEFINITION__PROJECT_PATH;
 				case Bw5Package.RESOURCE__PARENT: return Bw5Package.PROCESS_DEFINITION__PARENT;
+				case Bw5Package.RESOURCE__FILE_NAME: return Bw5Package.PROCESS_DEFINITION__FILE_NAME;
 				default: return -1;
 			}
 		}

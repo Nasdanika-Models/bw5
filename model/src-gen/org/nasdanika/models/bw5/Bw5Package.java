@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.nasdanika.models.bw5.Bw5Factory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/emf/2002/GenModel bundleManifest='false' featureDelegation='Dynamic' complianceLevel='21.0' suppressGenModelAnnotations='false' copyrightFields='false' operationReflection='true' importOrganizing='true' basePackage='org.nasdanika.models'"
- *        annotation="http://www.eclipse.org/emf/2011/Xcore Ecore='http://www.eclipse.org/emf/2002/Ecore' GenModel='http://www.eclipse.org/emf/2002/GenModel'"
+ *        annotation="http://www.eclipse.org/emf/2011/Xcore Ecore='http://www.eclipse.org/emf/2002/Ecore' GenModel='http://www.eclipse.org/emf/2002/GenModel' Nasdanika='urn:org.nasdanika'"
  * @generated
  */
 public interface Bw5Package extends EPackage {
@@ -299,13 +299,22 @@ public interface Bw5Package extends EPackage {
 	int PROCESS_DEFINITION__PARENT = CONTAINER_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__FILE_NAME = CONTAINER_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Start Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 3;
+	int PROCESS_DEFINITION__START_TYPE = CONTAINER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>End Type</b></em>' attribute.
@@ -314,7 +323,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 4;
+	int PROCESS_DEFINITION__END_TYPE = CONTAINER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Target Namespace</b></em>' attribute.
@@ -323,7 +332,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 5;
+	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
@@ -332,7 +341,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 6;
+	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
@@ -341,7 +350,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 7;
+	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -350,7 +359,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 8;
+	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Process Variables</b></em>' containment reference list.
@@ -359,7 +368,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 9;
+	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Error Schemas</b></em>' attribute.
@@ -368,7 +377,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 10;
+	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Process Definition</em>' class.
@@ -377,7 +386,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 11;
+	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Process Definition</em>' class.
@@ -1536,13 +1545,31 @@ public interface Bw5Package extends EPackage {
 	int RESOURCE = 15;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__PROJECT_PATH = 0;
+	int RESOURCE__PROJECT_PATH = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1551,7 +1578,16 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__PARENT = 1;
+	int RESOURCE__PARENT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__FILE_NAME = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -1560,7 +1596,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = 2;
+	int RESOURCE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -1569,7 +1605,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_OPERATION_COUNT = 0;
+	int RESOURCE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.bw5.impl.FolderImpl <em>Folder</em>}' class.
@@ -1580,6 +1616,24 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 */
 	int FOLDER = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__NAME = RESOURCE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__DESCRIPTION = RESOURCE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
@@ -1600,6 +1654,15 @@ public interface Bw5Package extends EPackage {
 	int FOLDER__PARENT = RESOURCE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOLDER__FILE_NAME = RESOURCE__FILE_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Resources</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1618,22 +1681,13 @@ public interface Bw5Package extends EPackage {
 	int FOLDER__RESOURCE_TYPE = RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER__NAME = RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Folder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 3;
+	int FOLDER_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Folder</em>' class.
@@ -1655,6 +1709,24 @@ public interface Bw5Package extends EPackage {
 	int PROJECT = 17;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__NAME = FOLDER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__DESCRIPTION = FOLDER__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Project Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1673,6 +1745,15 @@ public interface Bw5Package extends EPackage {
 	int PROJECT__PARENT = FOLDER__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__FILE_NAME = FOLDER__FILE_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Resources</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1689,15 +1770,6 @@ public interface Bw5Package extends EPackage {
 	 * @ordered
 	 */
 	int PROJECT__RESOURCE_TYPE = FOLDER__RESOURCE_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__NAME = FOLDER__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Project</em>' class.
@@ -2429,6 +2501,17 @@ public interface Bw5Package extends EPackage {
 	EReference getResource_Parent();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.bw5.Resource#getFileName <em>File Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>File Name</em>'.
+	 * @see org.nasdanika.models.bw5.Resource#getFileName()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EAttribute getResource_FileName();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.bw5.Folder <em>Folder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2459,17 +2542,6 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFolder_ResourceType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.bw5.Folder#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.bw5.Folder#getName()
-	 * @see #getFolder()
-	 * @generated
-	 */
-	EAttribute getFolder_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.bw5.Project <em>Project</em>}'.
@@ -3065,6 +3137,14 @@ public interface Bw5Package extends EPackage {
 		EReference RESOURCE__PARENT = eINSTANCE.getResource_Parent();
 
 		/**
+		 * The meta object literal for the '<em><b>File Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE__FILE_NAME = eINSTANCE.getResource_FileName();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.bw5.impl.FolderImpl <em>Folder</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3089,14 +3169,6 @@ public interface Bw5Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute FOLDER__RESOURCE_TYPE = eINSTANCE.getFolder_ResourceType();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FOLDER__NAME = eINSTANCE.getFolder_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.bw5.impl.ProjectImpl <em>Project</em>}' class.

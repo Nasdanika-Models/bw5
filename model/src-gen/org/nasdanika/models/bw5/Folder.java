@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.nasdanika.models.bw5.Folder#getResources <em>Resources</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.Folder#getResourceType <em>Resource Type</em>}</li>
- *   <li>{@link org.nasdanika.models.bw5.Folder#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.bw5.Bw5Package#getFolder()
@@ -32,7 +31,8 @@ public interface Folder extends Resource {
 	 * @return the value of the '<em>Resources</em>' reference list.
 	 * @see org.nasdanika.models.bw5.Bw5Package#getFolder_Resources()
 	 * @see org.nasdanika.models.bw5.Resource#getParent
-	 * @model opposite="parent"
+	 * @model opposite="parent" keys="fileName"
+	 *        annotation="urn:org.nasdanika logicalContainment='true'"
 	 * @generated
 	 */
 	EList<Resource> getResources();
@@ -62,31 +62,5 @@ public interface Folder extends Resource {
 	 * @generated
 	 */
 	void setResourceType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * Loaded from .folder file repository/folder name attribute
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.nasdanika.models.bw5.Bw5Package#getFolder_Name()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.bw5.Folder#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // Folder

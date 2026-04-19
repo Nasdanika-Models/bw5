@@ -7,8 +7,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.bw5.Bw5Package;
 import org.nasdanika.models.bw5.Folder;
 import org.nasdanika.models.bw5.Resource;
@@ -23,11 +21,12 @@ import org.nasdanika.models.bw5.Resource;
  * <ul>
  *   <li>{@link org.nasdanika.models.bw5.impl.ResourceImpl#getProjectPath <em>Project Path</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ResourceImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.impl.ResourceImpl#getFileName <em>File Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ResourceImpl extends MinimalEObjectImpl.Container implements Resource {
+public class ResourceImpl extends NamedElementImpl implements Resource {
 	/**
 	 * The default value of the '{@link #getProjectPath() <em>Project Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,6 +36,16 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * @ordered
 	 */
 	protected static final String PROJECT_PATH_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getFileName() <em>File Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFileName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FILE_NAME_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -55,16 +64,6 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	@Override
 	protected EClass eStaticClass() {
 		return Bw5Package.Literals.RESOURCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -132,6 +131,26 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 	 * @generated
 	 */
 	@Override
+	public String getFileName() {
+		return (String)eDynamicGet(Bw5Package.RESOURCE__FILE_NAME, Bw5Package.Literals.RESOURCE__FILE_NAME, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFileName(String newFileName) {
+		eDynamicSet(Bw5Package.RESOURCE__FILE_NAME, Bw5Package.Literals.RESOURCE__FILE_NAME, newFileName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Bw5Package.RESOURCE__PARENT:
@@ -170,6 +189,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 			case Bw5Package.RESOURCE__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
+			case Bw5Package.RESOURCE__FILE_NAME:
+				return getFileName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,6 +208,9 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 				return;
 			case Bw5Package.RESOURCE__PARENT:
 				setParent((Folder)newValue);
+				return;
+			case Bw5Package.RESOURCE__FILE_NAME:
+				setFileName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -206,6 +230,9 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 			case Bw5Package.RESOURCE__PARENT:
 				setParent((Folder)null);
 				return;
+			case Bw5Package.RESOURCE__FILE_NAME:
+				setFileName(FILE_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -222,6 +249,8 @@ public class ResourceImpl extends MinimalEObjectImpl.Container implements Resour
 				return PROJECT_PATH_EDEFAULT == null ? getProjectPath() != null : !PROJECT_PATH_EDEFAULT.equals(getProjectPath());
 			case Bw5Package.RESOURCE__PARENT:
 				return basicGetParent() != null;
+			case Bw5Package.RESOURCE__FILE_NAME:
+				return FILE_NAME_EDEFAULT == null ? getFileName() != null : !FILE_NAME_EDEFAULT.equals(getFileName());
 		}
 		return super.eIsSet(featureID);
 	}

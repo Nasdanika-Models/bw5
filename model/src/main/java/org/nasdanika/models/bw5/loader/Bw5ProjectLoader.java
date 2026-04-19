@@ -46,6 +46,7 @@ public class Bw5ProjectLoader {
 	
 	protected void loadFolder(File dir, String projectPath, Folder folder) throws IOException {
 		folder.setName(dir.getName());
+		folder.setFileName(dir.getName());
 		// TODO - load .folder
 		for (File file : dir.listFiles()) {
 			String filePath = Util.isBlank(projectPath) ? file.getName() : projectPath + "/" + file.getName();
@@ -61,11 +62,17 @@ public class Bw5ProjectLoader {
 					if (content instanceof Resource res) {
 						folder.getResources().add(res);						
 						res.setProjectPath(filePath);
+						if (Util.isBlank(res.getName())) {
+							res.setName(file.getName());
+						}
+						res.setFileName(file.getName());
 					}
 				}
 			} else {
 				Resource resource = factory.createResource();
 				resource.setProjectPath(filePath);
+				resource.setName(file.getName());
+				resource.setFileName(file.getName());
 				folder.getResources().add(resource);
 			}
 		}

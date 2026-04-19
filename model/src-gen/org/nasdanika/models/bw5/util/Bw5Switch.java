@@ -191,6 +191,7 @@ public class Bw5Switch<T> extends Switch<T> {
 			case Bw5Package.RESOURCE: {
 				Resource resource = (Resource)theEObject;
 				T result = caseResource(resource);
+				if (result == null) result = caseNamedElement(resource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -198,6 +199,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				Folder folder = (Folder)theEObject;
 				T result = caseFolder(folder);
 				if (result == null) result = caseResource(folder);
+				if (result == null) result = caseNamedElement(folder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +208,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				T result = caseProject(project);
 				if (result == null) result = caseFolder(project);
 				if (result == null) result = caseResource(project);
+				if (result == null) result = caseNamedElement(project);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

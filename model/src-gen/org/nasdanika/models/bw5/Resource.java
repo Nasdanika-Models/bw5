@@ -2,7 +2,6 @@
  */
 package org.nasdanika.models.bw5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +19,14 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.nasdanika.models.bw5.Resource#getProjectPath <em>Project Path</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.Resource#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.Resource#getFileName <em>File Name</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.bw5.Bw5Package#getResource()
  * @model
  * @generated
  */
-public interface Resource extends EObject {
+public interface Resource extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Project Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,5 +76,27 @@ public interface Resource extends EObject {
 	 * @generated
 	 */
 	void setParent(Folder value);
+
+	/**
+	 * Returns the value of the '<em><b>File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>File Name</em>' attribute.
+	 * @see #setFileName(String)
+	 * @see org.nasdanika.models.bw5.Bw5Package#getResource_FileName()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getFileName();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.bw5.Resource#getFileName <em>File Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>File Name</em>' attribute.
+	 * @see #getFileName()
+	 * @generated
+	 */
+	void setFileName(String value);
 
 } // Resource

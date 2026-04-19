@@ -1,18 +1,26 @@
 package org.nasdanika.models.bw5.doc;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
-import org.apache.poi.ss.formula.functions.T;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.DocumentationFactory;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.common.Util;
+import org.nasdanika.graph.emf.EReferenceConnection;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
 import org.nasdanika.models.app.Action;
 import org.nasdanika.models.app.Label;
 import org.nasdanika.models.app.graph.WidgetFactory;
-import org.nasdanika.models.bootstrap.Table;
+import org.nasdanika.models.app.graph.emf.OutgoingReferenceBuilder;
+import org.nasdanika.models.bw5.Bw5Package;
 import org.nasdanika.models.bw5.Folder;
+
 
 public class FolderNodeProcessor<T extends Folder> extends ResourceNodeProcessor<T> {
 
@@ -31,95 +39,53 @@ public class FolderNodeProcessor<T extends Folder> extends ResourceNodeProcessor
 //	}	
 	
 	@Override
-	protected Label createAction(ProgressMonitor progressMonitor) {
-		Action action = (Action) super.createAction(progressMonitor);
-		
-		Table propertiesTable = createPropertiesTable(progressMonitor);
-		if (propertiesTable != null) {
-			action.getContent().add(0, propertiesTable);
+	protected Collection<Entry<String, Collection<EObject>>> getProperties(ProgressMonitor progressMonitor) {
+		Collection<Entry<String, Collection<EObject>>> properties = super.getProperties(progressMonitor);
+		String resourceType = getTarget().getResourceType();
+		if (!Util.isBlank(resourceType)) {
+			properties.add(
+					Map.entry(
+							"Resoure type", 
+							List.of(createText(resourceType))));
 		}
+		return properties;
+	}
 		
-//		if (documentationFactories != null && !documentationFactories.isEmpty()) {
-//			Resource target = getTarget();
-//			String code = target.getCode();
-//			if (!Util.isBlank(code)) {
-//				Optional<DocumentationFactory> dfo = documentationFactories
-//						.stream()
-//						.filter(df -> df.canHandle(Content.MARKDOWN))
-//						.findAny();
-//					
-//				if (dfo.isPresent()) {
-//					Collection<EObject> documentation = dfo.get().createDocumentation(
-//							target, 
-//							"""
-//							```python
-//							%s
-//							```
-//							""".formatted(code), 
-//							Content.MARKDOWN, 
-//							target.eResource() == null ? null : target.eResource().getURI(),
-//							Collections.<String,String>emptyMap()::get,
-//							progressMonitor);
-//
-//					if (!documentation.isEmpty()) {
-//						Action codeAction = getRoleActionByLocation(
-//								action.getNavigation(), 
-//								"code.html", 
-//								"Code", 
-//								CODE_ICON);
-//						
-//						String comment = target.getComment();
-//						if (!Util.isBlank(comment)) {
-//							codeAction.getContent().add(createText(comment));
-//						}
-//						
-//						codeAction.getContent().addAll(documentation);
-//						createImportsSection(codeAction, progressMonitor);						
-//					}					
-//				}
-//			}
-//		}
+	@OutgoingReferenceBuilder(
+			nsURI = Bw5Package.eNS_URI,
+			classID = Bw5Package.FOLDER,
+			referenceID = Bw5Package.FOLDER__RESOURCES)
+	public void buildResourcesOutgoingReference(
+			EReference eReference,
+			List<Entry<EReferenceConnection, WidgetFactory>> referenceOutgoingEndpoints, 
+			Collection<Label> labels,
+			Map<EReferenceConnection, Collection<Label>> outgoingLabels, 
+			ProgressMonitor progressMonitor) {
+
+		List<Entry<EReferenceConnection, Collection<Label>>> sorted = outgoingLabels.entrySet().stream()
+				.sorted((a,b) -> a.getKey().getIndex() - b.getKey().getIndex())
+				.toList();		
+
+		// A page with a dynamic agents table and links to agent pages.
+		for (Label label: labels) {
+			if (label instanceof Action action) {										
+				EList<EObject> childActions = action.getChildren(); 
 				
-		return action;
+				for (Entry<EReferenceConnection, Collection<Label>> re: sorted) {
+					childActions.addAll(re.getValue());
+				}				
+			}
+		}
 	}
 	
-//	protected void createImportsSection(Action codeAction, ProgressMonitor progressMonitor) {
-//		// TODO - as a table
-//		if (documentationFactories != null && !documentationFactories.isEmpty()) {
-//			Code target = getTarget();
-//			String imports = target.getImports();
-//			if (!Util.isBlank(imports)) {
-//				Optional<DocumentationFactory> dfo = documentationFactories
-//						.stream()
-//						.filter(df -> df.canHandle(Content.MARKDOWN))
-//						.findAny();
-//					
-//				if (dfo.isPresent()) {
-//					Collection<EObject> documentation = dfo.get().createDocumentation(
-//							target, 
-//							"""
-//							```yaml
-//							%s
-//							```
-//							""".formatted(imports), 
-//							Content.MARKDOWN, 
-//							target.eResource() == null ? null : target.eResource().getURI(),
-//							Collections.<String,String>emptyMap()::get,
-//							progressMonitor);
-//
-//					if (!documentation.isEmpty()) {						
-//						Action importsAction = getRoleActionByName(
-//								codeAction.getSections(), 
-//								"imports", 
-//								"Imports", 
-//								null);
-//						
-//						importsAction.getContent().addAll(documentation);
-//					}					
-//				}
-//			}
-//		}
-//	}
-	
+	/**
+	 * 
+	 * @param eReference
+	 * @return true if lables suppliers shall be called to create labels/actions. 
+	 * This implementation returns true for containment references, i.e. actions for child objects shall be created. 
+	 */
+	protected boolean isCallOutgoingReferenceLabelsSuppliers(EReference eReference) {
+		return Bw5Package.eINSTANCE.getFolder_Resources().equals(eReference) || super.isCallOutgoingReferenceLabelsSuppliers(eReference);
+	}
 	
 }

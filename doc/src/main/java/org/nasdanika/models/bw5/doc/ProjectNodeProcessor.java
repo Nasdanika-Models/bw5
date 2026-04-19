@@ -23,64 +23,11 @@ public class ProjectNodeProcessor extends FolderNodeProcessor<Project> {
 		
 		super(config, context, prototypeProvider, documentationFactories);
 	}		
-
+	
 //	@Override
 //	protected String getTypeIcon() {
 //		return RESOURCE_ICON;
 //	}	
-	
-	@Override
-	protected Label createAction(ProgressMonitor progressMonitor) {
-		Action action = (Action) super.createAction(progressMonitor);
-		
-		Table propertiesTable = createPropertiesTable(progressMonitor);
-		if (propertiesTable != null) {
-			action.getContent().add(0, propertiesTable);
-		}
-		
-//		if (documentationFactories != null && !documentationFactories.isEmpty()) {
-//			Resource target = getTarget();
-//			String code = target.getCode();
-//			if (!Util.isBlank(code)) {
-//				Optional<DocumentationFactory> dfo = documentationFactories
-//						.stream()
-//						.filter(df -> df.canHandle(Content.MARKDOWN))
-//						.findAny();
-//					
-//				if (dfo.isPresent()) {
-//					Collection<EObject> documentation = dfo.get().createDocumentation(
-//							target, 
-//							"""
-//							```python
-//							%s
-//							```
-//							""".formatted(code), 
-//							Content.MARKDOWN, 
-//							target.eResource() == null ? null : target.eResource().getURI(),
-//							Collections.<String,String>emptyMap()::get,
-//							progressMonitor);
-//
-//					if (!documentation.isEmpty()) {
-//						Action codeAction = getRoleActionByLocation(
-//								action.getNavigation(), 
-//								"code.html", 
-//								"Code", 
-//								CODE_ICON);
-//						
-//						String comment = target.getComment();
-//						if (!Util.isBlank(comment)) {
-//							codeAction.getContent().add(createText(comment));
-//						}
-//						
-//						codeAction.getContent().addAll(documentation);
-//						createImportsSection(codeAction, progressMonitor);						
-//					}					
-//				}
-//			}
-//		}
-				
-		return action;
-	}
 	
 //	protected void createImportsSection(Action codeAction, ProgressMonitor progressMonitor) {
 //		// TODO - as a table

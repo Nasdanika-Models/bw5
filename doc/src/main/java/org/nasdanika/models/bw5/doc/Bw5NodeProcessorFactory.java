@@ -18,7 +18,10 @@ import org.nasdanika.models.app.AppFactory;
 import org.nasdanika.models.app.Label;
 import org.nasdanika.models.app.graph.WidgetFactory;
 import org.nasdanika.models.bw5.Folder;
+import org.nasdanika.models.bw5.NamedElement;
+import org.nasdanika.models.bw5.ProcessDefinition;
 import org.nasdanika.models.bw5.Project;
+import org.nasdanika.models.bw5.Resource;
 //import org.nasdanika.models.sql.Catalog;
 //import org.nasdanika.models.sql.Column;
 //import org.nasdanika.models.sql.DataType;
@@ -88,12 +91,56 @@ public class Bw5NodeProcessorFactory {
 			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
 			ProgressMonitor progressMonitor) {
 		
-		return new ProjectNodeProcessor(
+		return new FolderNodeProcessor<Folder>(
 				config, 
 				context, 
 				getPrototypeProvider(config), 
 				documentationFactories);
 	}
+		
+	@EObjectNodeProcessor(type = Resource.class)
+	public Object createResourceNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new ResourceNodeProcessor<Resource>(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}
+	
+	@EObjectNodeProcessor(type = NamedElement.class)
+	public Object createNamedElementNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new NamedElementNodeProcessor<Resource>(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}
+		
+	@EObjectNodeProcessor(type = ProcessDefinition.class)
+	public Object createProcessDefinitionNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new ProcessDefinitionNodeProcessor(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}
+	
+	
 	
 //	ProcessDefinition.java
 //	Activity.java

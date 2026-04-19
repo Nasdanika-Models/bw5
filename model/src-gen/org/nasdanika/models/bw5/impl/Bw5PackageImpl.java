@@ -892,6 +892,16 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getResource_FileName() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFolder() {
 		return folderEClass;
 	}
@@ -914,16 +924,6 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	@Override
 	public EAttribute getFolder_ResourceType() {
 		return (EAttribute)folderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFolder_Name() {
-		return (EAttribute)folderEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1046,11 +1046,11 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		resourceEClass = createEClass(RESOURCE);
 		createEAttribute(resourceEClass, RESOURCE__PROJECT_PATH);
 		createEReference(resourceEClass, RESOURCE__PARENT);
+		createEAttribute(resourceEClass, RESOURCE__FILE_NAME);
 
 		folderEClass = createEClass(FOLDER);
 		createEReference(folderEClass, FOLDER__RESOURCES);
 		createEAttribute(folderEClass, FOLDER__RESOURCE_TYPE);
-		createEAttribute(folderEClass, FOLDER__NAME);
 
 		projectEClass = createEClass(PROJECT);
 	}
@@ -1101,6 +1101,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		groupEClass.getESuperTypes().add(this.getContainer());
 		labelEClass.getESuperTypes().add(this.getNode());
 		processVariableEClass.getESuperTypes().add(this.getTypedElement());
+		resourceEClass.getESuperTypes().add(this.getNamedElement());
 		folderEClass.getESuperTypes().add(this.getResource());
 		projectEClass.getESuperTypes().add(this.getFolder());
 
@@ -1189,11 +1190,12 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResource_ProjectPath(), theEcorePackage.getEString(), "projectPath", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResource_Parent(), this.getFolder(), this.getFolder_Resources(), "parent", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResource_FileName(), theEcorePackage.getEString(), "fileName", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFolder_Resources(), this.getResource(), this.getResource_Parent(), "resources", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getFolder_Resources().getEKeys().add(this.getResource_FileName());
 		initEAttribute(getFolder_ResourceType(), theEcorePackage.getEString(), "resourceType", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFolder_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1205,6 +1207,8 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		createGenModelAnnotations();
 		// http://www.eclipse.org/emf/2011/Xcore
 		createXcoreAnnotations();
+		// urn:org.nasdanika
+		createUrnorgAnnotations();
 	}
 
 	/**
@@ -1548,12 +1552,6 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 			   "documentation", "*\nLoaded from .folder file repository/folder resourceType attribute"
 		   });
 		addAnnotation
-		  (getFolder_Name(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nLoaded from .folder file repository/folder name attribute"
-		   });
-		addAnnotation
 		  (projectEClass,
 		   source,
 		   new String[] {
@@ -1574,7 +1572,24 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		   source,
 		   new String[] {
 			   "Ecore", "http://www.eclipse.org/emf/2002/Ecore",
-			   "GenModel", "http://www.eclipse.org/emf/2002/GenModel"
+			   "GenModel", "http://www.eclipse.org/emf/2002/GenModel",
+			   "Nasdanika", "urn:org.nasdanika"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>urn:org.nasdanika</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUrnorgAnnotations() {
+		String source = "urn:org.nasdanika";
+		addAnnotation
+		  (getFolder_Resources(),
+		   source,
+		   new String[] {
+			   "logicalContainment", "true"
 		   });
 	}
 

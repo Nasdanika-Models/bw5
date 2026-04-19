@@ -27,7 +27,6 @@ import org.nasdanika.models.bw5.Resource;
  * <ul>
  *   <li>{@link org.nasdanika.models.bw5.impl.FolderImpl#getResources <em>Resources</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.FolderImpl#getResourceType <em>Resource Type</em>}</li>
- *   <li>{@link org.nasdanika.models.bw5.impl.FolderImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,16 +41,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 	 * @ordered
 	 */
 	protected static final String RESOURCE_TYPE_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,26 +97,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
-		return (String)eDynamicGet(Bw5Package.FOLDER__NAME, Bw5Package.Literals.FOLDER__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		eDynamicSet(Bw5Package.FOLDER__NAME, Bw5Package.Literals.FOLDER__NAME, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -164,8 +133,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 				return getResources();
 			case Bw5Package.FOLDER__RESOURCE_TYPE:
 				return getResourceType();
-			case Bw5Package.FOLDER__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,9 +153,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 			case Bw5Package.FOLDER__RESOURCE_TYPE:
 				setResourceType((String)newValue);
 				return;
-			case Bw5Package.FOLDER__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -207,9 +171,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 			case Bw5Package.FOLDER__RESOURCE_TYPE:
 				setResourceType(RESOURCE_TYPE_EDEFAULT);
 				return;
-			case Bw5Package.FOLDER__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -226,8 +187,6 @@ public class FolderImpl extends ResourceImpl implements Folder {
 				return !getResources().isEmpty();
 			case Bw5Package.FOLDER__RESOURCE_TYPE:
 				return RESOURCE_TYPE_EDEFAULT == null ? getResourceType() != null : !RESOURCE_TYPE_EDEFAULT.equals(getResourceType());
-			case Bw5Package.FOLDER__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

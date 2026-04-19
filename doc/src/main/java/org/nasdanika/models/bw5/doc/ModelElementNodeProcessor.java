@@ -21,6 +21,7 @@ import org.nasdanika.models.app.Label;
 import org.nasdanika.models.app.gen.DynamicTableBuilder;
 import org.nasdanika.models.app.graph.WidgetFactory;
 import org.nasdanika.models.app.graph.emf.EObjectNodeProcessor;
+import org.nasdanika.models.bootstrap.Table;
 import org.nasdanika.ncore.ModelElement;
 import org.nasdanika.ncore.NamedElement;
 
@@ -69,6 +70,18 @@ public abstract class ModelElementNodeProcessor<T extends EObject> extends EObje
 		Collection<Label> labels, 
 		Map<EReferenceConnection, Collection<Label>> outgoingLabels, 
 		ProgressMonitor progressMonitor) {
+	}
+	
+	@Override
+	protected Label createAction(ProgressMonitor progressMonitor) {
+		Action action = (Action) super.createAction(progressMonitor);
+		
+		Table propertiesTable = createPropertiesTable(progressMonitor);
+		if (propertiesTable != null) {
+			action.getContent().add(0, propertiesTable);
+		}
+						
+		return action;
 	}
 		
 	@Override
