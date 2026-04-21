@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <!-- begin-model-doc -->
  * *
- * Root element of a Tibco BW 5.x process file (.process).
+ * Root element of a BW 5.x process file (.process).
  * Corresponds to pd:ProcessDefinition in the XML namespace
  * http://xmlns.tibco.com/bw/process/2003.
  * <!-- end-model-doc -->

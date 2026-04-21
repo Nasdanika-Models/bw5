@@ -69,6 +69,7 @@ public interface Container extends NamedElement {
 	 * @return the value of the '<em>Transitions</em>' containment reference list.
 	 * @see org.nasdanika.models.bw5.Bw5Package#getContainer_Transitions()
 	 * @model containment="true"
+	 *        annotation="urn:org.nasdanika logicalContainment='false'"
 	 * @generated
 	 */
 	EList<Transition> getTransitions();

@@ -75,10 +75,12 @@ public class TestBw5DocSiteGen {
 			
 		};		
 		
+		URI pageTeplateURI = URI.createFileURI(new File("page-template.yml").getAbsolutePath());//.appendFragment("/");		
+		
 		String siteMapDomain = "https://something.org";		
 		Map<String, Collection<String>> errors = actionSiteGenerator.generate(
 				rootActionURI, 
-				Theme.Cerulean.pageTemplateCdnURI, 
+				pageTeplateURI, 
 				siteMapDomain, 
 				new File("target/sample-project-docs"),  
 				new File("target/sample-project-doc-site-work-dir"), 

@@ -86,6 +86,7 @@ public interface Node extends NamedElement {
 	 * @see org.nasdanika.models.bw5.Bw5Package#getNode_OutgoingTransitions()
 	 * @see org.nasdanika.models.bw5.Transition#getSource
 	 * @model opposite="source"
+	 *        annotation="urn:org.nasdanika logicalContainment='true'"
 	 * @generated
 	 */
 	EList<Transition> getOutgoingTransitions();

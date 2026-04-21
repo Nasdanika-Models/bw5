@@ -1285,7 +1285,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		  (processDefinitionEClass,
 		   source,
 		   new String[] {
-			   "documentation", "*\nRoot element of a Tibco BW 5.x process file (.process).\nCorresponds to pd:ProcessDefinition in the XML namespace\nhttp://xmlns.tibco.com/bw/process/2003."
+			   "documentation", "*\nRoot element of a BW 5.x process file (.process).\nCorresponds to pd:ProcessDefinition in the XML namespace\nhttp://xmlns.tibco.com/bw/process/2003."
 		   });
 		addAnnotation
 		  (getProcessDefinition_StartType(),
@@ -1585,6 +1585,18 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 */
 	protected void createUrnorgAnnotations() {
 		String source = "urn:org.nasdanika";
+		addAnnotation
+		  (getContainer_Transitions(),
+		   source,
+		   new String[] {
+			   "logicalContainment", "false"
+		   });
+		addAnnotation
+		  (getNode_OutgoingTransitions(),
+		   source,
+		   new String[] {
+			   "logicalContainment", "true"
+		   });
 		addAnnotation
 		  (getFolder_Resources(),
 		   source,

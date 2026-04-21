@@ -1,599 +1,599 @@
 {
   "references/eClassifiers/Call/references/eStructuralFeatures/caller/index.html": {
     "path": "Call/References/caller",
-    "link-uuid": "9ab62c04-0862-41b0-a6a4-d3734d85ed7f",
+    "link-uuid": "35423100-4074-4001-a4f4-e43df3602ce8",
     "title": "caller",
     "content": "Type Caller Multiplicity 0..1",
-    "timestamp": 1776615902769
+    "timestamp": 1776744112101
   },
   "references/eClassifiers/ProcessVariable/index.html": {
-    "link-uuid": "7d15cc51-5347-471b-9882-50a8eb563bff",
+    "link-uuid": "ff8ab2e7-a0fd-4be6-900f-e9baa4d6bf7c",
     "title": "ProcessVariable",
     "content": "* A process-level variable declared in the processVariables section. Process variables hold state that is visible to all activities within the same process instance. Diagram ",
-    "timestamp": 1776615903110
+    "timestamp": 1776744112574
   },
   "references/eClassifiers/Container/references/eStructuralFeatures/start/index.html": {
     "path": "Container/References/start",
-    "link-uuid": "2a3427ac-d7f9-41db-87d8-02006658be13",
+    "link-uuid": "2fc4f332-0838-48cb-b768-28d758515476",
     "title": "start",
     "content": "Type Node Multiplicity 0..1 * A synthetic node populated from startName, startType, startX, startY",
-    "timestamp": 1776615902861
+    "timestamp": 1776744112233
   },
   "references/eClassifiers/Group/references/eStructuralFeatures/width/index.html": {
     "path": "Group/Attributes/width",
-    "link-uuid": "0349e003-422d-46c4-9976-5d43ec51155c",
+    "link-uuid": "460a8fcc-705f-46df-97c1-1d286cf3554a",
     "title": "width",
     "content": "Type EInt Multiplicity 0..1 * Width of the expanded group frame on the design canvas.",
-    "timestamp": 1776615902933
+    "timestamp": 1776744112352
   },
   "references/eClassifiers/TypedElement/references/eStructuralFeatures/type/index.html": {
     "path": "TypedElement/Attributes/type",
-    "link-uuid": "c391d7cb-81cb-4b9f-a459-0096e9a5c770",
+    "link-uuid": "ae8fd361-bf49-4e9a-9e17-4647708a3234",
     "title": "type",
     "content": "Type EString Multiplicity 0..1 * Fully-qualified Java class name of the activity implementation, e.g. &ldquo;com.tibco.pe.core.WriteToLogActivity&rdquo;.",
-    "timestamp": 1776615903246
+    "timestamp": 1776744112748
   },
   "references/eClassifiers/NamedElement/references/eStructuralFeatures/description/index.html": {
     "path": "NamedElement/Attributes/description",
-    "link-uuid": "bbd726e4-de44-48ea-a7eb-a741508ad773",
+    "link-uuid": "98002b44-c025-4a28-b28f-32179bc08051",
     "title": "description",
     "content": "Type EString Multiplicity 0..1 * Optional human-readable description of this element.",
-    "timestamp": 1776615903004
+    "timestamp": 1776744112450
   },
   "references/eClassifiers/Activity/references/eStructuralFeatures/inputBindings/index.html": {
     "path": "Activity/Attributes/inputBindings",
-    "link-uuid": "8d6feb11-caae-4792-955a-28b15150f0f1",
+    "link-uuid": "3fe3392a-8459-4e38-a74f-73d248d0b543",
     "title": "inputBindings",
     "content": "Type EString Multiplicity 0..1 * XSL input bindings for this activity, stored as raw XML text.",
-    "timestamp": 1776615902737
+    "timestamp": 1776744112070
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/target/index.html": {
     "path": "Transition/References/target",
-    "link-uuid": "fe9f8989-1b43-4e30-83d3-c3c0b11e92e6",
+    "link-uuid": "58e327ae-9590-415d-8ffb-db659b683ed5",
     "title": "target",
     "content": "Type Node Multiplicity 0..1",
-    "timestamp": 1776615903222
+    "timestamp": 1776744112716
   },
   "references/eClassifiers/CallTarget/inheritance.html": {
     "path": "CallTarget/Inheritance",
-    "link-uuid": "c24ce344-c06c-4ee2-a91e-fc5eb78ea38f",
+    "link-uuid": "f6039918-0a8c-4fa3-9ace-31265d2239a3",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1776615902819
+    "timestamp": 1776744112166
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/endType/index.html": {
     "path": "ProcessDefinition/Attributes/endType",
-    "link-uuid": "15cbf50b-1408-492a-9ff0-68c15f77bca5",
+    "link-uuid": "b34d3874-b923-4c39-9b7b-b5cd92b98e2b",
     "title": "endType",
     "content": "Type EString Multiplicity 0..1 * Canonical type of the end element (optional).",
-    "timestamp": 1776615903075
+    "timestamp": 1776744112528
   },
   "references/eClassifiers/Folder/references/eStructuralFeatures/resourceType/index.html": {
     "path": "Folder/Attributes/resourceType",
-    "link-uuid": "d9ec869c-5d50-46b0-9a6a-cbbe6ce12c5c",
+    "link-uuid": "4511179f-7e4c-4fae-832d-8b2e891a01d7",
     "title": "resourceType",
     "content": "Type EString Multiplicity 0..1 * Loaded from .folder file repository/folder resourceType attribute",
-    "timestamp": 1776615902894
+    "timestamp": 1776744112288
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/fade/index.html": {
     "path": "Label/Attributes/fade",
-    "link-uuid": "3021f9b2-8ff2-4e26-b204-609b63ce2a97",
+    "link-uuid": "ab44bb4f-9d91-4ee4-adad-823770db38a6",
     "title": "fade",
     "content": "Type EString Multiplicity 0..1 * Opacity / fade value.",
-    "timestamp": 1776615902967
+    "timestamp": 1776744112400
   },
   "references/eClassifiers/TypedNode/index.html": {
-    "link-uuid": "374ce901-57a6-433a-8262-e4a3572dfb16",
+    "link-uuid": "3b019a82-9978-4a7e-bc23-60da8bd9dc51",
     "title": "TypedNode",
     "content": "Diagram ",
-    "timestamp": 1776615903260
+    "timestamp": 1776744112768
   },
   "references/eClassifiers/Group/references/eStructuralFeatures/collapsedWidth/index.html": {
     "path": "Group/Attributes/collapsedWidth",
-    "link-uuid": "107cc564-8956-4a21-9def-e44c366dbf30",
+    "link-uuid": "3076cd9a-50c1-4e10-989d-fef897efe2cf",
     "title": "collapsedWidth",
     "content": "Type EInt Multiplicity 0..1 * Width of the group icon when collapsed.",
-    "timestamp": 1776615902925
+    "timestamp": 1776744112342
   },
   "index.html": {
-    "link-uuid": "4b26499b-5b68-44d7-b7ee-c1d6f15573cb",
+    "link-uuid": "6f05a797-5273-42e9-91de-7682fc05d43c",
     "title": "BW 5.x Model",
     "content": "Xcore model for BW 5.x concepts. Transition Node source outgoingTransitions target incomingTransitions ProcessDefinition TypedNode Label labels ProcessVariable processVariables Starter starter Container transitions NamedElement TypedElement Activity activities Group groups Folder Call Project Resource resources parent CallTarget incomingCalls target Caller caller outgoingCalls start end BW5",
-    "timestamp": 1776615902703
+    "timestamp": 1776744112026
   },
   "references/eClassifiers/Caller/inheritance.html": {
     "path": "Caller/Inheritance",
-    "link-uuid": "78924830-3cd6-4a3b-858b-171dcfd72658",
+    "link-uuid": "89ef6a95-c718-4b77-b417-2d22e45d9184",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1776615902797
+    "timestamp": 1776744112131
   },
   "references/eClassifiers/Starter/inheritance.html": {
     "path": "Starter/Inheritance",
-    "link-uuid": "614f440e-7260-45db-bb80-a966ab74466b",
+    "link-uuid": "02f1110d-3b97-4c27-8eb9-412239904f63",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615903179
+    "timestamp": 1776744112663
   },
   "references/eClassifiers/TypedNode/references/eStructuralFeatures/resourceType/index.html": {
     "path": "TypedNode/Attributes/resourceType",
-    "link-uuid": "d07b9740-a15e-423e-95b9-c5cff7a24dc2",
+    "link-uuid": "0d229345-eedf-4f43-a021-483032cfa775",
     "title": "resourceType",
     "content": "Type EString Multiplicity 0..1 * Palette / resource-type identifier used by the BW Designer, e.g. &ldquo;ae.activities.log&rdquo;.",
-    "timestamp": 1776615903266
+    "timestamp": 1776744112777
   },
   "references/eClassifiers/Container/references/eStructuralFeatures/end/index.html": {
     "path": "Container/References/end",
-    "link-uuid": "490ac22f-8b9a-494c-ae74-6663c3ee93e1",
+    "link-uuid": "31a9c78a-5b76-45fa-bf37-b7836d35e118",
     "title": "end",
     "content": "Type Node Multiplicity 0..1 * A synthetic node populated from endName, endType, endX, endY",
-    "timestamp": 1776615902856
+    "timestamp": 1776744112225
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/type/index.html": {
     "path": "Label/Attributes/type",
-    "link-uuid": "e81637ff-074e-46ab-b925-58cedae31510",
+    "link-uuid": "26c4074e-8065-427e-b732-669e9f303327",
     "title": "type",
     "content": "Type EString Multiplicity 0..1 * Label shape type.",
-    "timestamp": 1776615902977
+    "timestamp": 1776744112414
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/startType/index.html": {
     "path": "ProcessDefinition/Attributes/startType",
-    "link-uuid": "470d03d2-36ec-44dd-98ba-33f052435e87",
+    "link-uuid": "c3726b37-0294-4f36-b8d6-8d32cb6b8f32",
     "title": "startType",
     "content": "Type EString Multiplicity 0..1 * Canonical type of the start element (optional).",
-    "timestamp": 1776615903089
+    "timestamp": 1776744112547
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/width/index.html": {
     "path": "Label/Attributes/width",
-    "link-uuid": "b0b108fa-7126-4775-8995-cedcda0fdbff",
+    "link-uuid": "0f3aa065-e909-43e4-8f30-c1c3b7e077bd",
     "title": "width",
     "content": "Type EInt Multiplicity 0..1 * Width of the label box on the canvas.",
-    "timestamp": 1776615902980
+    "timestamp": 1776744112417
   },
   "references/eClassifiers/NamedElement/index.html": {
-    "link-uuid": "1ffc1197-12d9-404b-a520-75f0f45e2fad",
+    "link-uuid": "07c354a2-9d5a-4f43-aee9-2bb227a62761",
     "title": "NamedElement",
     "content": "* Abstract base for process elements that are identified by name within a process. Corresponds to the NamedType complex type in the BW process schema. Diagram ",
-    "timestamp": 1776615902999
+    "timestamp": 1776744112443
   },
   "references/eClassifiers/Caller/index.html": {
-    "link-uuid": "77550e0a-26d3-4b43-b466-70a460274ecc",
+    "link-uuid": "3fd375a8-0c29-431f-9805-6d1649044eb7",
     "title": "Caller",
     "content": "* Something making calls Diagram ",
-    "timestamp": 1776615902793
+    "timestamp": 1776744112127
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/incomingTransitions/index.html": {
     "path": "Node/References/incomingTransitions",
-    "link-uuid": "e5c6dd1c-7d56-4f05-81bf-3c8c8fafd07a",
+    "link-uuid": "ac19aea7-6e2d-410f-966e-7b8efa2ae810",
     "title": "incomingTransitions",
     "content": "Type Transition Multiplicity 0..*",
-    "timestamp": 1776615903035
+    "timestamp": 1776744112488
   },
   "references/eClassifiers/Resource/references/eStructuralFeatures/parent/index.html": {
     "path": "Resource/References/parent",
-    "link-uuid": "17c30269-285a-48cd-b420-c279804a845d",
+    "link-uuid": "428c3e78-8aeb-4159-9170-5c01034ec8e6",
     "title": "parent",
     "content": "Type Folder Multiplicity 0..1",
-    "timestamp": 1776615903158
+    "timestamp": 1776744112635
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/starter/index.html": {
     "path": "ProcessDefinition/References/starter",
-    "link-uuid": "15a97625-cf72-4cca-a275-23a7ba45df6f",
+    "link-uuid": "450e9eb7-d838-495d-86d5-b9398018d9fe",
     "title": "starter",
     "content": "Type Starter Multiplicity 0..1 * The optional event-source activity that starts this process (e.g. an HTTP receiver, JMS queue listener, Timer, &hellip;). When present, startName refers to this starter&rsquo;s name.",
-    "timestamp": 1776615903087
+    "timestamp": 1776744112541
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/condition/index.html": {
     "path": "Transition/Attributes/condition",
-    "link-uuid": "5a769c4c-5a43-4548-8bb8-b0bcdcb570a3",
+    "link-uuid": "4926619c-c4ca-41a5-b230-958d5079c16d",
     "title": "condition",
     "content": "Type EString Multiplicity 0..1 * XPath/XSL condition expression evaluated at runtime to decide whether this transition fires. Only used when conditionType is &ldquo;expression&rdquo;.",
-    "timestamp": 1776615903209
+    "timestamp": 1776744112699
   },
   "references/eClassifiers/Group/index.html": {
-    "link-uuid": "f3dd0b94-ada1-4bcf-b1d9-694b017b07da",
+    "link-uuid": "9e34d7e9-01d8-4414-b293-9449e5ae8aeb",
     "title": "Group",
     "content": "* A group of activities, used to model structured constructs such as: - Loops (Repeat-Until, For-Each, While) - Error handlers / Fault handlers - Critical sections - Scope groups Corresponds to pd:group in the process XML. Diagram ",
-    "timestamp": 1776615902914
+    "timestamp": 1776744112326
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/targetNamespace/index.html": {
     "path": "ProcessDefinition/Attributes/targetNamespace",
-    "link-uuid": "5e0393f1-377b-4e4a-8653-c227fefcfd4b",
+    "link-uuid": "94f70ff7-ba85-4c33-9dfe-930f836c29ba",
     "title": "targetNamespace",
     "content": "Type EString Multiplicity 0..1 * The XML target namespace declared in the process file. Used to qualify XPath expressions within the process.",
-    "timestamp": 1776615903092
+    "timestamp": 1776744112550
   },
   "references/eClassifiers/Caller/references/eStructuralFeatures/outgoingCalls/index.html": {
     "path": "Caller/References/outgoingCalls",
-    "link-uuid": "1d6ee147-39ef-40ff-98ed-2ce35bf631db",
+    "link-uuid": "6293bb79-4205-49b7-83bd-49a8e954bb43",
     "title": "outgoingCalls",
     "content": "Type Call Multiplicity 0..*",
-    "timestamp": 1776615902799
+    "timestamp": 1776744112136
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/outgoingTransitions/index.html": {
     "path": "Node/References/outgoingTransitions",
-    "link-uuid": "0e41d675-79d0-4bf0-83fc-fe5a0621817c",
+    "link-uuid": "07e05d50-9341-422a-aaf4-d885c4b512fd",
     "title": "outgoingTransitions",
     "content": "Type Transition Multiplicity 0..*",
-    "timestamp": 1776615903038
+    "timestamp": 1776744112492
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/labels/index.html": {
     "path": "ProcessDefinition/References/labels",
-    "link-uuid": "93a63a0b-84ed-4a1d-b017-f01f6043eab0",
+    "link-uuid": "6aeeff39-c43a-4060-bf24-73e56b3eba47",
     "title": "labels",
     "content": "Type Label Multiplicity 0..* * Visual annotation labels on the diagram.",
-    "timestamp": 1776615903080
+    "timestamp": 1776744112534
   },
   "references/eClassifiers/Resource/inheritance.html": {
     "path": "Resource/Inheritance",
-    "link-uuid": "5bfd3b37-e057-4244-9d45-06982239ac50",
+    "link-uuid": "7357e629-82a7-452b-aada-5674163c2317",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615903152
+    "timestamp": 1776744112627
   },
   "references/eClassifiers/Starter/index.html": {
-    "link-uuid": "df2d5afa-a7f0-4851-b6e6-417297577944",
+    "link-uuid": "c3db2192-47d7-4b05-9471-4ed1758ceeda",
     "title": "Starter",
     "content": "* An event-source (starter) activity that triggers the process. Corresponds to pd:starter in the process XML. Examples: HTTP Event Source, JMS Queue Receiver, Timer, File Poller. Structurally identical to a regular Activity; modelled as a distinct class so that tooling can easily distinguish starters from regular steps. Diagram ",
-    "timestamp": 1776615903177
+    "timestamp": 1776744112660
   },
   "references/eClassifiers/NamedElement/references/eStructuralFeatures/name/index.html": {
     "path": "NamedElement/Attributes/name",
-    "link-uuid": "087f87a5-4f30-4ae6-aeee-4169c920e63f",
+    "link-uuid": "0cbbfe38-8d75-4561-9cd2-2685df44cb59",
     "title": "name",
     "content": "Type EString Multiplicity 0..1 * The element&rsquo;s unique name within its containing scope (process or group). Used as the reference target in Transition.from and Transition.to.",
-    "timestamp": 1776615903006
+    "timestamp": 1776744112453
   },
   "references/eClassifiers/TypedElement/inheritance.html": {
     "path": "TypedElement/Inheritance",
-    "link-uuid": "9d8ee7e9-68b6-4f58-adc4-1964b85f7387",
+    "link-uuid": "07e95fed-2998-4948-8631-7a81ef244807",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615903241
+    "timestamp": 1776744112741
   },
   "references/eClassifiers/ProcessVariable/inheritance.html": {
     "path": "ProcessVariable/Inheritance",
-    "link-uuid": "8b44e6fb-4363-42fa-8ed2-c192e86e9c98",
+    "link-uuid": "82d46db2-8993-4a64-ba3d-d4813cebd418",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615903112
+    "timestamp": 1776744112577
   },
   "references/eClassifiers/Label/index.html": {
-    "link-uuid": "a00c4801-5e25-4b60-819c-1170bf3b6e7a",
+    "link-uuid": "2f43649d-6ccf-44bc-afde-45ffb979b3e7",
     "title": "Label",
     "content": "* A visual annotation (sticky-note style label) placed on the design canvas. Corresponds to pd:label in the process XML. Diagram ",
-    "timestamp": 1776615902957
+    "timestamp": 1776744112384
   },
   "references/eClassifiers/Node/index.html": {
-    "link-uuid": "eb4f680b-9784-45d9-b207-23581f02fc9b",
+    "link-uuid": "b4113129-3ac0-4112-b4ff-b76869701284",
     "title": "Node",
     "content": "Diagram ",
-    "timestamp": 1776615903028
+    "timestamp": 1776744112479
   },
   "references/eClassifiers/ProcessDefinition/index.html": {
-    "link-uuid": "13032306-5dd5-496c-8e37-c9fd7404c632",
+    "link-uuid": "793511e4-fdfd-4e9a-9b57-0bb0621f475c",
     "title": "ProcessDefinition",
-    "content": "* Root element of a Tibco BW 5.x process file (.process). Corresponds to pd:ProcessDefinition in the XML namespace http://xmlns.tibco.com/bw/process/2003. Diagram ",
-    "timestamp": 1776615903068
+    "content": "* Root element of a BW 5.x process file (.process). Corresponds to pd:ProcessDefinition in the XML namespace http://xmlns.tibco.com/bw/process/2003. Diagram ",
+    "timestamp": 1776744112520
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/from/index.html": {
     "path": "Transition/Attributes/from",
-    "link-uuid": "6b916836-838e-4635-aa73-a24ff569a1e0",
+    "link-uuid": "abe90959-cbac-4a3d-a29e-98f24169d9c7",
     "title": "from",
     "content": "Type EString Multiplicity 0..1 * Name of the source activity, group, or pseudo-state (e.g. &ldquo;Log&rdquo;, &ldquo;Start&rdquo;, &ldquo;IterateAndFindMatch&rdquo;).",
-    "timestamp": 1776615903213
+    "timestamp": 1776744112705
   },
   "references/eClassifiers/Container/references/eStructuralFeatures/groups/index.html": {
     "path": "Container/References/groups",
-    "link-uuid": "dee160ab-b8d6-4cb7-87b5-21def17178af",
+    "link-uuid": "3917ce31-0a02-41c0-8150-ddd53322ecab",
     "title": "groups",
     "content": "Type Group Multiplicity 0..* * Groups of activities at the top level of this process (loops, scope, etc.).",
-    "timestamp": 1776615902858
+    "timestamp": 1776744112229
   },
   "references/eClassifiers/Container/references/eStructuralFeatures/activities/index.html": {
     "path": "Container/References/activities",
-    "link-uuid": "428fc7f3-062e-451f-965e-1172393130c0",
+    "link-uuid": "53b9896d-12e9-42a7-878a-bac5983bae44",
     "title": "activities",
     "content": "Type Activity Multiplicity 0..* * Activities (tasks/steps) at the top level of this process.",
-    "timestamp": 1776615902853
+    "timestamp": 1776744112219
   },
   "references/eClassifiers/Call/index.html": {
-    "link-uuid": "50e2d5de-100e-47e5-9df5-021744764cd6",
+    "link-uuid": "db912174-ce2a-4150-b8fc-f390a06e8220",
     "title": "Call",
     "content": "* Calls are used for resolving inter-process communications. Diagram ",
-    "timestamp": 1776615902763
+    "timestamp": 1776744112095
   },
   "references/eClassifiers/Node/inheritance.html": {
     "path": "Node/Inheritance",
-    "link-uuid": "d13156b3-1542-4edf-8d34-41feb231d963",
+    "link-uuid": "86c4323c-da79-4841-9430-ee786b4ea8ac",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615903030
+    "timestamp": 1776744112482
   },
   "references/eClassifiers/TypedElement/index.html": {
-    "link-uuid": "680ffa7e-5a9e-44d8-9530-136205f7bd44",
+    "link-uuid": "c80ea387-fc2b-41ea-935d-30bdf25c2dc5",
     "title": "TypedElement",
     "content": "Diagram ",
-    "timestamp": 1776615903239
+    "timestamp": 1776744112738
   },
   "references/eClassifiers/Call/references/eStructuralFeatures/target/index.html": {
     "path": "Call/References/target",
-    "link-uuid": "fd92da95-99fa-40ae-bb3c-e082165fad69",
+    "link-uuid": "9b24cf90-f018-4fe3-a454-b87de1c7a13c",
     "title": "target",
     "content": "Type CallTarget Multiplicity 0..1",
-    "timestamp": 1776615902774
+    "timestamp": 1776744112107
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/conditionType/index.html": {
     "path": "Transition/Attributes/conditionType",
-    "link-uuid": "9bf4ae31-8825-4343-91ed-8dcc21662907",
+    "link-uuid": "81d7671b-3111-4b29-bccc-19cb10e38681",
     "title": "conditionType",
     "content": "Type EString Multiplicity 0..1 * How the transition is enabled. Common values: &ldquo;always&rdquo;, &ldquo;expression&rdquo;, &ldquo;error&rdquo;, &ldquo;timeout&rdquo;.",
-    "timestamp": 1776615903211
+    "timestamp": 1776744112702
   },
   "references/eClassifiers/Activity/inheritance.html": {
     "path": "Activity/Inheritance",
-    "link-uuid": "7a7b2c2d-efe9-4056-91e6-04f49bb9e492",
+    "link-uuid": "4500b667-cc9d-4879-96bf-c82864fc7719",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615902728
+    "timestamp": 1776744112056
   },
   "references/eClassifiers/Resource/index.html": {
-    "link-uuid": "f2bc4a7e-5649-4da1-8ac7-57a40836ac8f",
+    "link-uuid": "d194a3a9-f577-4123-98bc-f0c65e2ff633",
     "title": "Resource",
     "content": "* Project resource - process definition, XSD, &hellip; Diagram ",
-    "timestamp": 1776615903149
+    "timestamp": 1776744112624
   },
   "references/eClassifiers/Transition/index.html": {
-    "link-uuid": "8921e685-c526-424b-9dfc-a67b6dd5f943",
+    "link-uuid": "5d7cd0e2-0d47-4b26-b471-de1bd5b37994",
     "title": "Transition",
     "content": "* A directed connection from one activity (or pseudo-state) to another. Corresponds to pd:transition in the process XML. The source and target are identified by the name of the containing NamedElement (Activity, Starter, Group, or the special names &ldquo;Start&rdquo; and &ldquo;End&rdquo; / &ldquo;start&rdquo; and &ldquo;end&rdquo; inside a group). Diagram ",
-    "timestamp": 1776615903204
+    "timestamp": 1776744112693
   },
   "references/eClassifiers/Project/inheritance.html": {
     "path": "Project/Inheritance",
-    "link-uuid": "1bb6d429-adcc-45b5-bdf4-86f7a2d232cf",
+    "link-uuid": "1d4a2960-cbc6-46ae-a6fd-f9acd673c06e",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615903131
+    "timestamp": 1776744112600
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/source/index.html": {
     "path": "Transition/References/source",
-    "link-uuid": "3b1013cd-f74a-4e3d-9eb6-dc67930f951b",
+    "link-uuid": "13cb1525-b30b-48f0-b75d-0563dfcfa69a",
     "title": "source",
     "content": "Type Node Multiplicity 0..1",
-    "timestamp": 1776615903220
+    "timestamp": 1776744112713
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/returnBindings/index.html": {
     "path": "ProcessDefinition/Attributes/returnBindings",
-    "link-uuid": "56454928-e384-4a2c-a21a-11a126755797",
+    "link-uuid": "b65cf002-9470-473b-9a01-9b690239b52b",
     "title": "returnBindings",
     "content": "Type EString Multiplicity 0..1 * XSL bindings that produce the process return value (output schema). Stored as raw XML text because the bindings reference arbitrary namespaces.",
-    "timestamp": 1776615903084
+    "timestamp": 1776744112538
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/color/index.html": {
     "path": "Label/Attributes/color",
-    "link-uuid": "93af3252-15ff-4ab5-8491-4c19375f3a05",
+    "link-uuid": "e7f5202a-0a1a-497e-8a16-f6a063212ded",
     "title": "color",
     "content": "Type EString Multiplicity 0..1 * Background color encoded as an RGB integer string.",
-    "timestamp": 1776615902965
+    "timestamp": 1776744112396
   },
   "references/eClassifiers/Folder/references/eStructuralFeatures/resources/index.html": {
     "path": "Folder/References/resources",
-    "link-uuid": "0c12f66b-44cf-44a0-9375-1a5fd3a48b85",
+    "link-uuid": "62c7aac9-2d62-4920-8ad4-a87a7ef9006b",
     "title": "resources",
     "content": "Type Resource Multiplicity 0..*",
-    "timestamp": 1776615902892
+    "timestamp": 1776744112282
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/y/index.html": {
     "path": "Node/Attributes/y",
-    "link-uuid": "50661eef-d82f-4e52-92ae-5281b132979a",
+    "link-uuid": "c030976a-91fb-40d0-90da-0e65161b9a12",
     "title": "y",
     "content": "Type EInt Multiplicity 0..1 * Y coordinate on the design canvas.",
-    "timestamp": 1776615903042
+    "timestamp": 1776744112497
   },
   "references/eClassifiers/Container/inheritance.html": {
     "path": "Container/Inheritance",
-    "link-uuid": "cebcc65d-6e81-4892-a7b7-eb58e264e9a7",
+    "link-uuid": "eef62370-1bed-4095-accf-65e8193ed1c1",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615902850
+    "timestamp": 1776744112215
   },
   "references/eClassifiers/ProcessDefinition/inheritance.html": {
     "path": "ProcessDefinition/Inheritance",
-    "link-uuid": "17470935-726a-4691-b01a-4fa73fca806a",
+    "link-uuid": "aca170e2-e262-4a0f-a9cd-786a393bda61",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615903070
+    "timestamp": 1776744112523
   },
   "references/eClassifiers/Activity/index.html": {
-    "link-uuid": "42425299-e824-40c0-ada7-415e885bcb2c",
+    "link-uuid": "61c27535-d9d8-41ce-a2f1-4b5e7c45c8e9",
     "title": "Activity",
     "content": "* An activity (task or step) within a BW process or group. Corresponds to pd:activity in the process XML. Diagram ",
-    "timestamp": 1776615902724
+    "timestamp": 1776744112052
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/fontColor/index.html": {
     "path": "Label/Attributes/fontColor",
-    "link-uuid": "4835dd9b-cbde-4863-9f0c-7ecb5b38b32a",
+    "link-uuid": "3edfae28-e7a7-42f7-a57c-c225ce27fee5",
     "title": "fontColor",
     "content": "Type EString Multiplicity 0..1 * Font color encoded as an RGB integer string.",
-    "timestamp": 1776615902970
+    "timestamp": 1776744112403
   },
   "references/eClassifiers/NamedElement/inheritance.html": {
     "path": "NamedElement/Inheritance",
-    "link-uuid": "967cf457-b8c5-4a38-b645-7a32ab8c6905",
+    "link-uuid": "5053d0ae-6416-4e8d-bedf-04d8ec65f183",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1776615903002
+    "timestamp": 1776744112447
   },
   "references/eClassifiers/Call/references/eStructuralFeatures/description/index.html": {
     "path": "Call/Attributes/description",
-    "link-uuid": "7f1b542a-7554-42cc-b91e-1d63e4a93554",
+    "link-uuid": "40e7f23a-6a43-4479-9154-37a797334df3",
     "title": "description",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1776615902771
+    "timestamp": 1776744112104
   },
   "references/eClassifiers/Resource/references/eStructuralFeatures/projectPath/index.html": {
     "path": "Resource/Attributes/projectPath",
-    "link-uuid": "816738c6-522e-4ed2-809d-e2e7542b3313",
+    "link-uuid": "62463f1a-ea96-456e-85bc-67b1203c7cc7",
     "title": "projectPath",
     "content": "Type EString Multiplicity 0..1 * Relative path in the project",
-    "timestamp": 1776615903161
+    "timestamp": 1776744112638
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/lineColor/index.html": {
     "path": "Transition/Attributes/lineColor",
-    "link-uuid": "60c04e39-5f6e-468d-ace3-8b66f03b4707",
+    "link-uuid": "70d71dac-5927-4240-a9a4-ae9dddec4787",
     "title": "lineColor",
     "content": "Type EString Multiplicity 0..1 * RGB color of the transition line encoded as a signed integer (Java AWT convention), e.g. &ldquo;-16777216&rdquo; for black.",
-    "timestamp": 1776615903215
+    "timestamp": 1776744112708
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/to/index.html": {
     "path": "Transition/Attributes/to",
-    "link-uuid": "8eb3834c-1c92-4866-9e86-74ea56828d8f",
+    "link-uuid": "fe2f98a6-2109-45e4-9294-5aaa5493598c",
     "title": "to",
     "content": "Type EString Multiplicity 0..1 * Name of the target activity, group, or pseudo-state (e.g. &ldquo;End&rdquo;, &ldquo;MapResultToResponse&rdquo;).",
-    "timestamp": 1776615903224
+    "timestamp": 1776744112718
   },
   "references/eClassifiers/TypedNode/inheritance.html": {
     "path": "TypedNode/Inheritance",
-    "link-uuid": "f1e3c6bb-00a2-425d-9b3c-9f35e407f1e7",
+    "link-uuid": "77e1bb95-4a2c-4838-83e5-194afea4dc4e",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615903262
+    "timestamp": 1776744112770
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/errorSchemas/index.html": {
     "path": "ProcessDefinition/Attributes/errorSchemas",
-    "link-uuid": "d54e02ee-d4c9-4a2e-983d-6e304b436c0a",
+    "link-uuid": "e48c4f37-77cf-4f59-919d-83c61335db80",
     "title": "errorSchemas",
     "content": "Type EString Multiplicity 0..1 * Error schemas that this process can throw. Stored as raw XML text because they are arbitrary XSD fragments.",
-    "timestamp": 1776615903077
+    "timestamp": 1776744112531
   },
   "references/eClassifiers/Activity/references/eStructuralFeatures/config/index.html": {
     "path": "Activity/Attributes/config",
-    "link-uuid": "5c5704a3-973c-4348-8ba3-e2580dcf06c4",
+    "link-uuid": "47f4f441-91c8-4b82-8ccb-1d03a05d786f",
     "title": "config",
     "content": "Type EString Multiplicity 0..1 * Activity-specific configuration, stored as raw XML text. The structure varies per activity type.",
-    "timestamp": 1776615902735
+    "timestamp": 1776744112068
   },
   "references/eClassifiers/Project/index.html": {
-    "link-uuid": "bd53255f-3896-48fe-a1c3-b8bd35b39ce5",
+    "link-uuid": "861c1d55-5e83-4892-8712-bac8c56594b3",
     "title": "Project",
     "content": "* Project is folder with vcrepo.dat file and with resourceType=&ldquo;ae.rootfolder&rdquo; in the .folder file Diagram ",
-    "timestamp": 1776615903129
+    "timestamp": 1776744112597
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/thickness/index.html": {
     "path": "Label/Attributes/thickness",
-    "link-uuid": "b5d99037-245d-44b6-9468-e9eb2fd34e39",
+    "link-uuid": "f35f8b3e-bbc5-4dec-9249-384c99455f99",
     "title": "thickness",
     "content": "Type EString Multiplicity 0..1 * Border line thickness.",
-    "timestamp": 1776615902974
+    "timestamp": 1776744112410
   },
   "references/eClassifiers/Group/references/eStructuralFeatures/expanded/index.html": {
     "path": "Group/Attributes/expanded",
-    "link-uuid": "07eed259-04bf-4dc3-b91b-30d940706242",
+    "link-uuid": "15196b73-dbd2-4d7e-aae6-89364e979b32",
     "title": "expanded",
     "content": "Type EBoolean Multiplicity 0..1 * Whether the group is shown in expanded form on the canvas.",
-    "timestamp": 1776615902928
+    "timestamp": 1776744112346
   },
   "references/eClassifiers/Container/index.html": {
-    "link-uuid": "d1e39dbd-e1ab-4069-a288-3932bae918b1",
+    "link-uuid": "3244bec5-2eae-4f17-b6bb-a4badfdc8b3f",
     "title": "Container",
     "content": "Diagram ",
-    "timestamp": 1776615902847
+    "timestamp": 1776744112211
   },
   "references/eClassifiers/Transition/references/eStructuralFeatures/lineType/index.html": {
     "path": "Transition/Attributes/lineType",
-    "link-uuid": "c9a582be-9146-4584-aaf4-da880b48ebe4",
+    "link-uuid": "32bf03d2-177d-4000-8f72-2fe360ce561b",
     "title": "lineType",
     "content": "Type EString Multiplicity 0..1 * Visual style of the transition line. Common values: &ldquo;Default&rdquo;, &ldquo;Straight&rdquo;, &ldquo;Curved&rdquo;.",
-    "timestamp": 1776615903217
+    "timestamp": 1776744112711
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/height/index.html": {
     "path": "Label/Attributes/height",
-    "link-uuid": "5e4595c2-65d0-4645-844f-36b3ba56fe27",
+    "link-uuid": "163c7049-aa9c-4b7c-b878-162846cc7319",
     "title": "height",
     "content": "Type EInt Multiplicity 0..1 * Height of the label box on the canvas.",
-    "timestamp": 1776615902972
+    "timestamp": 1776744112407
   },
   "references/eClassifiers/Group/references/eStructuralFeatures/collapsedHeight/index.html": {
     "path": "Group/Attributes/collapsedHeight",
-    "link-uuid": "498a1b1a-0f07-4d05-acb5-cdb1756a9f83",
+    "link-uuid": "cf999694-0ac2-431f-85ab-149ca2c84f89",
     "title": "collapsedHeight",
     "content": "Type EInt Multiplicity 0..1 * Height of the group icon when collapsed.",
-    "timestamp": 1776615902923
+    "timestamp": 1776744112338
   },
   "references/eClassifiers/Resource/references/eStructuralFeatures/fileName/index.html": {
     "path": "Resource/Attributes/fileName",
-    "link-uuid": "15b2145d-4700-43ec-bd35-ebc2affd0ce8",
+    "link-uuid": "42b38cb1-933e-4165-8a31-79f0954e4dc5",
     "title": "fileName",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1776615903156
+    "timestamp": 1776744112633
   },
   "references/eClassifiers/Container/references/eStructuralFeatures/transitions/index.html": {
     "path": "Container/References/transitions",
-    "link-uuid": "20b231fa-32d1-4b7d-8c3f-a52994e971f0",
+    "link-uuid": "10742695-8b75-4442-afec-aab1d508e8ea",
     "title": "transitions",
     "content": "Type Transition Multiplicity 0..* * Transitions at the top level of this process.",
-    "timestamp": 1776615902864
+    "timestamp": 1776744112237
   },
   "references/eClassifiers/Label/inheritance.html": {
     "path": "Label/Inheritance",
-    "link-uuid": "140dbec9-ea64-427f-90aa-7cdac511996d",
+    "link-uuid": "21735158-1e67-479e-aef5-a69877fd371d",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615902959
+    "timestamp": 1776744112388
   },
   "references/eClassifiers/CallTarget/index.html": {
-    "link-uuid": "5f22c8a9-6b3a-484c-a79d-a8deb3431d88",
+    "link-uuid": "b7947975-2de5-4211-996e-b317a1dc9089",
     "title": "CallTarget",
     "content": "* Something that can receive calls Diagram ",
-    "timestamp": 1776615902816
+    "timestamp": 1776744112162
   },
   "references/eClassifiers/Folder/inheritance.html": {
     "path": "Folder/Inheritance",
-    "link-uuid": "6522573c-24bc-4e12-a6e4-c82581a99497",
+    "link-uuid": "05587c70-1247-4907-b9b9-bd704de87bf2",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1776615902886
+    "timestamp": 1776744112273
   },
   "references/eClassifiers/Folder/index.html": {
-    "link-uuid": "55aacd64-191d-4cad-8213-d01156562e64",
+    "link-uuid": "f9ba3efd-2929-41eb-aa85-19cfcd3b8775",
     "title": "Folder",
     "content": "Diagram ",
-    "timestamp": 1776615902882
+    "timestamp": 1776744112268
   },
   "references/eClassifiers/ProcessDefinition/references/eStructuralFeatures/processVariables/index.html": {
     "path": "ProcessDefinition/References/processVariables",
-    "link-uuid": "b6013f1a-866a-4560-bace-a91ef11b5b3c",
+    "link-uuid": "31781581-2809-414f-bfb8-bbdd101a4d2d",
     "title": "processVariables",
     "content": "Type ProcessVariable Multiplicity 0..* * Process-scoped variables declared in the process.",
-    "timestamp": 1776615903082
+    "timestamp": 1776744112536
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/x/index.html": {
     "path": "Node/Attributes/x",
-    "link-uuid": "fc247405-6958-4551-bcd6-c563b62bd06b",
+    "link-uuid": "fbab45ca-a9a8-4092-982d-d15fbc76a1ca",
     "title": "x",
     "content": "Type EInt Multiplicity 0..1 * X coordinate on the design canvas.",
-    "timestamp": 1776615903040
+    "timestamp": 1776744112494
   },
   "references/eClassifiers/CallTarget/references/eStructuralFeatures/incomingCalls/index.html": {
     "path": "CallTarget/References/incomingCalls",
-    "link-uuid": "1335ca5e-0f64-4c24-8fe2-4284d5b0e608",
+    "link-uuid": "238c722d-ca94-4759-a017-fd83e6986cc3",
     "title": "incomingCalls",
     "content": "Type Call Multiplicity 0..*",
-    "timestamp": 1776615902822
+    "timestamp": 1776744112171
   },
   "references/eClassifiers/Group/references/eStructuralFeatures/height/index.html": {
     "path": "Group/Attributes/height",
-    "link-uuid": "edf9164d-005b-401a-a2a9-8cdff8271687",
+    "link-uuid": "63489e54-3b53-4245-910c-40d3871747c5",
     "title": "height",
     "content": "Type EInt Multiplicity 0..1 * Height of the expanded group frame on the design canvas.",
-    "timestamp": 1776615902931
+    "timestamp": 1776744112349
   },
   "references/eClassifiers/Group/inheritance.html": {
     "path": "Group/Inheritance",
-    "link-uuid": "01da30c0-caca-4a87-b153-c5aa7fb6acec",
+    "link-uuid": "11b40b7c-30db-4107-a115-c8a9abc5d695",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1776615902917
+    "timestamp": 1776744112331
   }
 }

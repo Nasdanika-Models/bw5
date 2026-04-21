@@ -32,11 +32,6 @@ public class FolderNodeProcessor<T extends Folder> extends ResourceNodeProcessor
 		
 		super(config, context, prototypeProvider, documentationFactories);
 	}		
-
-//	@Override
-//	protected String getTypeIcon() {
-//		return RESOURCE_ICON;
-//	}	
 	
 	@Override
 	protected Collection<Entry<String, Collection<EObject>>> getProperties(ProgressMonitor progressMonitor) {
@@ -85,7 +80,7 @@ public class FolderNodeProcessor<T extends Folder> extends ResourceNodeProcessor
 	 * This implementation returns true for containment references, i.e. actions for child objects shall be created. 
 	 */
 	protected boolean isCallOutgoingReferenceLabelsSuppliers(EReference eReference) {
-		return Bw5Package.eINSTANCE.getFolder_Resources().equals(eReference) || super.isCallOutgoingReferenceLabelsSuppliers(eReference);
+		return Bw5Package.Literals.FOLDER__RESOURCES.equals(eReference) || super.isCallOutgoingReferenceLabelsSuppliers(eReference);
 	}
 	
 }

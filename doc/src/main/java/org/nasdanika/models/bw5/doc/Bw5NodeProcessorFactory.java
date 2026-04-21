@@ -17,11 +17,14 @@ import org.nasdanika.models.app.Action;
 import org.nasdanika.models.app.AppFactory;
 import org.nasdanika.models.app.Label;
 import org.nasdanika.models.app.graph.WidgetFactory;
+import org.nasdanika.models.bw5.Activity;
 import org.nasdanika.models.bw5.Folder;
+import org.nasdanika.models.bw5.Group;
 import org.nasdanika.models.bw5.NamedElement;
 import org.nasdanika.models.bw5.ProcessDefinition;
 import org.nasdanika.models.bw5.Project;
 import org.nasdanika.models.bw5.Resource;
+import org.nasdanika.models.bw5.Transition;
 //import org.nasdanika.models.sql.Catalog;
 //import org.nasdanika.models.sql.Column;
 //import org.nasdanika.models.sql.DataType;
@@ -111,20 +114,6 @@ public class Bw5NodeProcessorFactory {
 				getPrototypeProvider(config), 
 				documentationFactories);
 	}
-	
-	@EObjectNodeProcessor(type = NamedElement.class)
-	public Object createNamedElementNodeProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
-			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
-			ProgressMonitor progressMonitor) {
-		
-		return new NamedElementNodeProcessor<Resource>(
-				config, 
-				context, 
-				getPrototypeProvider(config), 
-				documentationFactories);
-	}
 		
 	@EObjectNodeProcessor(type = ProcessDefinition.class)
 	public Object createProcessDefinitionNodeProcessor(
@@ -139,24 +128,67 @@ public class Bw5NodeProcessorFactory {
 				getPrototypeProvider(config), 
 				documentationFactories);
 	}
+		
+	@EObjectNodeProcessor(type = Activity.class)
+	public Object createActivityNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new ActivityNodeProcessor<Activity>(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}
+		
+	@EObjectNodeProcessor(type = Group.class)
+	public Object createGroupDefinitionNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new GroupNodeProcessor(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}
 	
+	@EObjectNodeProcessor(type = Transition.class)
+	public Object createTransitionNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new TransitionNodeProcessor(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}		
 	
+	@EObjectNodeProcessor(type = org.nasdanika.models.bw5.Label.class)
+	public Object createLabelNodeProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory, Object> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<WidgetFactory, WidgetFactory, Object, Object>,ProgressMonitor>> infoProvider,
+			ProgressMonitor progressMonitor) {
+		
+		return new LabelNodeProcessor(
+				config, 
+				context, 
+				getPrototypeProvider(config), 
+				documentationFactories);
+	}		
 	
-//	ProcessDefinition.java
-//	Activity.java
-//	Bw5Factory.java
-//	Bw5Package.java
-//	Call.java
-//	Caller.java
-//	CallTarget.java
-//	Container.java
-//	Group.java
 //	Label.java
-//	NamedElement.java
 //	Node.java
 //	ProcessVariable.java
 //	Starter.java
-//	Transition.java
 	
 //	
 //	@EObjectNodeProcessor(type = Catalog.class)

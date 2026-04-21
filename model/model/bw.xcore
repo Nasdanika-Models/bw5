@@ -48,6 +48,7 @@ abstract class Container extends NamedElement {
     /**
      * Transitions at the top level of this process.
      */
+    @Nasdanika(logicalContainment="false")     
     contains Transition[] transitions
     
     /**
@@ -63,7 +64,7 @@ abstract class Container extends NamedElement {
 }
 
 /**
- * Root element of a Tibco BW 5.x process file (.process).
+ * Root element of a BW 5.x process file (.process).
  * Corresponds to pd:ProcessDefinition in the XML namespace
  * http://xmlns.tibco.com/bw/process/2003.
  */
@@ -128,6 +129,7 @@ class Node extends NamedElement {
      */
     int y
     
+    @Nasdanika(logicalContainment="true")   
     refers Transition[] outgoingTransitions opposite source
     
     refers Transition[] incomingTransitions opposite target

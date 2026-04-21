@@ -25,12 +25,6 @@ public class ResourceNodeProcessor<T extends Resource> extends NamedElementNodeP
 		
 		super(config, context, prototypeProvider, documentationFactories);
 	}		
-
-//	@Override
-//	protected String getTypeIcon() {
-//		return RESOURCE_ICON;
-//	}	
-	
 	
 	@Override
 	protected Collection<Entry<String, Collection<EObject>>> getProperties(ProgressMonitor progressMonitor) {
