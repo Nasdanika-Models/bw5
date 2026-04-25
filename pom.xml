@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika.models.bw5</groupId>
 	<artifactId>parent</artifactId>
-	<version>2026.2.0</version>
+	<version>2026.4.0</version>
 	<packaging>pom</packaging>
 	<name>BW5 Model</name>
 	<description>A model of BW 5.x concepts</description>
@@ -167,6 +167,7 @@
 	<modules>
 		<module>model</module>
 		<module>ecore</module>
+		<!--<module>doc</module>-->
 	</modules>
 
 	 <profiles>
@@ -203,4 +204,3 @@
 		</profile>
 	</profiles>
 </project>
-

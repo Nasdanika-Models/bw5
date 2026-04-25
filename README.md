@@ -1,6 +1,6 @@
 # BW5
 
-A model of BW5 artifacts for demonstration of [model-driven legacy modernization](https://medium.com/nasdanika/stop-asking-ai-to-read-spaghetti-why-context-windows-and-tools-arent-enough-for-legacy-8787d8d4d49a).
+A model of BW5 artifacts for demonstration of [model-driven legacy modernization](https://docs.nasdanika.org/practices/legacy-modernization/index.html).
 
 ## References
 
