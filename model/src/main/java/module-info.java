@@ -8,6 +8,7 @@ module org.nasdanika.models.bw5 {
 	exports org.nasdanika.models.bw5.impl;
 	exports org.nasdanika.models.bw5.loader;
 	exports org.nasdanika.models.bw5.util;
+	exports org.nasdanika.models.bw5.graph;
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
