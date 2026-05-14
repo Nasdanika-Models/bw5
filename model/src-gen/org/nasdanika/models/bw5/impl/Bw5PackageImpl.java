@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.bw5.impl;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -20,6 +22,7 @@ import org.nasdanika.models.bw5.Folder;
 import org.nasdanika.models.bw5.Group;
 import org.nasdanika.models.bw5.Label;
 import org.nasdanika.models.bw5.NamedElement;
+import org.nasdanika.models.bw5.NamespaceAware;
 import org.nasdanika.models.bw5.Node;
 import org.nasdanika.models.bw5.ProcessDefinition;
 import org.nasdanika.models.bw5.ProcessVariable;
@@ -50,6 +53,20 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 * @generated
 	 */
 	private EClass containerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringToStringEntryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namespaceAwareEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -322,6 +339,76 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getContainer_ReturnBindings() {
+		return (EAttribute)containerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_ReturnBindingsNamespaces() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStringToStringEntry() {
+		return stringToStringEntryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStringToStringEntry_Key() {
+		return (EAttribute)stringToStringEntryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStringToStringEntry_Value() {
+		return (EAttribute)stringToStringEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNamespaceAware() {
+		return namespaceAwareEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNamespaceAware_Namespaces() {
+		return (EReference)namespaceAwareEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProcessDefinition() {
 		return processDefinitionEClass;
 	}
@@ -362,18 +449,8 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProcessDefinition_ReturnBindings() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getProcessDefinition_Starter() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(4);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -383,7 +460,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 */
 	@Override
 	public EReference getProcessDefinition_Labels() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(5);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -393,7 +470,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 */
 	@Override
 	public EReference getProcessDefinition_ProcessVariables() {
-		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(6);
+		return (EReference)processDefinitionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -403,7 +480,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	 */
 	@Override
 	public EAttribute getProcessDefinition_ErrorSchemas() {
-		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)processDefinitionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -524,6 +601,16 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 	@Override
 	public EAttribute getActivity_InputBindings() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_InputBindingsNamespaces() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -975,12 +1062,20 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		createEReference(containerEClass, CONTAINER__TRANSITIONS);
 		createEReference(containerEClass, CONTAINER__START);
 		createEReference(containerEClass, CONTAINER__END);
+		createEAttribute(containerEClass, CONTAINER__RETURN_BINDINGS);
+		createEReference(containerEClass, CONTAINER__RETURN_BINDINGS_NAMESPACES);
+
+		stringToStringEntryEClass = createEClass(STRING_TO_STRING_ENTRY);
+		createEAttribute(stringToStringEntryEClass, STRING_TO_STRING_ENTRY__KEY);
+		createEAttribute(stringToStringEntryEClass, STRING_TO_STRING_ENTRY__VALUE);
+
+		namespaceAwareEClass = createEClass(NAMESPACE_AWARE);
+		createEReference(namespaceAwareEClass, NAMESPACE_AWARE__NAMESPACES);
 
 		processDefinitionEClass = createEClass(PROCESS_DEFINITION);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__START_TYPE);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__END_TYPE);
 		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__TARGET_NAMESPACE);
-		createEAttribute(processDefinitionEClass, PROCESS_DEFINITION__RETURN_BINDINGS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__STARTER);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__LABELS);
 		createEReference(processDefinitionEClass, PROCESS_DEFINITION__PROCESS_VARIABLES);
@@ -1001,6 +1096,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		activityEClass = createEClass(ACTIVITY);
 		createEAttribute(activityEClass, ACTIVITY__CONFIG);
 		createEAttribute(activityEClass, ACTIVITY__INPUT_BINDINGS);
+		createEReference(activityEClass, ACTIVITY__INPUT_BINDINGS_NAMESPACES);
 
 		starterEClass = createEClass(STARTER);
 
@@ -1087,6 +1183,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 
 		// Add supertypes to classes
 		containerEClass.getESuperTypes().add(this.getNamedElement());
+		containerEClass.getESuperTypes().add(this.getNamespaceAware());
 		processDefinitionEClass.getESuperTypes().add(this.getContainer());
 		processDefinitionEClass.getESuperTypes().add(this.getCallTarget());
 		processDefinitionEClass.getESuperTypes().add(this.getResource());
@@ -1096,6 +1193,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		typedNodeEClass.getESuperTypes().add(this.getNode());
 		activityEClass.getESuperTypes().add(this.getTypedNode());
 		activityEClass.getESuperTypes().add(this.getCaller());
+		activityEClass.getESuperTypes().add(this.getNamespaceAware());
 		starterEClass.getESuperTypes().add(this.getActivity());
 		groupEClass.getESuperTypes().add(this.getActivity());
 		groupEClass.getESuperTypes().add(this.getContainer());
@@ -1118,12 +1216,20 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		initEReference(getContainer_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, org.nasdanika.models.bw5.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_Start(), this.getNode(), null, "start", null, 0, 1, org.nasdanika.models.bw5.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_End(), this.getNode(), null, "end", null, 0, 1, org.nasdanika.models.bw5.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainer_ReturnBindings(), theEcorePackage.getEString(), "returnBindings", null, 0, 1, org.nasdanika.models.bw5.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainer_ReturnBindingsNamespaces(), this.getStringToStringEntry(), null, "returnBindingsNamespaces", null, 0, -1, org.nasdanika.models.bw5.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringToStringEntryEClass, Map.Entry.class, "StringToStringEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringToStringEntry_Key(), theEcorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStringToStringEntry_Value(), theEcorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(namespaceAwareEClass, NamespaceAware.class, "NamespaceAware", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNamespaceAware_Namespaces(), this.getStringToStringEntry(), null, "namespaces", null, 0, -1, NamespaceAware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processDefinitionEClass, ProcessDefinition.class, "ProcessDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProcessDefinition_StartType(), theEcorePackage.getEString(), "startType", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_EndType(), theEcorePackage.getEString(), "endType", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessDefinition_TargetNamespace(), theEcorePackage.getEString(), "targetNamespace", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessDefinition_ReturnBindings(), theEcorePackage.getEString(), "returnBindings", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_Starter(), this.getStarter(), null, "starter", null, 0, 1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_Labels(), this.getLabel(), null, "labels", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessDefinition_ProcessVariables(), this.getProcessVariable(), null, "processVariables", null, 0, -1, ProcessDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1145,6 +1251,7 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActivity_Config(), theEcorePackage.getEString(), "config", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_InputBindings(), theEcorePackage.getEString(), "inputBindings", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_InputBindingsNamespaces(), this.getStringToStringEntry(), null, "inputBindingsNamespaces", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(starterEClass, Starter.class, "Starter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1282,6 +1389,12 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 			   "documentation", "*\nA synthetic node populated from endName, endType, endX, endY"
 		   });
 		addAnnotation
+		  (getContainer_ReturnBindings(),
+		   source,
+		   new String[] {
+			   "documentation", "*\nXSL bindings that produce the process return value (output schema).\nStored as raw XML text because the bindings reference arbitrary namespaces."
+		   });
+		addAnnotation
 		  (processDefinitionEClass,
 		   source,
 		   new String[] {
@@ -1304,12 +1417,6 @@ public class Bw5PackageImpl extends EPackageImpl implements Bw5Package {
 		   source,
 		   new String[] {
 			   "documentation", "*\nThe XML target namespace declared in the process file.\nUsed to qualify XPath expressions within the process."
-		   });
-		addAnnotation
-		  (getProcessDefinition_ReturnBindings(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nXSL bindings that produce the process return value (output schema).\nStored as raw XML text because the bindings reference arbitrary namespaces."
 		   });
 		addAnnotation
 		  (getProcessDefinition_Starter(),

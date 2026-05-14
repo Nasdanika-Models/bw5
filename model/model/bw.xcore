@@ -33,7 +33,7 @@ abstract class NamedElement {
     String description
 }
 
-abstract class Container extends NamedElement {
+abstract class Container extends NamedElement, NamespaceAware {
 
     /**
      * Activities (tasks/steps) at the top level of this process.
@@ -60,6 +60,27 @@ abstract class Container extends NamedElement {
      * A synthetic node populated from endName, endType, endX, endY
      */
     refers Node end
+
+    /**
+     * XSL bindings that produce the process return value (output schema).
+     * Stored as raw XML text because the bindings reference arbitrary namespaces.
+     */
+    String returnBindings
+        
+    contains StringToStringEntry[] returnBindingsNamespaces    
+    
+}
+
+class StringToStringEntry wraps java.util.Map$Entry {
+    
+    String key
+    String value
+    
+}
+
+interface NamespaceAware {
+    
+    contains StringToStringEntry[] namespaces
     
 }
 
@@ -85,12 +106,6 @@ class ProcessDefinition extends Container, CallTarget, Resource {
      * Used to qualify XPath expressions within the process.
      */
     String targetNamespace
-
-    /**
-     * XSL bindings that produce the process return value (output schema).
-     * Stored as raw XML text because the bindings reference arbitrary namespaces.
-     */
-    String returnBindings
     
     /**
      * The optional event-source activity that starts this process
@@ -114,6 +129,7 @@ class ProcessDefinition extends Container, CallTarget, Resource {
      * Stored as raw XML text because they are arbitrary XSD fragments.
      */
     String errorSchemas
+    
 }
 
 
@@ -160,7 +176,7 @@ class TypedNode extends TypedElement, Node {
  * An activity (task or step) within a BW process or group.
  * Corresponds to pd:activity in the process XML.
  */
-class Activity extends TypedNode, Caller {
+class Activity extends TypedNode, Caller, NamespaceAware {
 
     /**
      * Activity-specific configuration, stored as raw XML text.
@@ -173,8 +189,8 @@ class Activity extends TypedNode, Caller {
      */
     String inputBindings
     
-    // TODO - input/output transitions, perhaps derived        
-    
+    contains StringToStringEntry[] inputBindingsNamespaces    
+        
 }
 
 /**

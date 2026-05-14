@@ -23,7 +23,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getEndType <em>End Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getTargetNamespace <em>Target Namespace</em>}</li>
- *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getReturnBindings <em>Return Bindings</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getStarter <em>Starter</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.ProcessDefinition#getProcessVariables <em>Process Variables</em>}</li>
@@ -113,33 +112,6 @@ public interface ProcessDefinition extends Container, CallTarget, Resource {
 	 * @generated
 	 */
 	void setTargetNamespace(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Return Bindings</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
-	 * XSL bindings that produce the process return value (output schema).
-	 * Stored as raw XML text because the bindings reference arbitrary namespaces.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Return Bindings</em>' attribute.
-	 * @see #setReturnBindings(String)
-	 * @see org.nasdanika.models.bw5.Bw5Package#getProcessDefinition_ReturnBindings()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getReturnBindings();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.bw5.ProcessDefinition#getReturnBindings <em>Return Bindings</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Return Bindings</em>' attribute.
-	 * @see #getReturnBindings()
-	 * @generated
-	 */
-	void setReturnBindings(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Starter</b></em>' containment reference.

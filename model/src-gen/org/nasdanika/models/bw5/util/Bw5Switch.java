@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.bw5.util;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -76,6 +78,19 @@ public class Bw5Switch<T> extends Switch<T> {
 				Container container = (Container)theEObject;
 				T result = caseContainer(container);
 				if (result == null) result = caseNamedElement(container);
+				if (result == null) result = caseNamespaceAware(container);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Bw5Package.STRING_TO_STRING_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, String> stringToStringEntry = (Map.Entry<String, String>)theEObject;
+				T result = caseStringToStringEntry(stringToStringEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Bw5Package.NAMESPACE_AWARE: {
+				NamespaceAware namespaceAware = (NamespaceAware)theEObject;
+				T result = caseNamespaceAware(namespaceAware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -86,6 +101,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				if (result == null) result = caseCallTarget(processDefinition);
 				if (result == null) result = caseResource(processDefinition);
 				if (result == null) result = caseNamedElement(processDefinition);
+				if (result == null) result = caseNamespaceAware(processDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,6 +133,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				T result = caseActivity(activity);
 				if (result == null) result = caseTypedNode(activity);
 				if (result == null) result = caseCaller(activity);
+				if (result == null) result = caseNamespaceAware(activity);
 				if (result == null) result = caseTypedElement(activity);
 				if (result == null) result = caseNode(activity);
 				if (result == null) result = caseNamedElement(activity);
@@ -129,6 +146,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				if (result == null) result = caseActivity(starter);
 				if (result == null) result = caseTypedNode(starter);
 				if (result == null) result = caseCaller(starter);
+				if (result == null) result = caseNamespaceAware(starter);
 				if (result == null) result = caseTypedElement(starter);
 				if (result == null) result = caseNode(starter);
 				if (result == null) result = caseNamedElement(starter);
@@ -142,6 +160,7 @@ public class Bw5Switch<T> extends Switch<T> {
 				if (result == null) result = caseContainer(group);
 				if (result == null) result = caseTypedNode(group);
 				if (result == null) result = caseCaller(group);
+				if (result == null) result = caseNamespaceAware(group);
 				if (result == null) result = caseTypedElement(group);
 				if (result == null) result = caseNode(group);
 				if (result == null) result = caseNamedElement(group);
@@ -243,6 +262,36 @@ public class Bw5Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContainer(Container object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To String Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To String Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToStringEntry(Map.Entry<String, String> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Namespace Aware</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Namespace Aware</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamespaceAware(NamespaceAware object) {
 		return null;
 	}
 

@@ -9,12 +9,14 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
+import org.eclipse.emf.common.util.EMap;
 import org.nasdanika.models.bw5.Activity;
 import org.nasdanika.models.bw5.Bw5Factory;
 import org.nasdanika.models.bw5.Container;
 import org.nasdanika.models.bw5.Group;
 import org.nasdanika.models.bw5.Label;
 import org.nasdanika.models.bw5.NamedElement;
+import org.nasdanika.models.bw5.NamespaceAware;
 import org.nasdanika.models.bw5.Node;
 import org.nasdanika.models.bw5.ProcessDefinition;
 import org.nasdanika.models.bw5.ProcessVariable;
@@ -77,6 +79,19 @@ public class Bw5ProcessLoader {
 		XMLStreamReader reader = xmlFactory.createXMLStreamReader(systemId, inputStream);
 		return load(reader);
 	}
+	
+	private void loadNamespaces(XMLStreamReader reader, EMap<String, String> namespaces) {
+		int nsCount = reader.getNamespaceCount();
+	    for (int i = 0; i < nsCount; i++) {
+	        String prefix = reader.getNamespacePrefix(i);
+	        String uri = reader.getNamespaceURI(i);
+	        namespaces.put(prefix == null ? "" : prefix, uri);
+	    }
+	}
+	
+	private void loadNamespaces(XMLStreamReader reader, NamespaceAware namespaceAware) {
+		loadNamespaces(reader, namespaceAware.getNamespaces());
+	}
 
 	public ProcessDefinition load(XMLStreamReader reader) throws XMLStreamException {
 		try {
@@ -84,7 +99,7 @@ public class Bw5ProcessLoader {
 				int event = reader.next();
 				if (event == XMLStreamConstants.START_ELEMENT
 						&& "ProcessDefinition".equals(reader.getLocalName())
-						&& PD_NAMESPACE.equals(reader.getNamespaceURI())) {
+						&& PD_NAMESPACE.equals(reader.getNamespaceURI())) {					
 					ProcessDefinition processDefinition = parseProcessDefinition(reader);
 					resolve(processDefinition);
 					return processDefinition;
@@ -160,6 +175,7 @@ public class Bw5ProcessLoader {
 	 */
 	private ProcessDefinition parseProcessDefinition(XMLStreamReader reader) throws XMLStreamException {
 		ProcessDefinition pd = factory.createProcessDefinition();
+		loadNamespaces(reader, pd);
 
 		while (reader.hasNext()) {
 			int event = reader.next();
@@ -228,6 +244,10 @@ public class Bw5ProcessLoader {
 				case "transition":
 					container.getTransitions().add(parseTransition(reader));
 					break;
+				case "returnBindings":
+					loadNamespaces(reader, container.getReturnBindingsNamespaces());
+					container.setReturnBindings(captureXmlContent(reader));
+					break;
 				default:
 					handleNamedElementChild(reader, container);
 					break;
@@ -290,9 +310,6 @@ public class Bw5ProcessLoader {
 				case "targetNamespace":
 					pd.setTargetNamespace(reader.getElementText());
 					break;
-				case "returnBindings":
-					pd.setReturnBindings(captureXmlContent(reader));
-					break;
 				case "errorSchemas":
 					pd.setErrorSchemas(captureXmlContent(reader));
 					break;
@@ -354,6 +371,7 @@ public class Bw5ProcessLoader {
 	private void populateActivity(XMLStreamReader reader, Activity activity, String endLocalName)
 			throws XMLStreamException {
 
+		loadNamespaces(reader, activity);
 		while (reader.hasNext()) {
 			int event = reader.next();
 			switch (event) {
@@ -416,6 +434,7 @@ public class Bw5ProcessLoader {
 					activity.setResourceType(reader.getElementText());
 					break;
 				case "inputBindings":
+					loadNamespaces(reader, activity.getInputBindingsNamespaces());
 					activity.setInputBindings(captureXmlContent(reader));
 					break;
 				default:
@@ -441,6 +460,7 @@ public class Bw5ProcessLoader {
 	private Group parseGroup(XMLStreamReader reader) throws XMLStreamException {
 		Group group = factory.createGroup();
 		group.setName(reader.getAttributeValue(null, "name"));
+		loadNamespaces(reader, group);
 
 		while (reader.hasNext()) {
 			int event = reader.next();
@@ -493,6 +513,10 @@ public class Bw5ProcessLoader {
 					break;
 				case "transition":
 					group.getTransitions().add(parseTransition(reader));
+					break;
+				case "returnBindings":
+					loadNamespaces(reader, group.getReturnBindingsNamespaces());
+					group.setReturnBindings(captureXmlContent(reader));
 					break;
 				default:
 					handleActivityChild(reader, group);

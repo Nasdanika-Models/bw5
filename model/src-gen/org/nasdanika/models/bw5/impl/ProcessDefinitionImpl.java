@@ -38,7 +38,6 @@ import org.nasdanika.models.bw5.Starter;
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getStartType <em>Start Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getEndType <em>End Type</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getTargetNamespace <em>Target Namespace</em>}</li>
- *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getReturnBindings <em>Return Bindings</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getStarter <em>Starter</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl#getProcessVariables <em>Process Variables</em>}</li>
@@ -97,16 +96,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @ordered
 	 */
 	protected static final String TARGET_NAMESPACE_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getReturnBindings() <em>Return Bindings</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReturnBindings()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RETURN_BINDINGS_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getErrorSchemas() <em>Error Schemas</em>}' attribute.
@@ -293,26 +282,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 	 * @generated
 	 */
 	@Override
-	public String getReturnBindings() {
-		return (String)eDynamicGet(Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS, Bw5Package.Literals.PROCESS_DEFINITION__RETURN_BINDINGS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setReturnBindings(String newReturnBindings) {
-		eDynamicSet(Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS, Bw5Package.Literals.PROCESS_DEFINITION__RETURN_BINDINGS, newReturnBindings);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Starter getStarter() {
 		return (Starter)eDynamicGet(Bw5Package.PROCESS_DEFINITION__STARTER, Bw5Package.Literals.PROCESS_DEFINITION__STARTER, true, true);
 	}
@@ -444,8 +413,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return getEndType();
 			case Bw5Package.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				return getTargetNamespace();
-			case Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS:
-				return getReturnBindings();
 			case Bw5Package.PROCESS_DEFINITION__STARTER:
 				return getStarter();
 			case Bw5Package.PROCESS_DEFINITION__LABELS:
@@ -488,9 +455,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return;
 			case Bw5Package.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				setTargetNamespace((String)newValue);
-				return;
-			case Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS:
-				setReturnBindings((String)newValue);
 				return;
 			case Bw5Package.PROCESS_DEFINITION__STARTER:
 				setStarter((Starter)newValue);
@@ -539,9 +503,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 			case Bw5Package.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				setTargetNamespace(TARGET_NAMESPACE_EDEFAULT);
 				return;
-			case Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS:
-				setReturnBindings(RETURN_BINDINGS_EDEFAULT);
-				return;
 			case Bw5Package.PROCESS_DEFINITION__STARTER:
 				setStarter((Starter)null);
 				return;
@@ -580,8 +541,6 @@ public class ProcessDefinitionImpl extends ContainerImpl implements ProcessDefin
 				return END_TYPE_EDEFAULT == null ? getEndType() != null : !END_TYPE_EDEFAULT.equals(getEndType());
 			case Bw5Package.PROCESS_DEFINITION__TARGET_NAMESPACE:
 				return TARGET_NAMESPACE_EDEFAULT == null ? getTargetNamespace() != null : !TARGET_NAMESPACE_EDEFAULT.equals(getTargetNamespace());
-			case Bw5Package.PROCESS_DEFINITION__RETURN_BINDINGS:
-				return RETURN_BINDINGS_EDEFAULT == null ? getReturnBindings() != null : !RETURN_BINDINGS_EDEFAULT.equals(getReturnBindings());
 			case Bw5Package.PROCESS_DEFINITION__STARTER:
 				return getStarter() != null;
 			case Bw5Package.PROCESS_DEFINITION__LABELS:

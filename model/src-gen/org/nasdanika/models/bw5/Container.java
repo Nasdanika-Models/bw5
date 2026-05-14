@@ -3,6 +3,7 @@
 package org.nasdanika.models.bw5;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,13 +19,15 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.models.bw5.Container#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.Container#getStart <em>Start</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.Container#getEnd <em>End</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.Container#getReturnBindings <em>Return Bindings</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.Container#getReturnBindingsNamespaces <em>Return Bindings Namespaces</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.bw5.Bw5Package#getContainer()
  * @model abstract="true"
  * @generated
  */
-public interface Container extends NamedElement {
+public interface Container extends NamedElement, NamespaceAware {
 	/**
 	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.bw5.Activity}.
@@ -125,5 +128,45 @@ public interface Container extends NamedElement {
 	 * @generated
 	 */
 	void setEnd(Node value);
+
+	/**
+	 * Returns the value of the '<em><b>Return Bindings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * XSL bindings that produce the process return value (output schema).
+	 * Stored as raw XML text because the bindings reference arbitrary namespaces.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Return Bindings</em>' attribute.
+	 * @see #setReturnBindings(String)
+	 * @see org.nasdanika.models.bw5.Bw5Package#getContainer_ReturnBindings()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getReturnBindings();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.bw5.Container#getReturnBindings <em>Return Bindings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Return Bindings</em>' attribute.
+	 * @see #getReturnBindings()
+	 * @generated
+	 */
+	void setReturnBindings(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Return Bindings Namespaces</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Return Bindings Namespaces</em>' map.
+	 * @see org.nasdanika.models.bw5.Bw5Package#getContainer_ReturnBindingsNamespaces()
+	 * @model mapType="org.nasdanika.models.bw5.StringToStringEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
+	 * @generated
+	 */
+	EMap<String, String> getReturnBindingsNamespaces();
 
 } // Container

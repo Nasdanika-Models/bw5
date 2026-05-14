@@ -7,8 +7,10 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,6 +34,8 @@ import org.nasdanika.models.bw5.Transition;
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getStart <em>Start</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getEnd <em>End</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getReturnBindings <em>Return Bindings</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getReturnBindingsNamespaces <em>Return Bindings Namespaces</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.impl.GroupImpl#getCollapsedWidth <em>Collapsed Width</em>}</li>
@@ -42,6 +46,16 @@ import org.nasdanika.models.bw5.Transition;
  * @generated
  */
 public class GroupImpl extends ActivityImpl implements Group {
+	/**
+	 * The default value of the '{@link #getReturnBindings() <em>Return Bindings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReturnBindings()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RETURN_BINDINGS_EDEFAULT = null;
+
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -208,6 +222,37 @@ public class GroupImpl extends ActivityImpl implements Group {
 	 * @generated
 	 */
 	@Override
+	public String getReturnBindings() {
+		return (String)eDynamicGet(Bw5Package.GROUP__RETURN_BINDINGS, Bw5Package.Literals.CONTAINER__RETURN_BINDINGS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReturnBindings(String newReturnBindings) {
+		eDynamicSet(Bw5Package.GROUP__RETURN_BINDINGS, Bw5Package.Literals.CONTAINER__RETURN_BINDINGS, newReturnBindings);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EMap<String, String> getReturnBindingsNamespaces() {
+		return (EMap<String, String>)eDynamicGet(Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES, Bw5Package.Literals.CONTAINER__RETURN_BINDINGS_NAMESPACES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getWidth() {
 		return (Integer)eDynamicGet(Bw5Package.GROUP__WIDTH, Bw5Package.Literals.GROUP__WIDTH, true, true);
 	}
@@ -316,6 +361,8 @@ public class GroupImpl extends ActivityImpl implements Group {
 				return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
 			case Bw5Package.GROUP__TRANSITIONS:
 				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
+			case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES:
+				return ((InternalEList<?>)getReturnBindingsNamespaces()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -340,6 +387,11 @@ public class GroupImpl extends ActivityImpl implements Group {
 			case Bw5Package.GROUP__END:
 				if (resolve) return getEnd();
 				return basicGetEnd();
+			case Bw5Package.GROUP__RETURN_BINDINGS:
+				return getReturnBindings();
+			case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES:
+				if (coreType) return getReturnBindingsNamespaces();
+				else return getReturnBindingsNamespaces().map();
 			case Bw5Package.GROUP__WIDTH:
 				return getWidth();
 			case Bw5Package.GROUP__HEIGHT:
@@ -380,6 +432,12 @@ public class GroupImpl extends ActivityImpl implements Group {
 				return;
 			case Bw5Package.GROUP__END:
 				setEnd((Node)newValue);
+				return;
+			case Bw5Package.GROUP__RETURN_BINDINGS:
+				setReturnBindings((String)newValue);
+				return;
+			case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES:
+				((EStructuralFeature.Setting)getReturnBindingsNamespaces()).set(newValue);
 				return;
 			case Bw5Package.GROUP__WIDTH:
 				setWidth((Integer)newValue);
@@ -423,6 +481,12 @@ public class GroupImpl extends ActivityImpl implements Group {
 			case Bw5Package.GROUP__END:
 				setEnd((Node)null);
 				return;
+			case Bw5Package.GROUP__RETURN_BINDINGS:
+				setReturnBindings(RETURN_BINDINGS_EDEFAULT);
+				return;
+			case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES:
+				getReturnBindingsNamespaces().clear();
+				return;
 			case Bw5Package.GROUP__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
@@ -460,6 +524,10 @@ public class GroupImpl extends ActivityImpl implements Group {
 				return basicGetStart() != null;
 			case Bw5Package.GROUP__END:
 				return basicGetEnd() != null;
+			case Bw5Package.GROUP__RETURN_BINDINGS:
+				return RETURN_BINDINGS_EDEFAULT == null ? getReturnBindings() != null : !RETURN_BINDINGS_EDEFAULT.equals(getReturnBindings());
+			case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES:
+				return !getReturnBindingsNamespaces().isEmpty();
 			case Bw5Package.GROUP__WIDTH:
 				return getWidth() != WIDTH_EDEFAULT;
 			case Bw5Package.GROUP__HEIGHT:
@@ -488,6 +556,8 @@ public class GroupImpl extends ActivityImpl implements Group {
 				case Bw5Package.GROUP__TRANSITIONS: return Bw5Package.CONTAINER__TRANSITIONS;
 				case Bw5Package.GROUP__START: return Bw5Package.CONTAINER__START;
 				case Bw5Package.GROUP__END: return Bw5Package.CONTAINER__END;
+				case Bw5Package.GROUP__RETURN_BINDINGS: return Bw5Package.CONTAINER__RETURN_BINDINGS;
+				case Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES: return Bw5Package.CONTAINER__RETURN_BINDINGS_NAMESPACES;
 				default: return -1;
 			}
 		}
@@ -508,6 +578,8 @@ public class GroupImpl extends ActivityImpl implements Group {
 				case Bw5Package.CONTAINER__TRANSITIONS: return Bw5Package.GROUP__TRANSITIONS;
 				case Bw5Package.CONTAINER__START: return Bw5Package.GROUP__START;
 				case Bw5Package.CONTAINER__END: return Bw5Package.GROUP__END;
+				case Bw5Package.CONTAINER__RETURN_BINDINGS: return Bw5Package.GROUP__RETURN_BINDINGS;
+				case Bw5Package.CONTAINER__RETURN_BINDINGS_NAMESPACES: return Bw5Package.GROUP__RETURN_BINDINGS_NAMESPACES;
 				default: return -1;
 			}
 		}

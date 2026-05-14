@@ -136,13 +136,22 @@ public interface Bw5Package extends EPackage {
 	int CONTAINER__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__NAMESPACES = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__ACTIVITIES = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int CONTAINER__ACTIVITIES = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -151,7 +160,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CONTAINER__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -160,7 +169,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int CONTAINER__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' reference.
@@ -169,7 +178,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__START = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int CONTAINER__START = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -178,7 +187,25 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__END = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CONTAINER__END = NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__RETURN_BINDINGS = NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__RETURN_BINDINGS_NAMESPACES = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -187,7 +214,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int CONTAINER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Container</em>' class.
@@ -199,6 +226,89 @@ public interface Bw5Package extends EPackage {
 	int CONTAINER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.bw5.impl.StringToStringEntryImpl <em>String To String Entry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.bw5.impl.StringToStringEntryImpl
+	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getStringToStringEntry()
+	 * @generated
+	 */
+	int STRING_TO_STRING_ENTRY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_ENTRY__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_ENTRY__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To String Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_ENTRY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To String Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_ENTRY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.bw5.NamespaceAware <em>Namespace Aware</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.bw5.NamespaceAware
+	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getNamespaceAware()
+	 * @generated
+	 */
+	int NAMESPACE_AWARE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMESPACE_AWARE__NAMESPACES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Namespace Aware</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMESPACE_AWARE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Namespace Aware</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMESPACE_AWARE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,7 +316,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getProcessDefinition()
 	 * @generated
 	 */
-	int PROCESS_DEFINITION = 2;
+	int PROCESS_DEFINITION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -225,6 +335,15 @@ public interface Bw5Package extends EPackage {
 	 * @ordered
 	 */
 	int PROCESS_DEFINITION__DESCRIPTION = CONTAINER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__NAMESPACES = CONTAINER__NAMESPACES;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -270,6 +389,24 @@ public interface Bw5Package extends EPackage {
 	 * @ordered
 	 */
 	int PROCESS_DEFINITION__END = CONTAINER__END;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER__RETURN_BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_DEFINITION__RETURN_BINDINGS_NAMESPACES = CONTAINER__RETURN_BINDINGS_NAMESPACES;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Calls</b></em>' reference list.
@@ -335,22 +472,13 @@ public interface Bw5Package extends EPackage {
 	int PROCESS_DEFINITION__TARGET_NAMESPACE = CONTAINER_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS_DEFINITION__RETURN_BINDINGS = CONTAINER_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Starter</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 8;
+	int PROCESS_DEFINITION__STARTER = CONTAINER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -359,7 +487,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 9;
+	int PROCESS_DEFINITION__LABELS = CONTAINER_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Process Variables</b></em>' containment reference list.
@@ -368,7 +496,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 10;
+	int PROCESS_DEFINITION__PROCESS_VARIABLES = CONTAINER_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Error Schemas</b></em>' attribute.
@@ -377,7 +505,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 11;
+	int PROCESS_DEFINITION__ERROR_SCHEMAS = CONTAINER_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Process Definition</em>' class.
@@ -386,7 +514,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 12;
+	int PROCESS_DEFINITION_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Process Definition</em>' class.
@@ -405,7 +533,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 3;
+	int NODE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -487,7 +615,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getTypedElement()
 	 * @generated
 	 */
-	int TYPED_ELEMENT = 4;
+	int TYPED_ELEMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -542,7 +670,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getTypedNode()
 	 * @generated
 	 */
-	int TYPED_NODE = 5;
+	int TYPED_NODE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -642,7 +770,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 6;
+	int ACTIVITY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -726,13 +854,22 @@ public interface Bw5Package extends EPackage {
 	int ACTIVITY__OUTGOING_CALLS = TYPED_NODE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__NAMESPACES = TYPED_NODE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__CONFIG = TYPED_NODE_FEATURE_COUNT + 1;
+	int ACTIVITY__CONFIG = TYPED_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Input Bindings</b></em>' attribute.
@@ -741,7 +878,16 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__INPUT_BINDINGS = TYPED_NODE_FEATURE_COUNT + 2;
+	int ACTIVITY__INPUT_BINDINGS = TYPED_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Input Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__INPUT_BINDINGS_NAMESPACES = TYPED_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -750,7 +896,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = TYPED_NODE_FEATURE_COUNT + 3;
+	int ACTIVITY_FEATURE_COUNT = TYPED_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -769,7 +915,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getStarter()
 	 * @generated
 	 */
-	int STARTER = 7;
+	int STARTER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -853,6 +999,15 @@ public interface Bw5Package extends EPackage {
 	int STARTER__OUTGOING_CALLS = ACTIVITY__OUTGOING_CALLS;
 
 	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__NAMESPACES = ACTIVITY__NAMESPACES;
+
+	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -869,6 +1024,15 @@ public interface Bw5Package extends EPackage {
 	 * @ordered
 	 */
 	int STARTER__INPUT_BINDINGS = ACTIVITY__INPUT_BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Input Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTER__INPUT_BINDINGS_NAMESPACES = ACTIVITY__INPUT_BINDINGS_NAMESPACES;
 
 	/**
 	 * The number of structural features of the '<em>Starter</em>' class.
@@ -896,7 +1060,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getGroup()
 	 * @generated
 	 */
-	int GROUP = 8;
+	int GROUP = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -980,6 +1144,15 @@ public interface Bw5Package extends EPackage {
 	int GROUP__OUTGOING_CALLS = ACTIVITY__OUTGOING_CALLS;
 
 	/**
+	 * The feature id for the '<em><b>Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__NAMESPACES = ACTIVITY__NAMESPACES;
+
+	/**
 	 * The feature id for the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -996,6 +1169,15 @@ public interface Bw5Package extends EPackage {
 	 * @ordered
 	 */
 	int GROUP__INPUT_BINDINGS = ACTIVITY__INPUT_BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Input Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__INPUT_BINDINGS_NAMESPACES = ACTIVITY__INPUT_BINDINGS_NAMESPACES;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -1043,13 +1225,31 @@ public interface Bw5Package extends EPackage {
 	int GROUP__END = ACTIVITY_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Return Bindings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__RETURN_BINDINGS = ACTIVITY_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Return Bindings Namespaces</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__RETURN_BINDINGS_NAMESPACES = ACTIVITY_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__WIDTH = ACTIVITY_FEATURE_COUNT + 5;
+	int GROUP__WIDTH = ACTIVITY_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1058,7 +1258,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__HEIGHT = ACTIVITY_FEATURE_COUNT + 6;
+	int GROUP__HEIGHT = ACTIVITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed Width</b></em>' attribute.
@@ -1067,7 +1267,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__COLLAPSED_WIDTH = ACTIVITY_FEATURE_COUNT + 7;
+	int GROUP__COLLAPSED_WIDTH = ACTIVITY_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed Height</b></em>' attribute.
@@ -1076,7 +1276,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__COLLAPSED_HEIGHT = ACTIVITY_FEATURE_COUNT + 8;
+	int GROUP__COLLAPSED_HEIGHT = ACTIVITY_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Expanded</b></em>' attribute.
@@ -1085,7 +1285,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__EXPANDED = ACTIVITY_FEATURE_COUNT + 9;
+	int GROUP__EXPANDED = ACTIVITY_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -1094,7 +1294,7 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 10;
+	int GROUP_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -1113,7 +1313,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITION = 9;
+	int TRANSITION = 11;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -1213,7 +1413,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 10;
+	int LABEL = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1358,7 +1558,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getProcessVariable()
 	 * @generated
 	 */
-	int PROCESS_VARIABLE = 11;
+	int PROCESS_VARIABLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1413,7 +1613,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getCall()
 	 * @generated
 	 */
-	int CALL = 12;
+	int CALL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1468,7 +1668,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getCallTarget()
 	 * @generated
 	 */
-	int CALL_TARGET = 13;
+	int CALL_TARGET = 15;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Calls</b></em>' reference list.
@@ -1505,7 +1705,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getCaller()
 	 * @generated
 	 */
-	int CALLER = 14;
+	int CALLER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Calls</b></em>' containment reference list.
@@ -1542,7 +1742,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getResource()
 	 * @generated
 	 */
-	int RESOURCE = 15;
+	int RESOURCE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1615,7 +1815,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getFolder()
 	 * @generated
 	 */
-	int FOLDER = 16;
+	int FOLDER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1706,7 +1906,7 @@ public interface Bw5Package extends EPackage {
 	 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getProject()
 	 * @generated
 	 */
-	int PROJECT = 17;
+	int PROJECT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1888,6 +2088,83 @@ public interface Bw5Package extends EPackage {
 	EReference getContainer_End();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.bw5.Container#getReturnBindings <em>Return Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Return Bindings</em>'.
+	 * @see org.nasdanika.models.bw5.Container#getReturnBindings()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EAttribute getContainer_ReturnBindings();
+
+	/**
+	 * Returns the meta object for the map '{@link org.nasdanika.models.bw5.Container#getReturnBindingsNamespaces <em>Return Bindings Namespaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Return Bindings Namespaces</em>'.
+	 * @see org.nasdanika.models.bw5.Container#getReturnBindingsNamespaces()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_ReturnBindingsNamespaces();
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To String Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String To String Entry</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyUnique="false" keyDataType="org.eclipse.emf.ecore.EString"
+	 *        valueUnique="false" valueDataType="org.eclipse.emf.ecore.EString"
+	 * @generated
+	 */
+	EClass getStringToStringEntry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringEntry()
+	 * @generated
+	 */
+	EAttribute getStringToStringEntry_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringEntry()
+	 * @generated
+	 */
+	EAttribute getStringToStringEntry_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.bw5.NamespaceAware <em>Namespace Aware</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Namespace Aware</em>'.
+	 * @see org.nasdanika.models.bw5.NamespaceAware
+	 * @generated
+	 */
+	EClass getNamespaceAware();
+
+	/**
+	 * Returns the meta object for the map '{@link org.nasdanika.models.bw5.NamespaceAware#getNamespaces <em>Namespaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Namespaces</em>'.
+	 * @see org.nasdanika.models.bw5.NamespaceAware#getNamespaces()
+	 * @see #getNamespaceAware()
+	 * @generated
+	 */
+	EReference getNamespaceAware_Namespaces();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.bw5.ProcessDefinition <em>Process Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1929,17 +2206,6 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProcessDefinition_TargetNamespace();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.bw5.ProcessDefinition#getReturnBindings <em>Return Bindings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Return Bindings</em>'.
-	 * @see org.nasdanika.models.bw5.ProcessDefinition#getReturnBindings()
-	 * @see #getProcessDefinition()
-	 * @generated
-	 */
-	EAttribute getProcessDefinition_ReturnBindings();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.bw5.ProcessDefinition#getStarter <em>Starter</em>}'.
@@ -2112,6 +2378,17 @@ public interface Bw5Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getActivity_InputBindings();
+
+	/**
+	 * Returns the meta object for the map '{@link org.nasdanika.models.bw5.Activity#getInputBindingsNamespaces <em>Input Bindings Namespaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Input Bindings Namespaces</em>'.
+	 * @see org.nasdanika.models.bw5.Activity#getInputBindingsNamespaces()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_InputBindingsNamespaces();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.bw5.Starter <em>Starter</em>}'.
@@ -2653,6 +2930,66 @@ public interface Bw5Package extends EPackage {
 		EReference CONTAINER__END = eINSTANCE.getContainer_End();
 
 		/**
+		 * The meta object literal for the '<em><b>Return Bindings</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTAINER__RETURN_BINDINGS = eINSTANCE.getContainer_ReturnBindings();
+
+		/**
+		 * The meta object literal for the '<em><b>Return Bindings Namespaces</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__RETURN_BINDINGS_NAMESPACES = eINSTANCE.getContainer_ReturnBindingsNamespaces();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.bw5.impl.StringToStringEntryImpl <em>String To String Entry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.bw5.impl.StringToStringEntryImpl
+		 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getStringToStringEntry()
+		 * @generated
+		 */
+		EClass STRING_TO_STRING_ENTRY = eINSTANCE.getStringToStringEntry();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_ENTRY__KEY = eINSTANCE.getStringToStringEntry_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_ENTRY__VALUE = eINSTANCE.getStringToStringEntry_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.bw5.NamespaceAware <em>Namespace Aware</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.bw5.NamespaceAware
+		 * @see org.nasdanika.models.bw5.impl.Bw5PackageImpl#getNamespaceAware()
+		 * @generated
+		 */
+		EClass NAMESPACE_AWARE = eINSTANCE.getNamespaceAware();
+
+		/**
+		 * The meta object literal for the '<em><b>Namespaces</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NAMESPACE_AWARE__NAMESPACES = eINSTANCE.getNamespaceAware_Namespaces();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.bw5.impl.ProcessDefinitionImpl <em>Process Definition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2685,14 +3022,6 @@ public interface Bw5Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROCESS_DEFINITION__TARGET_NAMESPACE = eINSTANCE.getProcessDefinition_TargetNamespace();
-
-		/**
-		 * The meta object literal for the '<em><b>Return Bindings</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS_DEFINITION__RETURN_BINDINGS = eINSTANCE.getProcessDefinition_ReturnBindings();
 
 		/**
 		 * The meta object literal for the '<em><b>Starter</b></em>' containment reference feature.
@@ -2829,6 +3158,14 @@ public interface Bw5Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTIVITY__INPUT_BINDINGS = eINSTANCE.getActivity_InputBindings();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Bindings Namespaces</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__INPUT_BINDINGS_NAMESPACES = eINSTANCE.getActivity_InputBindingsNamespaces();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.bw5.impl.StarterImpl <em>Starter</em>}' class.

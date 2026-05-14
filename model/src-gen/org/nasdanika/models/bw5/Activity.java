@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.bw5;
 
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +21,14 @@ package org.nasdanika.models.bw5;
  * <ul>
  *   <li>{@link org.nasdanika.models.bw5.Activity#getConfig <em>Config</em>}</li>
  *   <li>{@link org.nasdanika.models.bw5.Activity#getInputBindings <em>Input Bindings</em>}</li>
+ *   <li>{@link org.nasdanika.models.bw5.Activity#getInputBindingsNamespaces <em>Input Bindings Namespaces</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.bw5.Bw5Package#getActivity()
  * @model
  * @generated
  */
-public interface Activity extends TypedNode, Caller {
+public interface Activity extends TypedNode, Caller, NamespaceAware {
 	/**
 	 * Returns the value of the '<em><b>Config</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,5 +81,18 @@ public interface Activity extends TypedNode, Caller {
 	 * @generated
 	 */
 	void setInputBindings(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input Bindings Namespaces</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Bindings Namespaces</em>' map.
+	 * @see org.nasdanika.models.bw5.Bw5Package#getActivity_InputBindingsNamespaces()
+	 * @model mapType="org.nasdanika.models.bw5.StringToStringEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
+	 * @generated
+	 */
+	EMap<String, String> getInputBindingsNamespaces();
 
 } // Activity
